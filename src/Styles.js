@@ -8,10 +8,18 @@ module.exports = {
           },
     Text: {
         color: '#949495',
-        'font-size': '34px'
+        'fontSize': '14px',
+        'fontFamily': 'Arial, Helvetica, sans-serif',
+        display: 'block',
+        'marginBlockStart': '1em',
+        'marginBlockEnd': '1em',
+        'marginInlineStart': '0px',
+        'marginInlineEnd': '0px',
+        'lineHeight': '2em'
     },
     Title: {
         color: 'white',
-        'font-size': '50px'
+        'fontSize': '50px',
+        'fontFamily': 'Arial, Helvetica, sans-serif'
     }
 }
