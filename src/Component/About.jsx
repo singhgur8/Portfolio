@@ -4,7 +4,7 @@ import {Colors, Text} from '../Styles'
 import GithubIcon from '../SVG/github.jsx'
 
 const Container = styled.div`
-    width: 70%
+    width: 85%
 `
 
 const Name = styled.div`

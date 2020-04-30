@@ -15,7 +15,7 @@ module.exports = {
         'marginBlockEnd': '1em',
         'marginInlineStart': '0px',
         'marginInlineEnd': '0px',
-        'lineHeight': '2em'
+        'lineHeight': '1.5em'
     },
     Title: {
         color: 'white',

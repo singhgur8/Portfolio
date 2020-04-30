@@ -1,12 +1,32 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {Colors} from '../Styles'
+import ProjectItem from './ProjectItem.jsx';
 
-const Name = styled.div`
-    color: ${Colors.title};
-    font-size: 48px;
-    
+const Container = styled.div`
+    // padding-top: 35px;
 `
+
+const projectsData = [
+    {  
+        title: 'Home Reservation Application',
+        img: 'url()',
+        description: 'Created a containerized microserive which was deployed to Ec2. Main features include a dynamic photo gallery along with a photo carousel.',
+        techStack: ['React', 'Docker', 'AWS EC2', 'Node.js', 'CSS Modules', 'Webpack', 'Microservice', 'MongoDB']
+    },
+    {
+        title: 'System Design',
+        img: 'url()',
+        description: 'Created CRUD operations for Cassandra database. Deployed database to EC2 and load balanced it using Nginx proxy. This system was able to handle 1200 RPS which was achieved by horizontally scaling the database and Express Node.js servers. Performance was optimized by reviewing system metrics on the New Relic dashboard.',
+        techStack: ['Nginx', 'Cassandra', 'AWS', 'New Relic', 'PostgreSQL']
+    },
+    {
+        title: 'Mobile Application',
+        img: 'url()',
+        description: 'Created a mobile applciaiton using react native. Content on this application was served up using AWS Lambda serverless. Included D3 Piechart which was animated using React',
+        techStack: ['React Native', 'GraphQL', 'D3', 'AWS Lambda']
+    },
+]
 
     
 class Projects extends React.Component{
@@ -18,47 +38,19 @@ class Projects extends React.Component{
         alert('hi')
     }
 
+
     render(){
         return (
-            <div>
-                <Name>
-                    Hello, I'm Gurjot Singh.
-                </Name>
-                <p>
-                    I am full-stack software engineer who likes keeping up to date with the latest technologies.
-                    Lately I have been using React, Node, Python, GraphQL, and MongoDB to build my applications however
-                    I have used various other tech stacks. You can find the full list in the skills section.
-                </p>
-                <p>
-                    When I am not building apps, I might be snowboarding, filmmaking, playing volleyball or watching netlfix.
-                </p>
-                <p>
-                    I would love to hear from you so feel free to <u onClick={this.handleClick}>contact</u> me!
-                </p>
-                <div>
-                    ph: (510)672-8042
-                </div>
-                <div>
-                    email: gurjotssingh510@gmail.com
-                </div>
-                <div>
-                    Timeline:
-                </div>
-                <div>
-                    {/* clicking on each should scroll the page a certain amount
-                    and  i shoukd be able to scroll even if mouse in on the left half */}
-                    01 --- Work
-                    02 --- Projects
-                    03 --- Skills
-                    04 --- Contact
-                </div>
-                <div>
-                    Photo
-                    Github logo
-                    Linkedin logo
-                    Resume Download
-                </div>
-            </div>
+            <Container>
+                {projectsData.map((data, idx) => {
+                    return(
+                        <ProjectItem
+                            data={data}
+                            index={idx}
+                        />
+                    )
+                })}
+            </Container>
         )
     }
 }

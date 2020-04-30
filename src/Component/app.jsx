@@ -1,32 +1,33 @@
 import React from 'react';
-import About from './About.jsx'
-import styled from 'styled-components'
-import {Colors, Text, Title} from '../Styles.js'
+import About from './About.jsx';
+import Projects from './Projects.jsx';
+import styled from 'styled-components';
+import {Colors, Text, Title} from '../Styles.js';
 
 const Container = styled.div`
   background: ${Colors.background};
   height: auto;
-  padding:10px;
+  padding:0px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   // justify-content: center;
   // align-items: center;
-  border-style: solid;
-  border-width: 5px;
+  // border-style: solid;
+  // border-width: 5px;
   left: 0;
+  margin: 20px;
   @media (max-width: 990px) {
     flex-direction: column;
   }
 `
 
 const AboutContainer = styled.div`
-  padding: 20px;
-  width: 50%;
-  margin: 5px;
+  width: 40%;
+  margin: 20px;
   height: 100%;
-  border-style: solid;
-  border-width: 3px;
+  // border-style: solid;
+  // border-width: 3px;
   @media (max-width: 990px) {
     width: 100%;
     position: relative;
@@ -35,15 +36,15 @@ const AboutContainer = styled.div`
   position: sticky;
   top: 0;
   align-self: flex-start; /* <-- this is the fix */
-  background-color: ${Colors.innerBackground};  /* Not necessary -- for example only */
+  background-color: ${Colors.Background};  /* Not necessary -- for example only */
 `
 const TimelineContainer = styled.div`
-  width: 50%
+  width: 0px;
   margin: 5px;
-  border-style: solid;
-  border-width: 3px;
+  // border-style: solid;
+  // border-width: 3px;
   @media (max-width: 990px) {
-    width: 100%;
+    width: 80%;
   }
   flex-grow: 1;
 `
@@ -70,7 +71,8 @@ class App extends React.Component {
               <About/>
             </AboutContainer>
             <TimelineContainer>
-              <div style={Text}>How do i look?</div>
+              <Projects/>
+              <div style={Text}>How do i look?vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</div>
               <div style={Title}>Some Title</div>
             </TimelineContainer>
         </Container>
