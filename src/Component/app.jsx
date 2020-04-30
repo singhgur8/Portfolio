@@ -29,6 +29,7 @@ const AboutContainer = styled.div`
   border-width: 3px;
   @media (max-width: 990px) {
     width: 100%;
+    position: relative;
   }
   position: -webkit-sticky; /* for Safari */
   position: sticky;
@@ -64,7 +65,7 @@ class App extends React.Component {
 
   render() {
     return(
-        <Container>
+        <Container> 
             <AboutContainer>
               <About/>
             </AboutContainer>
