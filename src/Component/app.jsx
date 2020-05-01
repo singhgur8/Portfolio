@@ -1,8 +1,9 @@
 import React from 'react';
 import About from './About.jsx';
 import Projects from './Projects.jsx';
+import Experience from './Experience.jsx'
 import styled from 'styled-components';
-import {Colors, Text, Title} from '../Styles.js';
+import {Colors} from '../Styles.js';
 
 const Container = styled.div`
   background: ${Colors.background};
@@ -16,7 +17,7 @@ const Container = styled.div`
   // border-style: solid;
   // border-width: 5px;
   left: 0;
-  margin: 20px;
+  // padding: 20px;
   @media (max-width: 1150px) {
     flex-direction: column;
   }
@@ -24,7 +25,7 @@ const Container = styled.div`
 
 const AboutContainer = styled.div`
   width: 40%;
-  margin: 20px;
+  padding: 40px;
   height: 100%;
   // border-style: solid;
   // border-width: 3px;
@@ -40,7 +41,7 @@ const AboutContainer = styled.div`
 `
 const TimelineContainer = styled.div`
   width: 0px;
-  margin: 5px;
+  margin-top: 40px;
   // border-style: solid;
   // border-width: 3px;
   @media (max-width: 1150px) {
@@ -71,9 +72,8 @@ class App extends React.Component {
               <About/>
             </AboutContainer>
             <TimelineContainer>
+              <Experience/>
               <Projects/>
-              <div style={Text}>How do i look?vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</div>
-              <div style={Title}>Some Title</div>
             </TimelineContainer>
         </Container>
     )

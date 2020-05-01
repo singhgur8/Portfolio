@@ -137,17 +137,17 @@ class About extends React.Component{
                     Hello, I'm Gurjot Singh.
                 </Name>
                 <p style={Text}>
-                    I am full-stack software engineer who likes keeping up to date with the latest technologies.
-                    Lately I have been using React, Node, Python, GraphQL, and MongoDB to build my applications however
-                    I have used various other tech stacks. You can find the full list in the skills section.
+                    I'm a full-stack software engineer who likes keeping up to date with the latest technologies.
+                    Lately I have been using React, Node, Python, GraphQL, and MongoDB to build my applications. However
+                    a full list of technologies is in the <u style={{color:'white'}}>skills</u> section.
                     <br></br>
                     <br></br>
-                    When I am not building apps, I might be snowboarding, filmmaking, playing volleyball or watching netlfix.
+                    Outside of work, catch me snowboarding, filmmaking, or playing volleyball. 
                     <br></br>
                     <br></br>
-                    I would love to hear from you so feel free to <u onClick={this.handleClick}>contact</u> me!
+                    I'm eager to collaborate on new projects. <u style={{color:'white'}} onClick={this.handleClick}>Let's talk</u>!
                 </p>
-                <div>
+                {/* <div>
                     01 ---- Experience. onclick these should scroll
                 </div>
                 <div>
@@ -161,7 +161,7 @@ class About extends React.Component{
                 </div>
                 <div>
                     email: gurjotssingh510@gmail.com
-                </div>
+                </div> */}
                 <ContactInfoContainer>
                     <div style={{paddingRight: 0}}>
                         <Profile>

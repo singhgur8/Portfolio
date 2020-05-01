@@ -8,6 +8,7 @@ const Name = styled.div`
     font-size: 48px;
 `
 
+// THIS IS THE COMPONENT THAT GOES INSIDE OF THE ABOUT SECTION
     
 class Timeline extends React.Component{
     constructor(){

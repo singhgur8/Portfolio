@@ -7,8 +7,11 @@ import {Colors, Text, Title} from '../Styles'
 // will that happen if i know their class names? or can if that does work
 // then i could do it through props...and i could pass props to these components as well
 // maybe they need to be diff that const then
+
+// https://stackoverflow.com/questions/19170481/highlight-div-on-hover-and-fade-out-other-divs-using-just-css3
+
 const Container = styled.div`
-    width: 85%;
+    // width: 85%;
     display: flex;
     flex-direction: row;
     margin: 10px;
@@ -19,7 +22,7 @@ const Container = styled.div`
     &:hover {
         z-index:999;
         cursor: pointer;
-        filter: grayscale(0%);
+        filter: grayscale(0%) blur(0px);
         transform: scale(1.1);
     }
 `
@@ -49,7 +52,7 @@ class ProjectItem extends React.Component{
     }
 
     render(){
-        const {title, description, img, techStack} = this.props.data;
+        const {title, description, img, techStack, imgWidth} = this.props.data;
         return (
             <Container >
                 <ImgContainer>
@@ -58,7 +61,7 @@ class ProjectItem extends React.Component{
                             backgroundImage: img,
                             width: '100%',
                             height: '100%',
-                            backgroundSize: '120% 120%',
+                            backgroundSize: `auto ${imgWidth}px`,
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center'
                         }}
