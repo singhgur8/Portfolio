@@ -17,7 +17,7 @@ const Container = styled.div`
   // border-width: 5px;
   left: 0;
   margin: 20px;
-  @media (max-width: 990px) {
+  @media (max-width: 1150px) {
     flex-direction: column;
   }
 `
@@ -28,7 +28,7 @@ const AboutContainer = styled.div`
   height: 100%;
   // border-style: solid;
   // border-width: 3px;
-  @media (max-width: 990px) {
+  @media (max-width: 1150px) {
     width: 100%;
     position: relative;
   }
@@ -43,7 +43,7 @@ const TimelineContainer = styled.div`
   margin: 5px;
   // border-style: solid;
   // border-width: 3px;
-  @media (max-width: 990px) {
+  @media (max-width: 1150px) {
     width: 80%;
   }
   flex-grow: 1;

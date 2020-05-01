@@ -56,7 +56,7 @@ const LinkedinLogo = styled.div`
     height:${LinkedinSize/4}px;
     background-image: url(https://gurjotportfolio.s3-us-west-1.amazonaws.com/linkedin.png);
     background-size: cover;
-    filter: grayscale(100%);
+    filter: grayscale(100%) brightness(500%);
     transition: .5s;
     &:hover {
         cursor: pointer;
@@ -73,11 +73,10 @@ const GithubContainer = styled.div`
     position: relative;
     top: 20px;
     left: 30px;
-    filter: opacity(30%);
     transition: .5s;
     &:hover {
         cursor: pointer;
-        filter: opacity(100%);
+        filter: drop-shadow(8px 8px 10px gray);
     }
 `
 const GithubLogo = styled.div`
@@ -97,10 +96,9 @@ const ContactInfoContainer = styled.div`
 
 const ResumeContainer = styled.div`
     color: white;
-    filter: opacity(30%);
     font-size: 20px;
     height: 25px;
-    width: 300px;
+    width: 170px;
     padding: 10px;
     white-space: nowrap;
     font-weight: 800;
@@ -113,7 +111,6 @@ const ResumeContainer = styled.div`
     transition: .5s;
     &:hover {
         cursor: pointer;
-        filter: opacity(100%);
         background-color: pink;
     }
     border-radius: 40px
