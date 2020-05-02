@@ -136,7 +136,7 @@ class About extends React.Component{
                 <Name>
                     Hello, I'm Gurjot Singh.
                 </Name>
-                <p style={Text}>
+                <p style={{...Text, filter:'grayscale(100%)'}}>
                     I'm a full-stack software engineer who likes keeping up to date with the latest technologies.
                     Lately I have been using React, Node, Python, GraphQL, and MongoDB to build my applications. However
                     a full list of technologies is in the <u style={{color:'white'}}>skills</u> section.

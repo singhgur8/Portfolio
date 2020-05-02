@@ -6,6 +6,8 @@ import ProjectItem from './ProjectItem.jsx';
 const Container = styled.div`
     padding-right: 30px;
     padding-left: 10px;
+    position: relative;
+    z-index: 1;
 `
 
 const DimWrapper = styled.div`

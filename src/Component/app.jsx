@@ -36,8 +36,8 @@ const AboutContainer = styled.div`
   position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;
-  align-self: flex-start; /* <-- this is the fix */
-  background-color: ${Colors.Background};  /* Not necessary -- for example only */
+  align-self: flex-start; 
+  background-color: ${Colors.Background};
 `
 const TimelineContainer = styled.div`
   width: 0px;

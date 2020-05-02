@@ -26,9 +26,11 @@ class Timeline extends React.Component{
                 <div>
                     {/* clicking on each should scroll the page a certain amount
                     and  i shoukd be able to scroll even if mouse in on the left half */}
+
                     01 --- Work
                     02 --- Projects
                     03 --- Skills
+                    05 --- Education
                     04 --- Contact
                 </div>
                 <div>
