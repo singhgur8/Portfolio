@@ -6,13 +6,8 @@ import ProjectItem from './ProjectItem.jsx';
 const Container = styled.div`
     padding-right: 30px;
     padding-left: 10px;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 30px;
 `
-
-const DimWrapper = styled.div`
-`
-
 
 const Title = styled.div`
     color: white;
@@ -62,8 +57,7 @@ class Projects extends React.Component{
         return (
             <Container>
                 <Title>Projects</Title>
-                <DimWrapper>
-                    {projectsData.map((data, idx) => {
+                    {projectsData.map((data, idx) => { 
                         return(
                             <ProjectItem
                                 data={data}
@@ -72,7 +66,6 @@ class Projects extends React.Component{
                             />
                         )
                     })}
-                </DimWrapper>
             </Container>
         )
     }

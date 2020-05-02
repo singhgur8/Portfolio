@@ -2,6 +2,7 @@ import React from 'react';
 import About from './About.jsx';
 import Projects from './Projects.jsx';
 import Experience from './Experience.jsx'
+import Skills from './Skills.jsx';
 import styled from 'styled-components';
 import {Colors} from '../Styles.js';
 
@@ -12,6 +13,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  // overflow-x: hidden; stop horz scroll
   // justify-content: center;
   // align-items: center;
   // border-style: solid;
@@ -47,6 +49,8 @@ const TimelineContainer = styled.div`
   @media (max-width: 1150px) {
     width: 80%;
   }
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 `
 
@@ -74,6 +78,7 @@ class App extends React.Component {
             <TimelineContainer>
               <Experience/>
               <Projects/>
+              <Skills/>
             </TimelineContainer>
         </Container>
     )

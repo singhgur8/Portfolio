@@ -4,7 +4,7 @@ import {Colors} from '../Styles';
 
 const Container = styled.div`
     display: flex;
-    height: 250px;
+    flex-grow: 6;
     padding-right: 30px;
     padding-left: 30px;
 `

@@ -11,12 +11,13 @@ import {Colors, Text, Title} from '../Styles'
 // https://stackoverflow.com/questions/19170481/highlight-div-on-hover-and-fade-out-other-divs-using-just-css3
 
 const Container = styled.div`
-    // width: 85%;
     display: flex;
     flex-direction: row;
     margin: 10px;
     filter: grayscale(100%);
     transition: .5s;
+    flex-grow: 4;
+    overflow: hidden;
     position: relative;
     z-index: 1;
     &:hover {
@@ -29,13 +30,13 @@ const Container = styled.div`
 
 const ImgContainer = styled.div`
     width: 30%;
+    background-color: gray;
 `
 
 const WordContainer = styled.div`
     justify-content: center;
     align-items: center;
     background: ${Colors.innerBackground};
-    height: 200px;
     width: 400px;
     padding: 25px;
 `
@@ -61,7 +62,8 @@ class ProjectItem extends React.Component{
                             backgroundImage: img,
                             width: '100%',
                             height: '100%',
-                            backgroundSize: `auto ${imgWidth}px`,
+                            // backgroundSize: `auto ${imgWidth}px`,
+                            backgroundSize: 'auto 100%',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center'
                         }}
