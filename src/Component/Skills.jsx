@@ -20,13 +20,13 @@ const Title = styled.div`
 
 
 const skills = [
-        ['placeholder'],
+        ['React Native'],
         ['Javascript', 'React', 'Node.js'],
-        ['Javascript', 'React', 'Node.js', 'Expres.js', 'AWS EC2'],
+        ['HTTP', 'MySQL', 'AWS Lambda', 'Expres.js', 'AWS EC2'],
         ['Nginx', 'Python', 'C#' , 'ASP.NET', 'MongoDB', 'Cassandra', 'PostgreSQL'],
-        ['Javascript', 'React', 'Node.js', 'Expres.js', 'AWS EC2'],
-        ['Javascript', 'React', 'Node.js'],
-        ['placeholder']
+        ['Mocha/Jest', 'Docker', 'D3.js', 'GraphQL', 'Webpack'],
+        ['CSS', 'Git', 'Node.js'],
+        ['HTML']
 ]
 
     
@@ -41,7 +41,6 @@ class Skills extends React.Component{
                 <Title>Skills</Title>
                 <Container>
                     {skills.map((data,index) => {
-                        console.log(index, index%2===1)
                         return(
                             <SkillItem
                                 data={data}

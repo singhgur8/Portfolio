@@ -3,6 +3,8 @@ import About from './About.jsx';
 import Projects from './Projects.jsx';
 import Experience from './Experience.jsx'
 import Skills from './Skills.jsx';
+import Education from './Education.jsx';
+import Contact from './Contact.jsx'
 import styled from 'styled-components';
 import {Colors} from '../Styles.js';
 
@@ -13,7 +15,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  // overflow-x: hidden; stop horz scroll
   // justify-content: center;
   // align-items: center;
   // border-style: solid;
@@ -32,7 +33,7 @@ const AboutContainer = styled.div`
   // border-style: solid;
   // border-width: 3px;
   @media (max-width: 1150px) {
-    width: 100%;
+    width: 90%;
     position: relative;
   }
   position: -webkit-sticky; /* for Safari */
@@ -47,7 +48,7 @@ const TimelineContainer = styled.div`
   // border-style: solid;
   // border-width: 3px;
   @media (max-width: 1150px) {
-    width: 80%;
+    width: 90%;
   }
   display: flex;
   flex-direction: column;
@@ -79,6 +80,8 @@ class App extends React.Component {
               <Experience/>
               <Projects/>
               <Skills/>
+              <Education/>
+              <Contact/>
             </TimelineContainer>
         </Container>
     )

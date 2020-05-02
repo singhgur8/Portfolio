@@ -10,6 +10,9 @@ import {Colors, Text, Title} from '../Styles'
 
 // https://stackoverflow.com/questions/19170481/highlight-div-on-hover-and-fade-out-other-divs-using-just-css3
 
+// i should dim outer container containing all projects so this things parent. when i hover on these
+// items they should come out, and be above the parent in z index so it lightends up while others are dark
+
 const Container = styled.div`
     display: flex;
     flex-direction: row;
@@ -41,11 +44,6 @@ const WordContainer = styled.div`
     padding: 25px;
 `
 
-// this should take in props with following data
-// Tech Stack
-// App Description
-// photo of the item
-// want to add abstraction black and white layer here on photo?..maybe later keep color for now. then on hover it changes
     
 class ProjectItem extends React.Component{
     constructor(props){

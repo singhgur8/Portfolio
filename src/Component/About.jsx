@@ -5,6 +5,9 @@ import GithubIcon from '../SVG/github.jsx'
 
 const Container = styled.div`
     width: 85%
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 `
 
 const Name = styled.div`
@@ -92,6 +95,7 @@ const GithubLogo = styled.div`
 
 const ContactInfoContainer = styled.div`
     display: flex;
+    align-self: flex-end;
 `    
 
 const ResumeContainer = styled.div`
@@ -156,12 +160,16 @@ class About extends React.Component{
                 <div>03 ---- Skills</div>
                 <div>04 ---- Contact Me</div>
 
-                <div>
-                    ph: (510)672-8042
-                </div>
-                <div>
-                    email: gurjotssingh510@gmail.com
                 </div> */}
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <ContactInfoContainer>
                     <div style={{paddingRight: 0}}>
                         <Profile>
