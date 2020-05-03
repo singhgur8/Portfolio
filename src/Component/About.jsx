@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import {Colors, Text} from '../Styles'
+import {Colors, Text, Title} from '../Styles'
 import GithubIcon from '../SVG/github.jsx'
 
 const Container = styled.div`
@@ -142,6 +142,24 @@ class About extends React.Component{
             behavior: 'smooth'
         });
     }
+    goToTop(){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    goToProjects(){
+        window.scrollTo({
+            top: 525,
+            behavior: 'smooth'
+        });
+    }
+    goToContact(){
+        window.scrollTo({
+            top: 1830,
+            behavior: 'smooth'
+        });
+    }
 
     render(){
         return (
@@ -158,23 +176,21 @@ class About extends React.Component{
                     Outside of work, catch me snowboarding, filmmaking, or playing volleyball. 
                     <br></br>
                     <br></br>
-                    I'm eager to collaborate on new projects. <u style={{color:'white'}} onClick={this.handleClick}>Let's talk</u>!
+                    I'm eager to collaborate on new projects. <u style={{color:'white', cursor:'pointer'}} onClick={this.goToContact}>Let's talk</u>!
                 </p>
-                {/* <div>
-                    01 ---- Experience. onclick these should scroll
+                <div style={{...Title, fontSize: 20, cursor: 'pointer'}} onClick={this.goToTop}>
+                    01 ---- Experience
                 </div>
-                <div>
-                    02 ---- Projects. and on scroll these should highlight differently
+                <div style={{...Title, fontSize: 20, cursor: 'pointer'}} onClick={this.goToProjects}>
+                    02 ---- Projects
                 </div>
-                <div>03 ---- Skills</div>
-                <div>04 ---- Contact Me</div>
+                <div style={{...Title, fontSize: 20, cursor: 'pointer'}} onClick={this.goToSkills}>
+                    03 ---- Skills
+                </div>
+                <div style={{...Title, fontSize: 20, cursor:'pointer'}} onClick={this.goToContact}>
+                    04 ---- Contact Me
+                </div>
 
-                </div> */}
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
                 <br></br>
                 <br></br>
                 <br></br>
