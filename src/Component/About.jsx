@@ -47,7 +47,7 @@ const Image = styled.div`
     filter: grayscale(100%);
     transition: .5s;
     &:hover {
-        cursor: pointer;
+        // cursor: pointer;
         filter: grayscale(0%);
     }
 `
@@ -98,7 +98,8 @@ const ContactInfoContainer = styled.div`
     align-self: flex-end;
 `    
 
-const ResumeContainer = styled.div`
+const ResumeContainer = styled.a`
+    text-decoration: none;
     color: white;
     font-size: 20px;
     height: 25px;
@@ -126,12 +127,20 @@ class About extends React.Component{
         super()
     }
 
-    handleClick(e){
+    handleGit(e){
         e.preventDefault();
-        console.log('whole thing clicked')
-        // alert('hi')
-        // scroll the page to my contact even when my face is clicked
-        // otherwise have Github, Linkedin, Contact info on sticky
+        window.location = 'https://github.com/singhgur8'
+    }
+    handleLinkedin(e){
+        e.preventDefault();
+        window.location = 'https://www.linkedin.com/in/singhgur8/'
+    }
+
+    goToSkills(){
+        window.scrollTo({
+            top: 1330,
+            behavior: 'smooth'
+        });
     }
 
     render(){
@@ -143,7 +152,7 @@ class About extends React.Component{
                 <p style={{...Text, filter:'grayscale(100%)'}}>
                     I'm a full-stack software engineer who likes keeping up to date with the latest technologies.
                     Lately I have been using React, Node, Python, GraphQL, and MongoDB to build my applications. However
-                    a full list of technologies is in the <u style={{color:'white'}}>skills</u> section.
+                    a full list of technologies is in the <u style={{color:'white', cursor:'pointer'}} onClick={this.goToSkills}>skills</u> section.
                     <br></br>
                     <br></br>
                     Outside of work, catch me snowboarding, filmmaking, or playing volleyball. 
@@ -176,15 +185,15 @@ class About extends React.Component{
                             <Image onClick={this.handleClick}/>
                         </Profile>
                     </div>
-                    <GithubContainer onClick={this.handleClick}>
+                    <GithubContainer onClick={this.handleGit}>
                         <GithubIcon width={45} height={45}/>
                         <GithubLogo/>
                         {/* <div style={{...Text, fontSize: '20px', color: '#fff', position: 'relative', top: -18, left: 5}}>Github</div> */}
                     </GithubContainer>
-                    <div style={{position: 'relative', top: 24, left: 40}}>
+                    <div style={{position: 'relative', top: 24, left: 40}} onClick={this.handleLinkedin}>
                         <LinkedinLogo/>
                     </div>
-                    <ResumeContainer>
+                    <ResumeContainer id='resume' href={'https://gurjotportfolio.s3-us-west-1.amazonaws.com/GurjotSingh_Resume.pdf'} download='resume.pdf' >
                         Download Resume
                     </ResumeContainer>
                 </ContactInfoContainer>
