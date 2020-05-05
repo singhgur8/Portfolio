@@ -32,7 +32,7 @@ class Contact extends React.Component{
 
     render(){
         return (
-            <div>
+            <div id='contact'>
                 <Title>Contact Information</Title>
                     <Container>
                         <div style={{backgroundColor: Colors.innerBackground, width:'100%', margin: 'auto', borderRadius:'3px'}}>

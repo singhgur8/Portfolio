@@ -55,28 +55,71 @@ const TimelineContainer = styled.div`
   flex-grow: 1;
 `
 
+// So i can create a hook that runs when the window size changes...
+// altho how do i encorporate that into this? cus i just need to see if window size changed so i can
+// retrigger to change this.positions... i might just be able to add logic in here as listener as well
+// and maybe i need to make the positions state so it actually registers the change? naw  i can just 
+// create a method that runs a comparision and updates state if needed, create that helper funtiocn
+
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-     
+          sectionHighlight: 0
       }
-    
+    this.positions = []
+    this.onScrollHandle = this.onScrollHandle.bind(this)
+  }
+  
+  componentDidMount(){
+    window.addEventListener('scroll', this.onScrollHandle);
+
+    // flaw with below design happens if someone adjusts window size after page opens, i need to 
+    // retrigger these calculations at that time
+    let components = []
+    components.push(document.getElementById('experience'), document.getElementById('projects'), document.getElementById('skills'), document.getElementById('contact'))
+    let bodyRect = document.body.getBoundingClientRect();
+    for (let i = 0; i < components.length; i++){
+      this.positions.push(-bodyRect.top + components[i].getBoundingClientRect().top - 40)
+    }
   }
 
-  componentDidMount() {
-   
-    }
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  onScrollHandle(){
+    let bodyRect = document.body.getBoundingClientRect();
+    let section = 0;
+    for(let i = 0; i < this.positions.length; i++){
+      if (-bodyRect.top+(500) >= this.positions[i]) {
+        section = i;
+      }
+    } // adding half of 710 (height of page) just means when its half way in sight the section will
+    // highlight... dont need the updateing of width anyways because you cant really see
+    // the timeline once you scroll down in a single view anyways....
+    // altho, issue still is if they open at wrong width right???
+
+    // only issue is that the last section is placed lower than we can possibly go...
+    // unless i change it so it shows when the page is first showing...? 
+    // but then this wont watch with how the symbols high light when are clicked, cus it takes the
+    // page to their personal tops
+    this.setState({sectionHighlight: section})
+
+    // this needs to retrigger a rerender of about if it crosses over... only thing is i dont know the 
+    // the position of all the elements...unless its just calculated at the beginging...unless i can trigger
+    // an event everytime the media width is changed in the componenet
+  }
   
 
   render() {
     return(
-        <Container> 
+        <Container onScroll={this.onScrollHandle}> 
             <AboutContainer>
-              <About/>
+              <About idx={this.state.sectionHighlight}/>
             </AboutContainer>
-            <TimelineContainer>
+            <TimelineContainer onScroll={this.onScrollHandle}>
               <Experience/>
               <Projects/>
               <Skills/>

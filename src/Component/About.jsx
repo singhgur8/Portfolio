@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {Colors, Text, Title} from '../Styles'
 import GithubIcon from '../SVG/github.jsx'
 
@@ -121,10 +121,55 @@ const ResumeContainer = styled.a`
     border-radius: 40px
 `
 
+let timelineData = [
+    {
+        title: 'Experience'
+    },
+    {
+        title: 'Projects'
+    },
+    {
+        title: 'Skills'
+    },
+    {
+        title: 'Contact'
+    }
+]
+
+const TimeLineDiv = styled.div`
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    ${props=> props.highlight && css `
+        font-size: 40px;
+    `}
+
+`
+
+let TimelineItem = ({highlight, title, index, scrollPage}) => {
+    if (highlight){
+        return(
+            <TimeLineDiv highlight onClick={scrollPage} id={title.toLowerCase()+'.'}>
+                    {index+1} ---- {title}
+            </TimeLineDiv>
+        )
+    } else {
+        return (
+            <TimeLineDiv onClick={scrollPage} id={title.toLowerCase()+'.'}>
+                    {index+1} ---- {title}
+            </TimeLineDiv>
+        )
+    }
+}
+
 
 class About extends React.Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+
+        this.goToSection = this.goToSection.bind(this)
     }
 
     handleGit(e){
@@ -136,39 +181,23 @@ class About extends React.Component{
         window.location = 'https://www.linkedin.com/in/singhgur8/'
     }
 
-    goToSkills(e, data){
-        // id and class name work, so just give all the buttons that move this item
-        // to this element by id and test it...cus idk if all the e.targets will result in name
-        console.log(e.target.name, e.target.id, e.target.className)
-        let el = document.getElementById('skills')
+    goToSection(e){
+        let id = e.target.id.slice(0,e.target.id.length-1)
+        let el = document.getElementById(id)
+        let elRect = el.getBoundingClientRect();
+        let bodyRect = document.body.getBoundingClientRect();
+        console.log(bodyRect.top ,elRect.top ) // body rect gives its previous location
+        // anywho, i should just do something on scroll
         el.scrollIntoView({behavior: "smooth"});
 
-        // do scroll to top for one of them... i can get window y position
-        // but dynamically that doesn't help... unless i can also get the position
-        // of certain divs on the window, then i get location and their relative pos and tell which
-        // thing on the timeline will be highlighted
-    }
-
-    goToTop(){
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-    goToProjects(){
-        window.scrollTo({
-            top: 525,
-            behavior: 'smooth'
-        });
-    }
-    goToContact(){
-        window.scrollTo({
-            top: 1830,
-            behavior: 'smooth'
-        });
     }
 
     render(){
+
+        // this will recieve a props from which index item will be highlighted
+        // then this needs to just  take care of it in its array...
+        // so instead of writing out all of the items in the array, just create data set outside
+
         return (
             <Container>
                 <Name>
@@ -185,19 +214,17 @@ class About extends React.Component{
                     <br></br>
                     I'm eager to collaborate on new projects. <u style={{color:'white', cursor:'pointer'}} onClick={this.goToContact}>Let's talk</u>!
                 </p>
-                <div style={{...Title, fontSize: 20, cursor: 'pointer'}} onClick={this.goToTop}>
-                    01 ---- Experience
-                </div>
-                <div style={{...Title, fontSize: 20, cursor: 'pointer'}} onClick={this.goToProjects}>
-                    02 ---- Projects
-                </div>
-                <div style={{...Title, fontSize: 20, cursor: 'pointer'}} onClick={this.goToSkills} className='test' name='test' id='test'>
-                    03 ---- Skills
-                </div>
-                <div style={{...Title, fontSize: 20, cursor:'pointer'}} onClick={this.goToContact}>
-                    04 ---- Contact Me
-                </div>
-
+                {timelineData.map((item,idx)=>{
+                    let highlight = this.props.idx === idx
+                    return(
+                        <TimelineItem
+                            title = {item.title}
+                            index = {idx}
+                            highlight = {highlight}
+                            scrollPage = {this.goToSection}
+                        />
+                    )
+                })}
                 <br></br>
                 <br></br>
                 <br></br>

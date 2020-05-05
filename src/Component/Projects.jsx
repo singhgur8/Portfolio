@@ -61,7 +61,7 @@ class Projects extends React.Component{
 
     render(){
         return (
-            <Container>
+            <Container id='projects'>
                 <Title>Projects</Title>
                     {projectsData.map((data, idx) => { 
                         return(
