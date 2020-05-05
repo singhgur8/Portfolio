@@ -13,7 +13,8 @@ import {Colors, Text, Title} from '../Styles'
 // i should dim outer container containing all projects so this things parent. when i hover on these
 // items they should come out, and be above the parent in z index so it lightends up while others are dark
 
-const Container = styled.div`
+const Container = styled.a`
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     margin: 10px;
@@ -44,6 +45,16 @@ const WordContainer = styled.div`
     padding: 25px;
 `
 
+const VideoLink = styled.a`
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+    transition: .5s;
+    position: relative;
+    &:hover {
+        color: white;
+    }
+`
     
 class ProjectItem extends React.Component{
     constructor(props){
@@ -51,9 +62,10 @@ class ProjectItem extends React.Component{
     }
 
     render(){
-        const {title, description, img, techStack, imgWidth} = this.props.data;
+        const {title, description, img, techStack, imgWidth, videoUrl, githubUrl} = this.props.data;
+        const playSign = '\u25B6'
         return (
-            <Container >
+            <Container href={githubUrl}>
                 <ImgContainer>
                     <div
                         style = {{
@@ -71,6 +83,7 @@ class ProjectItem extends React.Component{
                     <div style={{...Title, fontSize: 25, fontWeight: 'bold'}}>{title}</div>
                     <div style={{...Text}}>{description}</div>
                     <div style={{...Text, fontSize: 15, color: 'white'}}>Technologies: {techStack}</div>
+                    {videoUrl ? <VideoLink href={videoUrl}>{playSign} Video</VideoLink> : null}
                 </WordContainer>
             </Container>
         )

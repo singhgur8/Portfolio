@@ -136,12 +136,19 @@ class About extends React.Component{
         window.location = 'https://www.linkedin.com/in/singhgur8/'
     }
 
-    goToSkills(){
-        window.scrollTo({
-            top: 1330,
-            behavior: 'smooth'
-        });
+    goToSkills(e, data){
+        // id and class name work, so just give all the buttons that move this item
+        // to this element by id and test it...cus idk if all the e.targets will result in name
+        console.log(e.target.name, e.target.id, e.target.className)
+        let el = document.getElementById('skills')
+        el.scrollIntoView({behavior: "smooth"});
+
+        // do scroll to top for one of them... i can get window y position
+        // but dynamically that doesn't help... unless i can also get the position
+        // of certain divs on the window, then i get location and their relative pos and tell which
+        // thing on the timeline will be highlighted
     }
+
     goToTop(){
         window.scrollTo({
             top: 0,
@@ -184,7 +191,7 @@ class About extends React.Component{
                 <div style={{...Title, fontSize: 20, cursor: 'pointer'}} onClick={this.goToProjects}>
                     02 ---- Projects
                 </div>
-                <div style={{...Title, fontSize: 20, cursor: 'pointer'}} onClick={this.goToSkills}>
+                <div style={{...Title, fontSize: 20, cursor: 'pointer'}} onClick={this.goToSkills} className='test' name='test' id='test'>
                     03 ---- Skills
                 </div>
                 <div style={{...Title, fontSize: 20, cursor:'pointer'}} onClick={this.goToContact}>

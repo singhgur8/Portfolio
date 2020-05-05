@@ -24,14 +24,18 @@ const projectsData = [
         img: 'url(https://gurjotportfolio.s3-us-west-1.amazonaws.com/HomeReservationApp.png)',
         description: 'Created a containerized microserive which was deployed to Ec2. Main features include a dynamic photo gallery along with a photo carousel.',
         techStack: 'React, Docker, AWS EC2, Node.js, CSS Modules, Webpack, Microservice, MongoDB',
-        imgWidth: 250
+        imgWidth: 250,
+        videoUrl: 'https://www.youtube.com/watch?v=ltTGxX7qFrs&feature=youtu.be',
+        githubUrl: 'https://github.com/singhgur8/airbnb-photogallery'
     },
     {
         title: 'System Design',
         img: 'url(https://gurjotportfolio.s3-us-west-1.amazonaws.com/DashboardSysDesign.png)',
         description: 'Created CRUD operations for Cassandra database. Deployed database to EC2 and load balanced using Nginx proxy. This system handled 1200 RPS which was achieved by horizontally scaling the database and Node.js servers. Performance was optimized by finding bottlenecks using the New Relic dashboard.',
         techStack: 'Nginx, Cassandra, AWS, New Relic, PostgreSQL',
-        imgWidth: 250
+        imgWidth: 250,
+        videoUrl: null,
+        githubUrl: 'https://github.com/singhgur8/popularFoods'
     },
     {
         title: 'Mobile Application',
@@ -39,6 +43,8 @@ const projectsData = [
         description: 'Created a mobile applciaiton using react native. Content on this application was served up using AWS Lambda serverless. Included D3 Piechart which was animated using React',
         techStack: 'React Native, GraphQL, D3, AWS Lambda',
         imgWidth: 470,
+        videoUrl: null,
+        githubUrl: 'https://github.com/singhgur8/groakMobile'
     },
 ]
 

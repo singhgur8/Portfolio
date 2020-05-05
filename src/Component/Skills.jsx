@@ -37,7 +37,7 @@ class Skills extends React.Component{
 
     render(){
         return (
-            <div>
+            <div id='skills'>
                 <Title>Skills</Title>
                 <Container>
                     {skills.map((data,index) => {

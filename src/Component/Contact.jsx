@@ -24,13 +24,11 @@ const Title = styled.div`
     width: 100%;
     padding-left: 20px;
 `
-
     
 class Contact extends React.Component{
     constructor(){
         super()
     }
-
 
     render(){
         return (
