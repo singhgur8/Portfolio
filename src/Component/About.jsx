@@ -179,7 +179,7 @@ class About extends React.Component{
         return (
             <Container>
                 <Name>
-                    Hello, I'm Gurjot Singh.
+                    Hello, I'm <br></br>Gurjot Singh.
                 </Name>
                 <p style={{...Text, filter:'grayscale(100%)'}}>
                     I'm a full-stack software engineer who likes keeping up to date with the latest technologies.
