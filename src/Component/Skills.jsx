@@ -22,10 +22,10 @@ const Title = styled.div`
 const skills = [
         ['React Native'],
         ['Javascript', 'React', 'Node.js'],
-        ['HTTP', 'MySQL', 'AWS Lambda', 'Expres.js', 'AWS EC2'],
+        ['HTTP', 'MySQL', 'AWS Lambda', 'Express.js', 'AWS EC2'],
         ['Nginx', 'Python', 'C#' , 'ASP.NET', 'MongoDB', 'Cassandra', 'PostgreSQL'],
         ['Mocha/Jest', 'Docker', 'D3.js', 'GraphQL', 'Webpack'],
-        ['CSS', 'Git', 'Node.js'],
+        ['CSS', 'Git', 'Rest API'],
         ['HTML']
 ]
 

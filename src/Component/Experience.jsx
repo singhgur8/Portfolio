@@ -29,7 +29,7 @@ const experienceData = [
         description: [
             'Developed front-end website email list report feature for admin users using C# in ASP.NET MVC.',
             'Seeded SQL database and created MVC components for new ecommerce products', 
-            'Updated the search capabilities of parts on eCommerce web application.',
+            'Updated authentication forms to include more data points. Reflected changes in the backend and database.',
             'Coded python scripts to create adaptable 3D models based on user input.',
             'Used Inventor to create engineering specification drawings for manufacturable 3D parts.'
         ],

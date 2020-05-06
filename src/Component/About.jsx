@@ -121,7 +121,7 @@ let timelineData = [
 ]
 
 const TimeLineDiv = styled.div`
-    font-size: 20px;
+    font-size: 14px;
     cursor: pointer;
     color: ${Colors.text};
     margin: 10px;
@@ -129,7 +129,7 @@ const TimeLineDiv = styled.div`
     transition: .5s;
     filter: grayscale(100%);
     ${props=> props.highlight && css `
-        font-size: 40px;
+        font-size: 20px;
         color: white;
     `}
 
@@ -184,9 +184,7 @@ class About extends React.Component{
                 <p style={{...Text, filter:'grayscale(100%)'}}>
                     I'm a full-stack software engineer who likes keeping up to date with the latest technologies.
                     Lately I have been using React, Node, Python, GraphQL, and MongoDB to build my applications. However
-                    a full list of technologies is in the <u style={{color:'white', cursor:'pointer'}} onClick={this.goToSection} id={'skills!'}>skills</u> section.
-                    <br></br>
-                    <br></br>
+                    a full list of technologies is in the <u style={{color:'white', cursor:'pointer'}} onClick={this.goToSection} id={'skills!'}>skills</u> section. 
                     Outside of work, catch me snowboarding, filmmaking, or playing volleyball. 
                     <br></br>
                     <br></br>
@@ -206,6 +204,8 @@ class About extends React.Component{
                         )
                     })}
                 </div>
+                <br></br>
+                <br></br>
                 <ContactInfoContainer>
                     <div style={{paddingRight: 0}}>
                         {/* <Profile> */}
