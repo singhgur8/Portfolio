@@ -92,14 +92,14 @@ class App extends React.Component {
   onScrollHandle(){
     let bodyRect = document.body.getBoundingClientRect();
     let section = 0;
+    let bodyPosY = -bodyRect.top
+    if (bodyPosY > this.positions[this.positions.length-2]) bodyPosY += 500 // adjusts for last one
+    // being at a spot where the page cant scroll to top of
     for(let i = 0; i < this.positions.length; i++){
-      if (-bodyRect.top+(500) >= this.positions[i]) {
+      if (bodyPosY >= this.positions[i]) {
         section = i;
       }
-    } // adding half of 710 (height of page) just means when its half way in sight the section will
-    // highlight... dont need the updateing of width anyways because you cant really see
-    // the timeline once you scroll down in a single view anyways....
-    // altho, issue still is if they open at wrong width right???
+    } 
 
     // only issue is that the last section is placed lower than we can possibly go...
     // unless i change it so it shows when the page is first showing...? 

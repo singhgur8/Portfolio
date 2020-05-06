@@ -5,9 +5,6 @@ import ProjectItem from './ProjectItem.jsx';
 
 const Container = styled.div`
     width: 80%;
-    border-style: solid;
-    border-wdith:1px;
-    border-color: white;
     margin-bottom: 60px;
     margin-left: 15px;
     text-align: center;

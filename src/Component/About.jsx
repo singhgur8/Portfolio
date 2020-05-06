@@ -17,39 +17,23 @@ const Name = styled.div`
     font-family: Arial, Helvetica, sans-serif;
 `
 
-const photoHeight = 150;
-const photoWidth = photoHeight*(3/2)
-
-const frameHeight = photoHeight;
+const frameHeight = 150;
 const frameWidth = frameHeight
 
-const posX = (frameWidth/2) - (photoWidth/2)
-const posY = (frameHeight/2) - (photoHeight/2)
-
-
-const Profile = styled.div`
-    width:${frameHeight}px;
-    height: ${frameWidth}px;
-    border-radius: ${frameWidth/2}px;
-    overflow: hidden;
-    background: white;
-`
-
 const Image = styled.div`
-    width:${photoWidth}px;
-    height: ${photoHeight}px; 
+    width:${frameWidth}px;
+    height: ${frameHeight}px; 
     background: rgb(0,0,0,0); 
     position: relative;
-    top: ${posY}px;
-    left: ${posX}px;
     background-image: url(https://gurjotportfolio.s3-us-west-1.amazonaws.com/Profile.jpg);
     background-size: cover;
+    background-position: center;
     filter: grayscale(100%);
     transition: .5s;
     &:hover {
-        // cursor: pointer;
         filter: grayscale(0%);
     }
+    border-radius: ${frameWidth/2}px;
 `
 const LinkedinSize = 130;
 const LinkedinLogo = styled.div`
@@ -139,26 +123,30 @@ let timelineData = [
 const TimeLineDiv = styled.div`
     font-size: 20px;
     cursor: pointer;
-    color: white;
+    color: ${Colors.text};
+    margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
-
+    transition: .5s;
+    filter: grayscale(100%);
     ${props=> props.highlight && css `
         font-size: 40px;
+        color: white;
     `}
 
 `
 
 let TimelineItem = ({highlight, title, index, scrollPage}) => {
+    const dash = '\u2015'
     if (highlight){
         return(
             <TimeLineDiv highlight onClick={scrollPage} id={title.toLowerCase()+'.'}>
-                    {index+1} ---- {title}
+                    {index+1} {dash} {title}
             </TimeLineDiv>
         )
     } else {
         return (
             <TimeLineDiv onClick={scrollPage} id={title.toLowerCase()+'.'}>
-                    {index+1} ---- {title}
+                    {index+1} {dash} {title}
             </TimeLineDiv>
         )
     }
@@ -193,11 +181,6 @@ class About extends React.Component{
     }
 
     render(){
-
-        // this will recieve a props from which index item will be highlighted
-        // then this needs to just  take care of it in its array...
-        // so instead of writing out all of the items in the array, just create data set outside
-
         return (
             <Container>
                 <Name>
@@ -206,39 +189,36 @@ class About extends React.Component{
                 <p style={{...Text, filter:'grayscale(100%)'}}>
                     I'm a full-stack software engineer who likes keeping up to date with the latest technologies.
                     Lately I have been using React, Node, Python, GraphQL, and MongoDB to build my applications. However
-                    a full list of technologies is in the <u style={{color:'white', cursor:'pointer'}} onClick={this.goToSkills}>skills</u> section.
+                    a full list of technologies is in the <u style={{color:'white', cursor:'pointer'}} onClick={this.goToSection} id={'skills!'}>skills</u> section.
                     <br></br>
                     <br></br>
                     Outside of work, catch me snowboarding, filmmaking, or playing volleyball. 
                     <br></br>
                     <br></br>
-                    I'm eager to collaborate on new projects. <u style={{color:'white', cursor:'pointer'}} onClick={this.goToContact}>Let's talk</u>!
+                    I'm eager to collaborate on new projects. <u style={{color:'white', cursor:'pointer'}} onClick={this.goToSection} id={'contact!'}>Let's talk</u>!
                 </p>
-                {timelineData.map((item,idx)=>{
-                    let highlight = this.props.idx === idx
-                    return(
-                        <TimelineItem
-                            title = {item.title}
-                            index = {idx}
-                            highlight = {highlight}
-                            scrollPage = {this.goToSection}
-                        />
-                    )
-                })}
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+                <div style={{height: 160}}>
+                    {timelineData.map((item,idx)=>{
+                        let highlight = this.props.idx === idx
+                        return(
+                            <TimelineItem
+                                title = {item.title}
+                                index = {idx}
+                                highlight = {highlight}
+                                scrollPage = {this.goToSection}
+                            />
+                        )
+                    })}
+                </div>
                 <ContactInfoContainer>
                     <div style={{paddingRight: 0}}>
-                        <Profile>
-                            <Image onClick={this.handleClick}/>
-                        </Profile>
+                        {/* <Profile> */}
+                            <Image/>
+                        {/* </Profile> */}
                     </div>
                     <GithubContainer onClick={this.handleGit}>
                         <GithubIcon width={45} height={45}/>
                         <GithubLogo/>
-                        {/* <div style={{...Text, fontSize: '20px', color: '#fff', position: 'relative', top: -18, left: 5}}>Github</div> */}
                     </GithubContainer>
                     <div style={{position: 'relative', top: 24, left: 40}} onClick={this.handleLinkedin}>
                         <LinkedinLogo/>
