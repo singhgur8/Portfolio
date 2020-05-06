@@ -45,6 +45,7 @@ class Skills extends React.Component{
                             <SkillItem
                                 data={data}
                                 longer={index%2===1}
+                                key={index+'skillSection'}
                             />
                         )   
                     })}

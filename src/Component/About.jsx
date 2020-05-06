@@ -172,12 +172,7 @@ class About extends React.Component{
     goToSection(e){
         let id = e.target.id.slice(0,e.target.id.length-1)
         let el = document.getElementById(id)
-        let elRect = el.getBoundingClientRect();
-        let bodyRect = document.body.getBoundingClientRect();
-        console.log(bodyRect.top ,elRect.top ) // body rect gives its previous location
-        // anywho, i should just do something on scroll
         el.scrollIntoView({behavior: "smooth"});
-
     }
 
     render(){
@@ -206,6 +201,7 @@ class About extends React.Component{
                                 index = {idx}
                                 highlight = {highlight}
                                 scrollPage = {this.goToSection}
+                                key={'timeline'+idx}
                             />
                         )
                     })}

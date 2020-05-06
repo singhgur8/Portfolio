@@ -66,14 +66,16 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-          sectionHighlight: 0
+          sectionHighlight: 0,
       }
     this.positions = []
     this.onScrollHandle = this.onScrollHandle.bind(this)
+    this.handleWindowResize = this.handleWindowResize.bind(this)
   }
   
   componentDidMount(){
     window.addEventListener('scroll', this.onScrollHandle);
+    window.addEventListener('resize', this.handleWindowResize);
 
     // flaw with below design happens if someone adjusts window size after page opens, i need to 
     // retrigger these calculations at that time
@@ -87,6 +89,17 @@ class App extends React.Component {
 
   componentWillUnmount(){
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleWindowResize)
+  }
+
+  handleWindowResize(){
+    let components = []
+    components.push(document.getElementById('experience'), document.getElementById('projects'), document.getElementById('skills'), document.getElementById('contact'))
+    let bodyRect = document.body.getBoundingClientRect();
+    for (let i = 0; i < components.length; i++){
+      this.positions[i] = -bodyRect.top + components[i].getBoundingClientRect().top - 40
+    }
+    this.onScrollHandle()
   }
 
   onScrollHandle(){
@@ -105,11 +118,12 @@ class App extends React.Component {
     // unless i change it so it shows when the page is first showing...? 
     // but then this wont watch with how the symbols high light when are clicked, cus it takes the
     // page to their personal tops
-    this.setState({sectionHighlight: section})
 
-    // this needs to retrigger a rerender of about if it crosses over... only thing is i dont know the 
-    // the position of all the elements...unless its just calculated at the beginging...unless i can trigger
-    // an event everytime the media width is changed in the componenet
+    // does it rerender if the state changes from same to same?
+    if (this.state.sectionHighlight !== section){
+      this.setState({sectionHighlight: section})
+    }
+
   }
   
 

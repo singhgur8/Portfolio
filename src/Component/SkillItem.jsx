@@ -72,6 +72,7 @@ class SkillItem extends React.Component{
                         return(
                             <Skill
                                 name={item}
+                                key={'skillItem' + idx}
                             />
                         )
                     })}
