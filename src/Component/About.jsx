@@ -121,6 +121,7 @@ let timelineData = [
 ]
 
 const TimeLineDiv = styled.div`
+    height: 20px;
     font-size: 14px;
     cursor: pointer;
     color: ${Colors.text};

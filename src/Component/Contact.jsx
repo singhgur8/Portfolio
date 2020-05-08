@@ -33,9 +33,9 @@ class Contact extends React.Component{
                 <Title>Contact Information</Title>
                     <Container>
                         <div style={{backgroundColor: Colors.innerBackground, width:'100%', margin: 'auto', borderRadius:'3px'}}>
-                            <div style={Text}>Phone: (510) 672-8042</div>
-                            <div style={Text}>Email: gurjotssingh510@gmail.com</div>
-                            <div style={Text}>Linkedin: https://www.linkedin.com/in/singhgur8/</div>
+                            <div style={{...Text, color:'white'}}>Phone: (510) 672-8042</div>
+                            <div style={{...Text, color:'white'}}>Email: gurjotssingh510@gmail.com</div>
+                            <a style={{...Text, color:'white'}} href="https://www.linkedin.com/in/singhgur8/">https://www.linkedin.com/in/singhgur8/</a>
                         </div>
                 </Container>
             </div>

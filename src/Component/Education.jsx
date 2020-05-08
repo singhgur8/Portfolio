@@ -4,11 +4,13 @@ import {Colors, Text} from '../Styles'
 import ProjectItem from './ProjectItem.jsx';
 
 const Container = styled.div`
-    width: 80%;
+    width: 80%; // could be 100 if i could align everything to the left..?
     padding: 10px;
     margin-left: 15px;
     margin-bottom: 30px;
+    margin-top: 10px;
     text-align: center;
+    justify-content: space-between;
     background-color: ${Colors.innerBackground}
 `
 
@@ -21,6 +23,21 @@ const Title = styled.div`
     padding-left: 20px;
 `
 
+const InnerContainer = styled.div`
+    width:80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ${Colors.background}
+`
+const Seperator = styled.div`
+    width: 80%;
+    height: .5px;
+    color:white;
+    background-color: white;
+    margin: auto;
+`
     
 class Education extends React.Component{
     constructor(){
@@ -33,16 +50,23 @@ class Education extends React.Component{
             <div>
                 <Title>Education</Title>
                     <Container>
-                        <div style={{backgroundColor: 'white', width:'80%', margin: 'auto'}}>
-                            <div style={Text}>University of California, Davis</div>
-                            <div style={Text}>Bachelors of Science, Mechanical Engineering</div>
-                            <div style={Text}>2014-2018</div>
-                        </div>
-                        <div style={{backgroundColor: 'white', width:'80%', margin: 'auto'}}>
-                            <div style={Text}>Hack Reactor</div>
-                            <div style={Text}>Software Engineering Immersive</div>
-                            <div style={Text}>2019-2020</div>
-                        </div>
+                        <InnerContainer>
+                            <img style={{width:170, height:35, marginRight: 20}} src='https://gurjotportfolio.s3-us-west-1.amazonaws.com/ucdavis_logo_gold.png'/>
+                            <div>
+                                <div style={{...Text, color: 'white'}}>University of California, Davis</div>
+                                <div style={{...Text, color: 'white'}}>Bachelors of Science, Mechanical Engineering</div>
+                                <div style={{...Text, color: 'white'}}>2014 - 2018</div>
+                            </div>
+                        </InnerContainer>
+                        <Seperator/>
+                        <InnerContainer>
+                            <img style={{width:170, height:50, marginRight: 20}} src='http://hrhqdir.s3.amazonaws.com/brand-guide/HackReactor_RGBLogo-White-Blue.png'/>
+                            <div style={{alignSelf:'flex-end'}}>
+                                <div style={{...Text, color: 'white'}}>Hack Reactor</div>
+                                <div style={{...Text, color: 'white'}}>Software Engineering Immersive</div>
+                                <div style={{...Text, color: 'white'}}>2019 - 2020</div>
+                            </div>
+                        </InnerContainer>
                 </Container>
             </div>
         )
