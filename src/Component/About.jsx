@@ -4,7 +4,7 @@ import {Colors, Text, Title} from '../Styles'
 import GithubIcon from '../SVG/github.jsx'
 
 const Container = styled.div`
-    width: 85%
+    width: 85%;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -80,6 +80,7 @@ const GithubLogo = styled.div`
 const ContactInfoContainer = styled.div`
     display: flex;
     align-self: flex-end;
+    margin: auto;
 `    
 
 const ResumeContainer = styled.a`

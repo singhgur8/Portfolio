@@ -33,8 +33,9 @@ const AboutContainer = styled.div`
   // border-style: solid;
   // border-width: 3px;
   @media (max-width: 1150px) {
-    width: 90%;
+    width: 80%;
     position: relative;
+    margin: auto;
   }
   position: -webkit-sticky; /* for Safari */
   position: sticky;
@@ -48,19 +49,13 @@ const TimelineContainer = styled.div`
   // border-style: solid;
   // border-width: 3px;
   @media (max-width: 1150px) {
-    width: 90%;
+    width: 80%;
+    margin: auto;
   }
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 `
-
-// So i can create a hook that runs when the window size changes...
-// altho how do i encorporate that into this? cus i just need to see if window size changed so i can
-// retrigger to change this.positions... i might just be able to add logic in here as listener as well
-// and maybe i need to make the positions state so it actually registers the change? naw  i can just 
-// create a method that runs a comparision and updates state if needed, create that helper funtiocn
-
 
 class App extends React.Component {
   constructor() {
@@ -77,8 +72,6 @@ class App extends React.Component {
     window.addEventListener('scroll', this.onScrollHandle);
     window.addEventListener('resize', this.handleWindowResize);
 
-    // flaw with below design happens if someone adjusts window size after page opens, i need to 
-    // retrigger these calculations at that time
     let components = []
     components.push(document.getElementById('experience'), document.getElementById('projects'), document.getElementById('skills'), document.getElementById('contact'))
     let bodyRect = document.body.getBoundingClientRect();
@@ -113,11 +106,6 @@ class App extends React.Component {
         section = i;
       }
     } 
-
-    // only issue is that the last section is placed lower than we can possibly go...
-    // unless i change it so it shows when the page is first showing...? 
-    // but then this wont watch with how the symbols high light when are clicked, cus it takes the
-    // page to their personal tops
 
     // does it rerender if the state changes from same to same?
     if (this.state.sectionHighlight !== section){
