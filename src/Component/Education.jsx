@@ -58,7 +58,7 @@ class Education extends React.Component{
                         </InnerContainer>
                         <Seperator/>
                         <InnerContainer>
-                            <img style={{width:170, height:50, marginRight: 20}} src='http://hrhqdir.s3.amazonaws.com/brand-guide/HackReactor_RGBLogo-White-Blue.png'/>
+                            <img style={{width:170, height:50, marginRight: 20}} src='https://hrhqdir.s3.amazonaws.com/brand-guide/HackReactor_RGBLogo-White-Blue.png'/>
                             <div style={{alignSelf:'flex-end'}}>
                                 <div style={{...Text, color: 'white'}}>Hack Reactor</div>
                                 <div style={{...Text, color: 'white'}}>Software Engineering Immersive</div>
