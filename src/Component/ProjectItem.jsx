@@ -34,6 +34,7 @@ const Container = styled.a`
 
 const ImgContainer = styled.div`
     width: 30%;
+    // margin: auto;
     background-color: gray;
 `
 
@@ -41,8 +42,9 @@ const WordContainer = styled.div`
     justify-content: center;
     align-items: center;
     background: ${Colors.innerBackground};
-    width: 400px;
+    width: 70%;
     padding: 25px;
+    margin: auto;
 `
 
 const VideoLink = styled.a`

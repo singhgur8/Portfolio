@@ -4,10 +4,11 @@ import {Colors, Text, Title} from '../Styles'
 import GithubIcon from '../SVG/github.jsx'
 
 const Container = styled.div`
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin: auto;
 `
 
 const Name = styled.div`

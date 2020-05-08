@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {Colors, Text} from '../Styles'
-import ProjectItem from './ProjectItem.jsx';
 
 const Container = styled.div`
-    width: 80%;
-    margin-bottom: 60px;
-    margin-left: 15px;
+    width: 83%;
     text-align: center;
     box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
     background-color: white;
     border-radius: 5px;
+    margin: auto;
 `
 
 const Title = styled.div`
@@ -20,6 +18,8 @@ const Title = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding-left: 20px;
+    padding-top: 30px;
+    margin-bottom: -5px;
 `
     
 class Contact extends React.Component{
@@ -31,12 +31,12 @@ class Contact extends React.Component{
         return (
             <div id='contact'>
                 <Title>Contact Information</Title>
-                    <Container>
-                        <div style={{backgroundColor: Colors.innerBackground, width:'100%', margin: 'auto', borderRadius:'3px'}}>
-                            <div style={{...Text, color:'white'}}>Phone: (510) 672-8042</div>
-                            <div style={{...Text, color:'white'}}>Email: gurjotssingh510@gmail.com</div>
-                            <a style={{...Text, color:'white'}} href="https://www.linkedin.com/in/singhgur8/">https://www.linkedin.com/in/singhgur8/</a>
-                        </div>
+                <Container>
+                    <div style={{backgroundColor: Colors.innerBackground, width:'100%', margin: 'auto', borderRadius:'3px'}}>
+                        <div style={{...Text, color:'white'}}>Phone: (510) 672-8042</div>
+                        <div style={{...Text, color:'white'}}>Email: gurjotssingh510@gmail.com</div>
+                        <a style={{...Text, color:'white'}} href="https://www.linkedin.com/in/singhgur8/">https://www.linkedin.com/in/singhgur8/</a>
+                    </div>
                 </Container>
             </div>
         )

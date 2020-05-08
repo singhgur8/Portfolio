@@ -15,12 +15,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  // justify-content: center;
-  // align-items: center;
-  // border-style: solid;
-  // border-width: 5px;
   left: 0;
-  // padding: 20px;
   @media (max-width: 1150px) {
     flex-direction: column;
   }
@@ -55,6 +50,7 @@ const TimelineContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding-bottom: 40px;
 `
 
 class App extends React.Component {

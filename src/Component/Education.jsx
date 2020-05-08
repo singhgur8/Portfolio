@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {Colors, Text} from '../Styles'
-import ProjectItem from './ProjectItem.jsx';
 
 const Container = styled.div`
-    width: 80%; // could be 100 if i could align everything to the left..?
+    width: 80%;
     padding: 10px;
-    margin-left: 15px;
-    margin-bottom: 30px;
-    margin-top: 10px;
     text-align: center;
     justify-content: space-between;
+    margin: auto;
     background-color: ${Colors.innerBackground}
 `
 
@@ -21,6 +18,7 @@ const Title = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding-left: 20px;
+    padding-bottom:10px;
 `
 
 const InnerContainer = styled.div`

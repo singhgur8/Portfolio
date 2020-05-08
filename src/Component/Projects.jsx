@@ -7,6 +7,8 @@ const Container = styled.div`
     padding-right: 30px;
     padding-left: 10px;
     margin-bottom: 30px;
+    width: 90%;
+    margin: auto;
 `
 
 const Title = styled.div`
@@ -15,7 +17,6 @@ const Title = styled.div`
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    padding-left: 20px;
 `
 
 const projectsData = [

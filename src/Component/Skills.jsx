@@ -5,8 +5,9 @@ import SkillItem from './SkillItem.jsx';
 
 const Container = styled.div`
     margin: 10px;
-    width: 85%;
+    width: 90%;
     display: flex;
+    margin: auto;
 `
 
 const Title = styled.div`

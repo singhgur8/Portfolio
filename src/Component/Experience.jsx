@@ -6,8 +6,9 @@ import ExperienceItem from './ExperienceItem.jsx';
 const Container = styled.div`
     padding-right: 30px;
     margin: 10px;
-    width: 85%;
+    width: 90%;
     filter: grayscale(100%);
+    margin: auto;
     // background-color: ${Colors.innerBackground}
 `
 
