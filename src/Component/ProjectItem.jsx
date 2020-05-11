@@ -67,7 +67,7 @@ class ProjectItem extends React.Component{
         const {title, description, img, techStack, imgWidth, videoUrl, githubUrl} = this.props.data;
         const playSign = '\u25B6'
         return (
-            <Container href={githubUrl}>
+            <Container href={githubUrl} target="_blank">
                 <ImgContainer>
                     <div
                         style = {{

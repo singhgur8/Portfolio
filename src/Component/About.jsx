@@ -53,7 +53,8 @@ const LinkedinLogo = styled.div`
 `
 
 const githubSize = 140;
-const GithubContainer = styled.div`
+const GithubContainer = styled.a`
+    text-decoration: none;
     display: flex;
     cursor: pointer;
     width: ${githubSize}px;
@@ -163,15 +164,6 @@ class About extends React.Component{
         this.goToSection = this.goToSection.bind(this)
     }
 
-    handleGit(e){
-        e.preventDefault();
-        window.location = 'https://github.com/singhgur8'
-    }
-    handleLinkedin(e){
-        e.preventDefault();
-        window.location = 'https://www.linkedin.com/in/singhgur8/'
-    }
-
     goToSection(e){
         let id = e.target.id.slice(0,e.target.id.length-1)
         let el = document.getElementById(id)
@@ -215,14 +207,14 @@ class About extends React.Component{
                             <Image/>
                         {/* </Profile> */}
                     </div>
-                    <GithubContainer onClick={this.handleGit}>
+                    <GithubContainer href={'https://github.com/singhgur8'} target="_blank">
                         <GithubIcon width={45} height={45}/>
                         <GithubLogo/>
                     </GithubContainer>
-                    <div style={{position: 'relative', top: 24, left: 40}} onClick={this.handleLinkedin}>
+                    <a style={{position: 'relative', top: 24, left: 40, textDecoration: 'none'}} href={'https://www.linkedin.com/in/singhgur8/'} target="_blank">
                         <LinkedinLogo/>
-                    </div>
-                    <ResumeContainer id='resume' href={'https://gurjotportfolio.s3-us-west-1.amazonaws.com/GurjotSingh_Resume.pdf'} download='resume.pdf' >
+                    </a>
+                    <ResumeContainer target="_blank" id='resume' href={'https://gurjotportfolio.s3-us-west-1.amazonaws.com/GurjotSingh_Resume.pdf'} download='resume.pdf' >
                         Download Resume
                     </ResumeContainer>
                 </ContactInfoContainer>
