@@ -9,6 +9,10 @@ const Container = styled.div`
     flex-direction: column;
     height: 100%;
     margin: auto;
+    @media (max-width: 500px) {
+        width: 100%;
+        padding-bottom: 40px;
+    }
 `
 
 const Name = styled.div`
@@ -16,6 +20,23 @@ const Name = styled.div`
     font-size: 65px;
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
+`
+
+const Intro = styled.p`
+    color: #949495;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.5em;
+    filter: grayscale(100%);
+
+    @media (max-width: 500px) {
+        font-size: 40px;
+    }
 `
 
 const frameHeight = 150;
@@ -35,13 +56,18 @@ const Image = styled.div`
         filter: grayscale(0%);
     }
     border-radius: ${frameWidth/2}px;
+    @media (max-width: 500px) {
+        width:${frameWidth*1.5}px;
+        height: ${frameHeight*1.5}px; 
+        border-radius: ${(frameWidth*1.5)/2}px;
+    }
 `
 const LinkedinSize = 130;
 const LinkedinLogo = styled.div`
     background: rgb(255,255,255,0);
     position: relative;
-    width:${LinkedinSize}px;
-    height:${LinkedinSize/4}px;
+    width:${LinkedinSize+10}px;
+    height:${(LinkedinSize/4) + 1}px;
     background-image: url(https://gurjotportfolio.s3-us-west-1.amazonaws.com/linkedin.png);
     background-size: cover;
     filter: grayscale(100%) brightness(500%);
@@ -49,6 +75,19 @@ const LinkedinLogo = styled.div`
     &:hover {
         cursor: pointer;
         filter: grayscale(0%);
+    }
+    @media (max-width: 500px) {
+        width:${LinkedinSize*2+10}px;
+        height:${(LinkedinSize*2)/4}px;
+    }
+`
+const LinkedInContainer = styled.a`
+    position: relative;
+    top: 24px;
+    left: 40px; 
+    textDecoration: none;
+    @media (max-width: 500px) {
+        top: 30px;
     }
 `
 
@@ -67,6 +106,10 @@ const GithubContainer = styled.a`
         cursor: pointer;
         filter: drop-shadow(8px 8px 10px gray);
     }
+    @media (max-width: 500px) {
+        width: ${githubSize*1.5}px;
+        height: ${50*1.5};
+    }
 `
 const GithubLogo = styled.div`
     cursor: pointer;
@@ -77,12 +120,20 @@ const GithubLogo = styled.div`
     background: rgb(0,0,0,0);
     background-image: url(https://gurjotportfolio.s3-us-west-1.amazonaws.com/GitHub_Logo_White.png);
     background-size: cover;
+
+    @media (max-width: 500px) {
+        width: ${githubSize*1.5}px;
+        height: ${githubSize*(3/10)*2}px;
+    }
 `
 
 const ContactInfoContainer = styled.div`
     display: flex;
     align-self: flex-end;
     margin: auto;
+    @media (max-width: 500px) {
+        padding-top: 60px;
+    }
 `    
 
 const ResumeContainer = styled.a`
@@ -97,6 +148,18 @@ const ResumeContainer = styled.a`
     position: relative;
     left: -200px;
     top: 65px;
+    text-align: center;
+
+
+    @media (max-width: 500px) {
+        height: 50px;
+        width: 340px;
+        border-radius: 80px;
+        font-size: 40px;
+        left: -380px;
+        top: 120px;
+    }
+
     border-style: solid;
     border-width: 3px;
     border-color: white;
@@ -106,6 +169,7 @@ const ResumeContainer = styled.a`
         background-color: pink;
     }
     border-radius: 40px
+
 `
 
 let timelineData = [
@@ -136,6 +200,11 @@ const TimeLineDiv = styled.div`
         font-size: 20px;
         color: white;
     `}
+
+    @media (max-width: 500px) {
+        font-size: 40px;
+        margin: 20px;
+    }
 
 `
 
@@ -176,7 +245,7 @@ class About extends React.Component{
                 <Name>
                     Hello, I'm <br></br>Gurjot Singh.
                 </Name>
-                <p style={{...Text, filter:'grayscale(100%)'}}>
+                <Intro>
                     I'm a full-stack software engineer who likes keeping up to date with the latest technologies.
                     Lately I have been using React, Node, Python, GraphQL, and MongoDB to build my applications. However
                     a full list of technologies is in the <u style={{color:'white', cursor:'pointer'}} onClick={this.goToSection} id={'skills!'}>skills</u> section. 
@@ -184,7 +253,7 @@ class About extends React.Component{
                     <br></br>
                     <br></br>
                     I'm eager to collaborate on new projects. <u style={{color:'white', cursor:'pointer'}} onClick={this.goToSection} id={'contact!'}>Let's talk</u>!
-                </p>
+                </Intro>
                 <div style={{height: 160}}>
                     {timelineData.map((item,idx)=>{
                         let highlight = this.props.idx === idx
@@ -203,17 +272,15 @@ class About extends React.Component{
                 <br></br>
                 <ContactInfoContainer>
                     <div style={{paddingRight: 0}}>
-                        {/* <Profile> */}
-                            <Image/>
-                        {/* </Profile> */}
+                        <Image/>
                     </div>
                     <GithubContainer href={'https://github.com/singhgur8'} target="_blank">
                         <GithubIcon width={45} height={45}/>
                         <GithubLogo/>
                     </GithubContainer>
-                    <a style={{position: 'relative', top: 24, left: 40, textDecoration: 'none'}} href={'https://www.linkedin.com/in/singhgur8/'} target="_blank">
+                    <LinkedInContainer href={'https://www.linkedin.com/in/singhgur8/'} target="_blank">
                         <LinkedinLogo/>
-                    </a>
+                    </LinkedInContainer>
                     <ResumeContainer target="_blank" id='resume' href={'https://gurjotportfolio.s3-us-west-1.amazonaws.com/GurjotSingh_Resume.pdf'} download='resume.pdf' >
                         Download Resume
                     </ResumeContainer>

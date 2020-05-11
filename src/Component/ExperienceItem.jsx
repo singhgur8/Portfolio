@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
-import {Colors} from '../Styles';
 
 const Container = styled.div`
     display: flex;
@@ -64,6 +63,9 @@ const Line = styled.div`
     background-color: #949495;
     margin: 2px;
     position: relative;
+    @media (max-width: 500px) {
+        display: none;
+      }
 
     ${props=> props.animate && css `
         background-image: linear-gradient(to bottom, 
@@ -86,6 +88,9 @@ width: ${ballSize}px;
 background-color: #949495;
 border-radius: ${ballSize/2}px;
 
+@media (max-width: 500px) {
+    display: none;
+  }
 `
 
 const LineContainer = styled.div`
@@ -96,6 +101,19 @@ const LineContainer = styled.div`
     padding-left: 10px;
     position: relative;
     top: -12px;
+`
+
+const Description = styled.ul`
+    color: #949495;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.5em;
+    filter: grayscale(100%);
 `
     
 class ExperienceItem extends React.Component{
@@ -116,7 +134,7 @@ class ExperienceItem extends React.Component{
                 <Details>
                     <Title>{jobTitle}</Title>
                     <Text>{company}</Text>
-                    <ul>
+                    <Description>
                         {description.map((item, idx) => {
                             return(
                                 <ExperienceBulletPoints
@@ -125,7 +143,7 @@ class ExperienceItem extends React.Component{
                                 />
                             )
                         })}
-                    </ul>
+                    </Description>
                 </Details>
             </Container>
         )
