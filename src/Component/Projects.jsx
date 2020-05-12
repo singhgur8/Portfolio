@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import {Colors} from '../Styles'
+import {Colors, Mobile} from '../Styles'
 import ProjectItem from './ProjectItem.jsx';
 
 const Container = styled.div`
@@ -17,6 +17,10 @@ const Title = styled.div`
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
+
+    @media (max-width: 600px) {
+        font-size: ${Mobile.titleFontSize}px;
+    }
 `
 
 const projectsData = [

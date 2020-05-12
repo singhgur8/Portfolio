@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
-import {Colors, Text, Title} from '../Styles'
+import {Colors, Text, Mobile} from '../Styles'
 
 
 // SEE IF I could use react styled components to dim other classes
@@ -36,6 +36,10 @@ const ImgContainer = styled.div`
     width: 30%;
     // margin: auto;
     background-color: gray;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
 `
 
 const WordContainer = styled.div`
@@ -45,6 +49,51 @@ const WordContainer = styled.div`
     width: 70%;
     padding: 25px;
     margin: auto;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+`
+
+const Title = styled.div`
+    color: white;
+    font-size: 25px;
+    font-weight: bold; // might need to be like 800
+    font-family: Arial, Helvetica, sans-serif;
+
+    @media (max-width: 600px) {
+        font-size: 50px;
+    }
+`
+
+const Description = styled.div`
+    color: #949495;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.5em;
+
+    @media (max-width: 600px) {
+        font-size: ${Mobile.textFontSize}px;
+    }
+`
+
+const SkillsText = styled.div`
+    color: white;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.5em;
+
+    @media (max-width: 600px) {
+        font-size: ${Mobile.textFontSize}px;
+    }
 `
 
 const VideoLink = styled.a`
@@ -55,6 +104,10 @@ const VideoLink = styled.a`
     position: relative;
     &:hover {
         color: white;
+    }
+
+    @media (max-width: 600px) {
+        font-size: ${Mobile.textFontSize + 10}px;
     }
 `
     
@@ -82,9 +135,9 @@ class ProjectItem extends React.Component{
                     />
                 </ImgContainer>
                 <WordContainer onMouseEnter={this.hoverWrapper} onMouseLeave={this.hoverWrapper}>
-                    <div style={{...Title, fontSize: 25, fontWeight: 'bold'}}>{title}</div>
-                    <div style={{...Text}}>{description}</div>
-                    <div style={{...Text, fontSize: 15, color: 'white'}}>Technologies: {techStack}</div>
+                    <Title>{title}</Title>
+                    <Description>{description}</Description>
+                    <SkillsText>Technologies: {techStack}</SkillsText>
                     {videoUrl ? <VideoLink href={videoUrl}>{playSign} Video</VideoLink> : null}
                 </WordContainer>
             </Container>
