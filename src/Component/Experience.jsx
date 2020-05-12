@@ -20,7 +20,7 @@ const Title = styled.div`
     width: 100%;
     padding-left: 30px;
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         font-size: ${Mobile.titleFontSize}px;
     }
 `

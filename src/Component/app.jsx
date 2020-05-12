@@ -31,7 +31,7 @@ const AboutContainer = styled.div`
     margin: auto;
   }
   
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     width: 100%;
     position: relative;
     margin: auto;
@@ -50,7 +50,7 @@ const TimelineContainer = styled.div`
     width: 80%;
     margin: auto;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     width: 100%;
     position: relative;
     margin: auto;

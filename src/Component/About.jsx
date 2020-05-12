@@ -9,7 +9,7 @@ const Container = styled.div`
     flex-direction: column;
     height: 100%;
     margin: auto;
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         width: 100%;
         padding-bottom: 40px;
     }
@@ -20,7 +20,7 @@ const Name = styled.div`
     font-size: 65px;
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         font-size: 80px;
     }
 `
@@ -37,7 +37,7 @@ const Intro = styled.p`
     line-height: 1.5em;
     filter: grayscale(100%);
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         font-size: 40px;
     }
 `
@@ -59,7 +59,7 @@ const Image = styled.div`
         filter: grayscale(0%);
     }
     border-radius: ${frameWidth/2}px;
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         width:${frameWidth*1.5}px;
         height: ${frameHeight*1.5}px; 
         border-radius: ${(frameWidth*1.5)/2}px;
@@ -79,7 +79,7 @@ const LinkedinLogo = styled.div`
         cursor: pointer;
         filter: grayscale(0%);
     }
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         width:${LinkedinSize*2+10}px;
         height:${(LinkedinSize*2)/4}px;
     }
@@ -89,7 +89,7 @@ const LinkedInContainer = styled.a`
     top: 24px;
     left: 40px; 
     textDecoration: none;
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         top: 30px;
     }
 `
@@ -109,7 +109,7 @@ const GithubContainer = styled.a`
         cursor: pointer;
         filter: drop-shadow(8px 8px 10px gray);
     }
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         width: ${githubSize*1.5}px;
         height: ${50*1.5};
     }
@@ -124,7 +124,7 @@ const GithubLogo = styled.div`
     background-image: url(https://gurjotportfolio.s3-us-west-1.amazonaws.com/GitHub_Logo_White.png);
     background-size: cover;
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         width: ${githubSize*1.5}px;
         height: ${githubSize*(3/10)*2}px;
     }
@@ -134,7 +134,7 @@ const ContactInfoContainer = styled.div`
     display: flex;
     align-self: flex-end;
     margin: auto;
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         padding-top: 60px;
     }
 `    
@@ -154,7 +154,7 @@ const ResumeContainer = styled.a`
     text-align: center;
 
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         height: 50px;
         width: 340px;
         border-radius: 80px;
@@ -204,7 +204,7 @@ const TimeLineDiv = styled.div`
         color: white;
     `}
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         font-size: 40px;
         margin: 20px;
     }
