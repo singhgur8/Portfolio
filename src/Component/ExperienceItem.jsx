@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
+import {Mobile} from '../Styles.js';
 
 const Container = styled.div`
     display: flex;
@@ -15,6 +16,10 @@ const Title = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding-left: 30px;
+
+    @media (max-width: 600px) {
+        font-size: 50px;
+    }
 `
 const Text = styled.div`
     padding-left: 30px;
@@ -22,17 +27,24 @@ const Text = styled.div`
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
+
+    @media (max-width: 600px) {
+        font-size: 40px;
+    }
 `
 const Bullet = styled.li`
     color: #949495;
-    'fontSize': '14px',
-    'fontFamily': 'Arial, Helvetica, sans-serif',
-    display: 'block',
-    'marginBlockStart': '1em',
-    'marginBlockEnd': '1em',
-    'marginInlineStart': '0px',
-    'marginInlineEnd': '0px',
-    'lineHeight': '1.5em'
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.5em;
+
+    @media (max-width: 600px) {
+        font-size: ${Mobile.textFontSize}px;
+    }
 `
 
 class ExperienceBulletPoints extends React.Component {
@@ -53,6 +65,25 @@ const Timeline = styled.div`
     width: 158px;
     color: #949495;
     text-align: end;
+
+    ${props=> props.mobile && css `
+        display: none;
+        border-bottom: solid;
+        border-color: white;
+        width: 100%;
+        padding-left: 30px;
+        font-size: 30px;
+        text-align: start;
+        @media (max-width: 600px) {
+            display: block;
+        }
+    `}
+
+    ${props=> props.web && css `
+        @media (max-width: 600px) {
+            display: none;
+        }
+    `}
 `
 
 // I could make this take in an animation if its the last one, then i conditional render it
@@ -63,7 +94,7 @@ const Line = styled.div`
     background-color: #949495;
     margin: 2px;
     position: relative;
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         display: none;
       }
 
@@ -88,7 +119,7 @@ width: ${ballSize}px;
 background-color: #949495;
 border-radius: ${ballSize/2}px;
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     display: none;
   }
 `
@@ -126,7 +157,7 @@ class ExperienceItem extends React.Component{
         const {last} = this.props
         return (
             <Container>
-                <Timeline>{timeline}</Timeline>
+                <Timeline web>{timeline}</Timeline>
                 <LineContainer>
                     <Ball/>
                     {last ? <Line animate/> : <Line/>}
@@ -134,6 +165,7 @@ class ExperienceItem extends React.Component{
                 <Details>
                     <Title>{jobTitle}</Title>
                     <Text>{company}</Text>
+                    <Timeline mobile>{timeline}</Timeline>
                     <Description>
                         {description.map((item, idx) => {
                             return(

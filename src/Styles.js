@@ -1,10 +1,9 @@
 module.exports = {
-    Colors: 
-        {
-            background: '#151515',
-            innerBackground: '#202022',
-            text: '#949495',
-            title: 'white'
+    Colors: {
+        background: '#151515',
+        innerBackground: '#202022',
+        text: '#949495',
+        title: 'white'
           },
     Text: {
         color: '#949495',
@@ -21,5 +20,10 @@ module.exports = {
         color: 'white',
         'fontSize': '50px',
         'fontFamily': 'Arial, Helvetica, sans-serif'
+    },
+    Mobile: {
+        'titleFontSize': 60,
+        'textFontSize':  40
     }
+
 }

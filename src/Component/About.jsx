@@ -20,6 +20,9 @@ const Name = styled.div`
     font-size: 65px;
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
+    @media (max-width: 500px) {
+        font-size: 80px;
+    }
 `
 
 const Intro = styled.p`

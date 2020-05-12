@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Colors} from '../Styles';
+import {Colors, Mobile} from '../Styles';
 import ExperienceItem from './ExperienceItem.jsx';
 
 const Container = styled.div`
@@ -19,6 +19,10 @@ const Title = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding-left: 30px;
+
+    @media (max-width: 500px) {
+        font-size: ${Mobile.titleFontSize}px;
+    }
 `
 
 
