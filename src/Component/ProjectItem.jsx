@@ -108,6 +108,7 @@ const VideoLink = styled.a`
 
     @media (max-width: 600px) {
         font-size: ${Mobile.textFontSize + 10}px;
+        color: white;
     }
 `
     

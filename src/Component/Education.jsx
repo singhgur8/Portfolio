@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import {Colors, Text} from '../Styles'
+import {Colors, Mobile} from '../Styles'
 
 const Container = styled.div`
     width: 80%;
@@ -8,6 +8,10 @@ const Container = styled.div`
     text-align: center;
     justify-content: space-between;
     margin: auto;
+    
+    @media (max-width: 600px) {
+        width: 95%;
+    }
     background-color: ${Colors.innerBackground}
 `
 
@@ -19,6 +23,10 @@ const Title = styled.div`
     width: 100%;
     padding-left: 20px;
     padding-bottom:10px;
+
+    @media (max-width: 600px) {
+        font-size: ${Mobile.titleFontSize}px;
+    }
 `
 
 const InnerContainer = styled.div`
@@ -27,8 +35,50 @@ const InnerContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    @media (max-width: 600px) {
+        width: 100%;
+    }
     background-color: ${Colors.background}
 `
+
+const Text = styled.div`
+    color: white;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.5em;
+
+    @media (max-width: 600px) {
+        font-size: ${Mobile.textFontSize}px;
+    }
+`
+const Davis = styled.img`
+    width: 170px;
+    height: 35px;
+    margin-right: 20px;
+
+    @media (max-width: 600px) {
+        width: 340px;
+        height: 70px;
+        margin-left: 30px;
+    }
+`
+const HR = styled.img`
+    width: 170px;
+    height: 50px;
+    margin-right: 20px;
+
+    @media (max-width: 600px) {
+        width: 340px;
+        height: 100px;
+        margin-left: 30px;
+    }
+`
+
 const Seperator = styled.div`
     width: 80%;
     height: .5px;
@@ -49,20 +99,20 @@ class Education extends React.Component{
                 <Title>Education</Title>
                     <Container>
                         <InnerContainer>
-                            <img style={{width:170, height:35, marginRight: 20}} src='https://gurjotportfolio.s3-us-west-1.amazonaws.com/ucdavis_logo_gold.png'/>
+                            <Davis src='https://gurjotportfolio.s3-us-west-1.amazonaws.com/ucdavis_logo_gold.png'/>
                             <div>
-                                <div style={{...Text, color: 'white'}}>University of California, Davis</div>
-                                <div style={{...Text, color: 'white'}}>Bachelors of Science, Mechanical Engineering</div>
-                                <div style={{...Text, color: 'white'}}>2014 - 2018</div>
+                                <Text>University of California, Davis</Text>
+                                <Text>Bachelors of Science, Mechanical Engineering</Text>
+                                <Text>2014 - 2018</Text>
                             </div>
                         </InnerContainer>
                         <Seperator/>
                         <InnerContainer>
-                            <img style={{width:170, height:50, marginRight: 20}} src='https://hrhqdir.s3.amazonaws.com/brand-guide/HackReactor_RGBLogo-White-Blue.png'/>
+                            <HR src='https://hrhqdir.s3.amazonaws.com/brand-guide/HackReactor_RGBLogo-White-Blue.png'/>
                             <div style={{alignSelf:'flex-end'}}>
-                                <div style={{...Text, color: 'white'}}>Hack Reactor</div>
-                                <div style={{...Text, color: 'white'}}>Software Engineering Immersive</div>
-                                <div style={{...Text, color: 'white'}}>2019 - 2020</div>
+                                <Text>Hack Reactor</Text>
+                                <Text>Software Engineering Immersive</Text>
+                                <Text>2019 - 2020</Text>
                             </div>
                         </InnerContainer>
                 </Container>
