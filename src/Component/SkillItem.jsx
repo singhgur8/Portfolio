@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
-import {Colors} from '../Styles';
+import {Colors, Mobile} from '../Styles';
 
 const SkillContainer = styled.div`
     padding-top: 30px;
@@ -31,6 +31,10 @@ const Title = styled.div`
     justify-text: center;
     align-text: center;
     text-align: center;
+
+    @media (max-width: 600px) {
+        font-size: 25px;
+    }
 `
 
 

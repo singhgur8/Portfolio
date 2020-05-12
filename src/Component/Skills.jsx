@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Colors} from '../Styles';
+import {Colors, Mobile} from '../Styles';
 import SkillItem from './SkillItem.jsx';
 
 const Container = styled.div`
@@ -17,14 +17,18 @@ const Title = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding-left: 30px;
+
+    @media (max-width: 600px) {
+        font-size: ${Mobile.titleFontSize}px;
+    }
 `
 
 
 const skills = [
-        ['React Native'],
+        ['ASP.NET'],
         ['Javascript', 'React', 'Node.js'],
         ['HTTP', 'MySQL', 'AWS Lambda', 'Express.js', 'AWS EC2'],
-        ['Nginx', 'Python', 'C#' , 'ASP.NET', 'MongoDB', 'Cassandra', 'PostgreSQL'],
+        ['Nginx', 'Python', 'C#' , 'React Native', 'MongoDB', 'Cassandra', 'PostgreSQL'],
         ['Mocha/Jest', 'Docker', 'D3.js', 'GraphQL', 'Webpack'],
         ['CSS', 'Git', 'Rest API'],
         ['HTML']
