@@ -139,7 +139,7 @@ class ProjectItem extends React.Component{
                     <Title>{title}</Title>
                     <Description>{description}</Description>
                     <SkillsText>Technologies: {techStack}</SkillsText>
-                    {videoUrl ? <VideoLink href={videoUrl}>{playSign} Video</VideoLink> : null}
+                    {videoUrl ? <VideoLink href={videoUrl} target='_blank'>{playSign} Video</VideoLink> : null}
                 </WordContainer>
             </Container>
         )

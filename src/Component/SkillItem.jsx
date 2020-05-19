@@ -10,10 +10,10 @@ const SkillContainer = styled.div`
     border-width: 1px;
     border-color: white;
     border-radius: 40px;
-    background-color: ${Colors.innerBackground};
     position: relative;
     z-index: 1;
-
+    min-width: 70px;
+    background-color: ${Colors.innerBackground};
 
     &:hover {
         z-index:999;

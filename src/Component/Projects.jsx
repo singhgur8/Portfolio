@@ -9,6 +9,10 @@ const Container = styled.div`
     margin-bottom: 30px;
     width: 90%;
     margin: auto;
+
+    @media (max-width: 600px) {
+        padding: 0px;
+    }
 `
 
 const Title = styled.div`
@@ -27,7 +31,7 @@ const projectsData = [
     {  
         title: 'Home Reservation Application',
         img: 'url(https://gurjotportfolio.s3-us-west-1.amazonaws.com/HomeReservationApp.png)',
-        description: 'Created a containerized microserive which was deployed to Ec2. Main features include a dynamic photo gallery along with a photo carousel.',
+        description: 'Created a containerized microservice which was deployed to Ec2. Main features include a dynamic photo gallery along with a photo carousel.',
         techStack: 'React, Docker, AWS EC2, Node.js, CSS Modules, Webpack, Microservice, MongoDB',
         imgWidth: 250,
         videoUrl: 'https://www.youtube.com/watch?v=ltTGxX7qFrs&feature=youtu.be',

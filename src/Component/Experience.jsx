@@ -10,6 +10,9 @@ const Container = styled.div`
     filter: grayscale(100%);
     margin: auto;
     // background-color: ${Colors.innerBackground}
+    @media (max-width: 600px) {
+        padding: 0px;
+    }
 `
 
 const Title = styled.div`

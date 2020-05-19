@@ -104,7 +104,7 @@ class App extends React.Component {
     let bodyRect = document.body.getBoundingClientRect();
     let section = 0;
     let bodyPosY = -bodyRect.top
-    if (bodyPosY > this.positions[this.positions.length-2]) bodyPosY += 500 // adjusts for last one
+    if (bodyPosY > this.positions[this.positions.length-2]) bodyPosY += 650 // adjusts for last one
     // being at a spot where the page cant scroll to top of
     for(let i = 0; i < this.positions.length; i++){
       if (bodyPosY >= this.positions[i]) {
