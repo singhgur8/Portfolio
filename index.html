@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gurjot Singh — Creator, Engineer, Photographer</title>
+<meta name="description" content="Portfolio of Gurjot Singh — full-stack software engineer and photographer. Building digital products and capturing the world through a lens.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Gurjot Singh — Creator, Engineer, Photographer">
+<meta property="og:description" content="Full-stack software engineer and photographer. Building digital products and capturing the world through a lens.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gurjot Singh",
+  "url": "https://gurjot.info",
+  "jobTitle": "Full-Stack Software Engineer & Photographer",
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "University of California, Davis"},
+    {"@type": "EducationalOrganization", "name": "Hack Reactor"}
+  ],
+  "sameAs": [
+    "https://github.com/singhgur8",
+    "https://www.linkedin.com/in/singhgur8/"
+  ],
+  "creator": {
+    "@type": "SoftwareApplication",
+    "name": "Perplexity Computer",
+    "url": "https://www.perplexity.ai/computer"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- Skip link -->
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============================================
+     HEADER
+     ============================================ -->
+<header class="site-header" id="header">
+  <a class="logo" onclick="navigate('home')" role="link" tabindex="0">Gurjot Singh</a>
+  <nav>
+    <ul class="nav-links" role="list">
+      <li><a href="#projects" onclick="navigate('projects'); return false;" data-page="projects">Projects</a></li>
+      <li><a href="#gallery" onclick="navigate('gallery'); return false;" data-page="gallery">Gallery</a></li>
+      <li><a href="#about" onclick="navigate('about'); return false;" data-page="about">About</a></li>
+      <li><a href="#contact" onclick="navigate('contact'); return false;" data-page="contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div style="display:flex;align-items:center;gap:var(--space-3)">
+    <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#projects" onclick="navigate('projects'); closeMobileMenu(); return false;">Projects</a>
+  <a href="#gallery" onclick="navigate('gallery'); closeMobileMenu(); return false;">Gallery</a>
+  <a href="#about" onclick="navigate('about'); closeMobileMenu(); return false;">About</a>
+  <a href="#contact" onclick="navigate('contact'); closeMobileMenu(); return false;">Contact</a>
+</div>
+
+<main id="main">
+
+<!-- ============================================
+     HOME PAGE
+     ============================================ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <svg class="hero-grain" width="100%" height="100%">
+      <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/></filter>
+      <rect width="100%" height="100%" filter="url(#grain)"/>
+    </svg>
+    <div class="hero-content">
+      <p class="hero-label">Creator &middot; Engineer &middot; Photographer</p>
+      <h1 class="hero-title">Gurjot Singh</h1>
+      <p class="hero-subtitle">I build digital products and capture the world through a lens. Full-stack engineer by trade, visual storyteller by passion.</p>
+      <a class="hero-cta" href="#projects" onclick="navigate('projects'); return false;">
+        View my work
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Preview Section -->
+  <section class="section">
+    <div class="container--wide">
+      <div class="section-label reveal">What I Do</div>
+      <h2 class="section-heading reveal" style="margin-bottom: var(--space-10);">Two sides of the same coin.</h2>
+
+      <div class="preview-grid">
+        <a class="preview-card reveal" onclick="navigate('projects'); return false;" role="link" tabindex="0">
+          <img class="preview-card__image" src="./assets/hero-engineering.png" alt="Code editor with warm ambient lighting" width="600" height="375" loading="lazy" decoding="async">
+          <div class="preview-card__body">
+            <p class="preview-card__label">Engineering</p>
+            <h3 class="preview-card__title">Software Projects</h3>
+            <p class="preview-card__desc">Full-stack applications, system design, and mobile development. From React to Swift, Docker to AWS.</p>
+          </div>
+        </a>
+        <a class="preview-card reveal" onclick="navigate('gallery'); return false;" role="link" tabindex="0">
+          <img class="preview-card__image" src="./assets/hero-photography.png" alt="Camera on tripod at golden hour" width="600" height="375" loading="lazy" decoding="async">
+          <div class="preview-card__body">
+            <p class="preview-card__label">Photography</p>
+            <h3 class="preview-card__title">Visual Stories</h3>
+            <p class="preview-card__desc">Landscapes, street photography, portraits, and action shots. Capturing moments that tell a story.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brief About -->
+  <section class="section" style="border-top: 1px solid oklch(from var(--color-text) l c h / 0.06);">
+    <div class="container">
+      <div class="section-label reveal">A Bit About Me</div>
+      <h2 class="section-heading reveal">Engineer with an eye for detail.</h2>
+      <p class="section-subtext reveal">Mechanical engineering background from UC Davis. Software engineering immersive at Hack Reactor. Currently building full-stack applications at ConfigFab while chasing light with a camera on the weekends.</p>
+      <div style="margin-top: var(--space-6);">
+        <a class="hero-cta reveal" href="#about" onclick="navigate('about'); return false;">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================
+     PROJECTS PAGE
+     ============================================ -->
+<div class="page" id="page-projects">
+  <section class="section" style="padding-top: var(--space-16);">
+    <div class="container--wide">
+      <div class="section-label">Engineering</div>
+      <h1 class="section-heading" style="font-size: var(--text-2xl);">Selected Projects</h1>
+      <p class="section-subtext" style="margin-bottom: clamp(var(--space-10), 5vw, var(--space-16));">A selection of engineering work spanning web applications, system design, mobile development, and interactive experiences.</p>
+
+      <div class="project-list">
+
+        <!-- Project 1: HP Monopoly -->
+        <article class="project-item reveal">
+          <div class="project-image-wrap">
+            <img src="./assets/gallery-3.png" alt="Harry Potter Monopoly Deal card game interface" width="600" height="375" loading="lazy" decoding="async">
+          </div>
+          <div class="project-info">
+            <span class="project-number">01</span>
+            <h2 class="project-title">Harry Potter Monopoly Deal</h2>
+            <p class="project-desc">An online multiplayer card game supporting 5 players, with over 106 custom-designed cards, Galleons as currency, and real-time gameplay. A passion project blending game design with web engineering.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Vite</span>
+              <span class="project-tag">Game Design</span>
+              <span class="project-tag">Custom Artwork</span>
+            </div>
+            <a class="project-link" href="https://github.com/singhgur8/HarryPotterMonopoly" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Expense Share -->
+        <article class="project-item reveal">
+          <div class="project-image-wrap">
+            <img src="./assets/gallery-2.png" alt="Expense Share iOS application" width="600" height="375" loading="lazy" decoding="async">
+          </div>
+          <div class="project-info">
+            <span class="project-number">02</span>
+            <h2 class="project-title">Expense Share</h2>
+            <p class="project-desc">A native iOS application for splitting expenses with friends and groups. Built with SwiftUI, Supabase backend with row-level security, real-time balance calculations, and friend discovery.</p>
+            <div class="project-tags">
+              <span class="project-tag">Swift</span>
+              <span class="project-tag">SwiftUI</span>
+              <span class="project-tag">Supabase</span>
+              <span class="project-tag">PostgreSQL</span>
+            </div>
+            <a class="project-link" href="https://github.com/singhgur8/expense-share" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Home Reservation -->
+        <article class="project-item reveal">
+          <div class="project-image-wrap">
+            <img src="./assets/gallery-4.png" alt="Home reservation application photo gallery" width="600" height="375" loading="lazy" decoding="async">
+          </div>
+          <div class="project-info">
+            <span class="project-number">03</span>
+            <h2 class="project-title">Home Reservation App</h2>
+            <p class="project-desc">A containerized microservice for a home reservation platform. Features a dynamic photo gallery with carousel, deployed to AWS EC2 with Docker, built with React and MongoDB.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">AWS EC2</span>
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">Node.js</span>
+            </div>
+            <a class="project-link" href="https://github.com/singhgur8/airbnb-photogallery" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: System Design -->
+        <article class="project-item reveal">
+          <div class="project-image-wrap">
+            <img src="./assets/hero-engineering.png" alt="System design architecture" width="600" height="375" loading="lazy" decoding="async">
+          </div>
+          <div class="project-info">
+            <span class="project-number">04</span>
+            <h2 class="project-title">System Design &mdash; Scale</h2>
+            <p class="project-desc">Scaled a database service to handle high throughput with CRUD operations for Cassandra, deployed across EC2 instances and load balanced with Nginx for production-level performance.</p>
+            <div class="project-tags">
+              <span class="project-tag">Cassandra</span>
+              <span class="project-tag">Nginx</span>
+              <span class="project-tag">AWS EC2</span>
+              <span class="project-tag">Load Balancing</span>
+            </div>
+            <a class="project-link" href="https://github.com/singhgur8/popularFoods" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================
+     GALLERY PAGE
+     ============================================ -->
+<div class="page" id="page-gallery">
+  <section class="section" style="padding-top: var(--space-16);">
+    <div class="container--wide">
+      <div class="gallery-intro">
+        <div class="section-label">Photography</div>
+        <h1 class="section-heading" style="font-size: var(--text-2xl);">Through the Lens</h1>
+        <p class="section-subtext" style="margin-inline: auto;">Landscapes, streets, people, and motion.</p>
+      </div>
+
+      <!-- SmugMug album tabs (populated dynamically if configured) -->
+      <div class="gallery-tabs" id="galleryTabs" style="display:none;">
+        <button class="gallery-tab active" data-album="all">All</button>
+      </div>
+
+      <!-- Loading state -->
+      <div class="gallery-loader" id="galleryLoader" style="display:none;">
+        <div class="loader-dots">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- Gallery grid (filled dynamically from SmugMug or with fallback placeholders) -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Fallback static images (shown when SmugMug is not configured) -->
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="./assets/gallery-1.png" alt="Mountain reflection in a still alpine lake at dawn" width="400" height="400" loading="lazy" decoding="async">
+          <div class="gallery-item__overlay"><span class="gallery-item__caption">Alpine Dawn</span></div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="./assets/gallery-2.png" alt="Brutalist architecture with dramatic shadows" width="400" height="400" loading="lazy" decoding="async">
+          <div class="gallery-item__overlay"><span class="gallery-item__caption">Concrete Geometry</span></div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="./assets/gallery-5.png" alt="Snowboarder carving through powder" width="400" height="400" loading="lazy" decoding="async">
+          <div class="gallery-item__overlay"><span class="gallery-item__caption">Powder Day</span></div>
+        </div>
+        <div class="gallery-item gallery-item--wide reveal" onclick="openLightbox(this)">
+          <img src="./assets/gallery-3.png" alt="Rainy night street scene with neon reflections" width="800" height="400" loading="lazy" decoding="async">
+          <div class="gallery-item__overlay"><span class="gallery-item__caption">Night Streets</span></div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="./assets/gallery-6.png" alt="Dramatic portrait with warm side lighting" width="400" height="400" loading="lazy" decoding="async">
+          <div class="gallery-item__overlay"><span class="gallery-item__caption">Warm Light</span></div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="./assets/gallery-4.png" alt="Autumn river winding through forest from above" width="400" height="400" loading="lazy" decoding="async">
+          <div class="gallery-item__overlay"><span class="gallery-item__caption">Autumn River</span></div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="./assets/hero-photography.png" alt="Film camera on tripod at golden hour" width="400" height="400" loading="lazy" decoding="async">
+          <div class="gallery-item__overlay"><span class="gallery-item__caption">Golden Hour Setup</span></div>
+        </div>
+      </div>
+
+      <!-- SmugMug attribution (shown when SmugMug is active) -->
+      <div class="smugmug-credit" id="smugmugCredit" style="display:none;">
+        <span>Photos hosted on</span>
+        <a href="https://www.smugmug.com" target="_blank" rel="noopener noreferrer">SmugMug</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- ============================================
+     ABOUT PAGE
+     ============================================ -->
+<div class="page" id="page-about">
+  <section class="section" style="padding-top: var(--space-16);">
+    <div class="container--wide">
+      <div class="section-label">About</div>
+      <h1 class="section-heading" style="font-size: var(--text-2xl); margin-bottom: clamp(var(--space-8), 4vw, var(--space-12));">The Full Picture</h1>
+
+      <div class="about-grid">
+        <div class="about-portrait reveal">
+          <img src="./assets/about-portrait.png" alt="Portrait of Gurjot Singh" width="480" height="640" loading="lazy" decoding="async">
+        </div>
+        <div class="about-text">
+          <h3 class="reveal">Engineer &amp; Creator</h3>
+          <p class="reveal">I'm Gurjot Singh — a full-stack software engineer, photographer, and filmmaker based in California. I build things for the web and capture the world through a lens.</p>
+          <p class="reveal">My path started with mechanical engineering at UC Davis, where I developed a problem-solving mindset and an eye for how things are built. I transitioned into software through Hack Reactor's immersive program and haven't looked back.</p>
+
+          <h3 class="reveal">What I Build</h3>
+          <p class="reveal">At ConfigFab, I work across the full stack — from C# and ASP.NET on the backend to React on the frontend. I've built email reporting systems, seeded databases for e-commerce products, coded Python scripts for 3D model generation, and even used Inventor for engineering spec drawings.</p>
+          <p class="reveal">On the side, I'm always building. Recent projects include a Harry Potter Monopoly Deal card game (React + Vite, 106 custom cards) and an iOS expense-sharing app (Swift + Supabase).</p>
+
+          <h3 class="reveal">Off the Clock</h3>
+          <p class="reveal">When I'm not writing code, you'll find me snowboarding, playing volleyball, making films, or out with a camera chasing golden hour light. Photography started as a hobby and became a way of seeing — finding composition and story in everyday moments.</p>
+
+          <div class="divider reveal"></div>
+
+          <h3 class="reveal">Skills</h3>
+          <div class="skills-row reveal">
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Swift</span>
+            <span class="skill-pill">C#</span>
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">ASP.NET</span>
+            <span class="skill-pill">GraphQL</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">Cassandra</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">Nginx</span>
+            <span class="skill-pill">React Native</span>
+            <span class="skill-pill">D3.js</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">Supabase</span>
+          </div>
+
+          <h3 class="reveal">Experience</h3>
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <span class="timeline-year">2019 — Present</span>
+              <div class="timeline-content">
+                <h4>Full Stack Engineer — ConfigFab Inc.</h4>
+                <p>Front-end and back-end development in C#, ASP.NET MVC, React. Database management, Python scripting for 3D models, and engineering specification drawings.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2018 — 2019</span>
+              <div class="timeline-content">
+                <h4>Supply Chain Associate — PepsiCo</h4>
+                <p>Managed quality, production, and maintenance. Decreased downtime by 20% through Lean Six Sigma. Improved safety with redesigned assembly line engineering.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="reveal">Education</h3>
+          <div class="education-list reveal">
+            <div class="education-item">
+              <h4>University of California, Davis</h4>
+              <p>B.S. Mechanical Engineering, 2014 — 2018</p>
+            </div>
+            <div class="education-item">
+              <h4>Hack Reactor</h4>
+              <p>Software Engineering Immersive, 2019 — 2020</p>
+            </div>
+          </div>
+
+          <div class="now-card reveal" style="margin-top: var(--space-8);">
+            <h4>What I'm Working On Now</h4>
+            <ul role="list">
+              <li>Building an online multiplayer Harry Potter Monopoly Deal game</li>
+              <li>Expanding my photography portfolio</li>
+              <li>Exploring iOS development with SwiftUI</li>
+              <li>Snowboarding whenever the mountains call</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================
+     CONTACT PAGE
+     ============================================ -->
+<div class="page" id="page-contact">
+  <section class="section" style="padding-top: var(--space-16);">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h1 class="section-heading" style="font-size: var(--text-2xl); margin-bottom: clamp(var(--space-8), 4vw, var(--space-12));">Let's Create Something</h1>
+
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <h3>Reach Out</h3>
+          <p class="section-subtext" style="margin-bottom: var(--space-8);">Whether you have a project in mind, want to collaborate, or just want to say hello — I'd love to hear from you.</p>
+
+          <div class="contact-links">
+            <a class="contact-link-item" href="mailto:gurjotssingh510@gmail.com" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="mail"></i>
+              <span>gurjotssingh510@gmail.com</span>
+            </a>
+            <a class="contact-link-item" href="https://github.com/singhgur8" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="github"></i>
+              <span>github.com/singhgur8</span>
+            </a>
+            <a class="contact-link-item" href="https://www.linkedin.com/in/singhgur8/" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="linkedin"></i>
+              <span>linkedin.com/in/singhgur8</span>
+            </a>
+          </div>
+
+          <div style="margin-top: var(--space-8);">
+            <a class="btn-primary" href="https://gurjotportfolio.s3-us-west-1.amazonaws.com/GurjotSingh_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="download" style="width:16px;height:16px"></i>
+              Download Resume
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or just say hi..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-left">
+      &copy; 2026 Gurjot Singh. All rights reserved.
+    </div>
+    <div class="footer-right">
+      <a href="https://github.com/singhgur8" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/singhgur8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+// ——— Theme Toggle ———
+(function(){
+  const t = document.querySelector('[data-theme-toggle]');
+  const r = document.documentElement;
+  let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+  r.setAttribute('data-theme', d);
+  updateThemeIcon();
+
+  t && t.addEventListener('click', () => {
+    d = d === 'dark' ? 'light' : 'dark';
+    r.setAttribute('data-theme', d);
+    t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
+    updateThemeIcon();
+  });
+
+  function updateThemeIcon() {
+    if (!t) return;
+    t.innerHTML = d === 'dark'
+      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+      : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  }
+})();
+
+// ——— Hash Router ———
+function navigate(page) {
+  window.location.hash = page === 'home' ? '' : page;
+}
+
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => {
+    p.classList.remove('active');
+  });
+
+  const target = document.getElementById('page-' + page);
+  if (target) {
+    target.classList.add('active');
+  }
+
+  // Update nav active state
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === page);
+  });
+
+  // Scroll to top
+  window.scrollTo(0, 0);
+
+  // Re-initialize Lucide icons for new page
+  if (window.lucide) lucide.createIcons();
+}
+
+function handleRoute() {
+  const hash = window.location.hash.replace('#', '') || 'home';
+  showPage(hash);
+}
+
+window.addEventListener('hashchange', handleRoute);
+window.addEventListener('DOMContentLoaded', handleRoute);
+
+// ——— Mobile Menu ———
+const mobileBtn = document.getElementById('mobileMenuBtn');
+const mobileNav = document.getElementById('mobileNav');
+
+mobileBtn.addEventListener('click', () => {
+  mobileBtn.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+});
+
+function closeMobileMenu() {
+  mobileBtn.classList.remove('open');
+  mobileNav.classList.remove('open');
+}
+
+// ——— Header Scroll Behavior ———
+let lastScroll = 0;
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+  const current = window.scrollY;
+
+  if (current > 100) {
+    header.classList.add('site-header--scrolled');
+  } else {
+    header.classList.remove('site-header--scrolled');
+  }
+
+  if (current > lastScroll && current > 200) {
+    header.classList.add('site-header--hidden');
+  } else {
+    header.classList.remove('site-header--hidden');
+  }
+
+  lastScroll = current;
+}, { passive: true });
+
+// ——— Lightbox ———
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  // Use higher-res SmugMug URL if available, otherwise fall back to src
+  lbImg.src = el.dataset.largeSrc || img.src;
+  lbImg.alt = img.alt;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e) {
+  if (e.target === document.getElementById('lightbox') || e.target.closest('.lightbox-close')) {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
+// ——— Contact Form ———
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.btn-primary');
+  btn.textContent = 'Message Sent!';
+  btn.style.background = '#437a22';
+  setTimeout(() => {
+    btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+    btn.style.background = '';
+    e.target.reset();
+  }, 2000);
+}
+
+// ——— Init Lucide ———
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.lucide) lucide.createIcons();
+});
+
+// ——— SmugMug Integration ———
+// To connect your SmugMug gallery:
+// 1. Go to https://api.smugmug.com/api/developer/apply and get an API key
+// 2. Fill in SMUGMUG_CONFIG below with your API key and nickname (username)
+// 3. Optionally list specific album keys, or leave empty to show all public albums
+
+const SMUGMUG_CONFIG = {
+  apiKey: '',           // Your SmugMug API key (e.g., 'abc123XYZ')
+  nickname: '',         // Your SmugMug username/nickname (e.g., 'gurjotsingh')
+  albums: [],           // Optional: specific album keys to show (e.g., ['AbCdEf', 'GhIjKl'])
+                        // Leave empty [] to auto-discover all public albums
+  maxImages: 50,        // Max images per album to load
+};
+
+const SmugMug = {
+  baseUrl: 'https://api.smugmug.com',
+
+  // Fetch JSON from SmugMug API v2
+  async fetchApi(endpoint) {
+    const separator = endpoint.includes('?') ? '&' : '?';
+    const url = `${this.baseUrl}${endpoint}${separator}APIKey=${SMUGMUG_CONFIG.apiKey}&_accept=application%2Fjson`;
+    const res = await fetch(url, {
+      headers: { 'Accept': 'application/json' }
+    });
+    if (!res.ok) throw new Error(`SmugMug API error: ${res.status}`);
+    return res.json();
+  },
+
+  // Get user's public albums
+  async getAlbums() {
+    const data = await this.fetchApi(`/api/v2/user/${SMUGMUG_CONFIG.nickname}!albums?_expand=AlbumImages&count=50&_shorturis=true`);
+    return data.Response?.Album || [];
+  },
+
+  // Get images from a specific album
+  async getAlbumImages(albumKey) {
+    const data = await this.fetchApi(`/api/v2/album/${albumKey}!images?count=${SMUGMUG_CONFIG.maxImages}&_expand=ImageSizes`);
+    return data.Response?.AlbumImage || [];
+  },
+
+  // Get the best image URL for display
+  getImageUrl(image, size) {
+    const sizes = image?.Uris?.ImageSizes?.ImageSizes || image?.Uris?.ImageSizes || {};
+    // Prefer sizes: XLarge, Large, X2Large, Original
+    if (size === 'thumb') {
+      return sizes.SmallImageUrl || sizes.ThumbnailUrl || sizes.MediumImageUrl || '';
+    }
+    if (size === 'large') {
+      return sizes.X3LargeImageUrl || sizes.X2LargeImageUrl || sizes.XLargeImageUrl || sizes.LargeImageUrl || '';
+    }
+    return sizes.LargeImageUrl || sizes.XLargeImageUrl || sizes.MediumImageUrl || '';
+  },
+
+  // Initialize the gallery
+  async init() {
+    if (!SMUGMUG_CONFIG.apiKey || !SMUGMUG_CONFIG.nickname) return false;
+
+    const loader = document.getElementById('galleryLoader');
+    const grid = document.getElementById('galleryGrid');
+    const tabs = document.getElementById('galleryTabs');
+    const credit = document.getElementById('smugmugCredit');
+
+    try {
+      // Show loader, hide static fallback
+      loader.style.display = 'flex';
+      grid.innerHTML = '';
+
+      // Fetch all albums
+      let albums = await this.getAlbums();
+
+      // Filter to specific albums if configured
+      if (SMUGMUG_CONFIG.albums.length > 0) {
+        albums = albums.filter(a => SMUGMUG_CONFIG.albums.includes(a.AlbumKey));
+      }
+
+      if (albums.length === 0) {
+        loader.style.display = 'none';
+        return false;
+      }
+
+      // Build album tabs
+      if (albums.length > 1) {
+        tabs.style.display = 'flex';
+        albums.forEach(album => {
+          const btn = document.createElement('button');
+          btn.className = 'gallery-tab';
+          btn.dataset.album = album.AlbumKey;
+          btn.textContent = album.Name || album.Title || 'Untitled';
+          btn.addEventListener('click', () => this.filterByAlbum(album.AlbumKey));
+          tabs.appendChild(btn);
+        });
+        // "All" tab click handler
+        tabs.querySelector('[data-album="all"]').addEventListener('click', () => this.filterByAlbum('all'));
+      }
+
+      // Fetch images from each album
+      this.allImages = [];
+      for (const album of albums) {
+        const images = await this.getAlbumImages(album.AlbumKey);
+        images.forEach(img => {
+          img._albumKey = album.AlbumKey;
+          img._albumName = album.Name || album.Title || '';
+        });
+        this.allImages.push(...images);
+      }
+
+      // Render all images
+      this.renderImages(this.allImages);
+      loader.style.display = 'none';
+      credit.style.display = 'flex';
+
+      return true;
+
+    } catch (err) {
+      console.warn('SmugMug load failed, showing fallback gallery:', err);
+      loader.style.display = 'none';
+      return false;
+    }
+  },
+
+  renderImages(images) {
+    const grid = document.getElementById('galleryGrid');
+    grid.innerHTML = '';
+
+    images.forEach((img, i) => {
+      const thumbUrl = this.getImageUrl(img, 'medium');
+      const largeUrl = this.getImageUrl(img, 'large');
+      if (!thumbUrl) return;
+
+      const caption = img.Title || img.Caption || img._albumName || '';
+      const isWide = i === 3 && images.length > 5; // Make 4th image span wide if enough images
+
+      const item = document.createElement('div');
+      item.className = `gallery-item${isWide ? ' gallery-item--wide' : ''} reveal`;
+      item.dataset.album = img._albumKey || '';
+      item.dataset.largeSrc = largeUrl;
+      item.onclick = () => openLightbox(item);
+
+      item.innerHTML = `
+        <img src="${thumbUrl}" alt="${caption}" width="400" height="400" loading="lazy" decoding="async">
+        <div class="gallery-item__overlay"><span class="gallery-item__caption">${caption}</span></div>
+      `;
+
+      grid.appendChild(item);
+    });
+  },
+
+  filterByAlbum(albumKey) {
+    // Update active tab
+    document.querySelectorAll('.gallery-tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.album === albumKey);
+    });
+
+    if (albumKey === 'all') {
+      this.renderImages(this.allImages);
+    } else {
+      this.renderImages(this.allImages.filter(img => img._albumKey === albumKey));
+    }
+  }
+};
+
+// Auto-init SmugMug when gallery page is shown
+const origShowPage = showPage;
+showPage = function(page) {
+  origShowPage(page);
+  if (page === 'gallery' && !SmugMug._initialized && SMUGMUG_CONFIG.apiKey) {
+    SmugMug._initialized = true;
+    SmugMug.init();
+  }
+};
+
+// Also try on DOMContentLoaded if starting on gallery
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.location.hash === '#gallery' && SMUGMUG_CONFIG.apiKey) {
+    SmugMug._initialized = true;
+    SmugMug.init();
+  }
+});
+</script>
+
+</body>
+</html>
