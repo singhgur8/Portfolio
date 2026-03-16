@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--
-   ______                            __
-  / ____/___  ____ ___  ____  __  __/ /____  _____
- / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
-/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
-\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
-                    /_/
-        Created with Perplexity Computer
-        https://www.perplexity.ai/computer
--->
-
-<!-- Perplexity Computer Attribution — SEO Meta Tags -->
-<meta name="generator" content="Perplexity Computer">
-<meta name="author" content="Perplexity Computer">
-<meta property="og:see_also" content="https://www.perplexity.ai/computer">
-<link rel="author" href="https://www.perplexity.ai/computer">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gurjot Singh — Creator, Engineer, Photographer</title>
@@ -57,11 +40,6 @@
     "https://github.com/singhgur8",
     "https://www.linkedin.com/in/singhgur8/"
   ],
-  "creator": {
-    "@type": "SoftwareApplication",
-    "name": "Perplexity Computer",
-    "url": "https://www.perplexity.ai/computer"
-  }
 }
 </script>
 </head>
@@ -288,59 +266,526 @@
       <div class="gallery-intro">
         <div class="section-label">Photography</div>
         <h1 class="section-heading" style="font-size: var(--text-2xl);">Through the Lens</h1>
-        <p class="section-subtext" style="margin-inline: auto;">Landscapes, streets, people, and motion.</p>
+        <p class="section-subtext" style="margin-inline: auto;">Landscapes, streets, people, and motion — organized by project.</p>
       </div>
 
-      <!-- SmugMug album tabs (populated dynamically if configured) -->
-      <div class="gallery-tabs" id="galleryTabs" style="display:none;">
-        <button class="gallery-tab active" data-album="all">All</button>
+      <!-- Project Grid (default view) -->
+      <div class="gallery-projects-grid" id="galleryProjectsGrid">
+        <a class="gallery-project-card reveal" href="#gallery/landscapes" onclick="navigate('gallery/landscapes'); return false;">
+          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-n7mTHMt/0/KPXMNHR2MvSk48b7bmhPk8bZTRh3jg5jwgXpg6mVF/XL/i-n7mTHMt-XL.jpg" alt="Landscapes photography" loading="lazy" decoding="async">
+          <div class="gallery-project-card__overlay">
+            <span class="gallery-project-card__count">16 photos</span>
+            <h3 class="gallery-project-card__title">Landscapes</h3>
+            <p class="gallery-project-card__desc">From Iceland's volcanic terrains to serene alpine reflections.</p>
+          </div>
+        </a>
+        <a class="gallery-project-card reveal" href="#gallery/carousel" onclick="navigate('gallery/carousel'); return false;">
+          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-F6Mc7bb/0/KWGWXc2nVxcK6xgvgvQgWRmSSVsBHTs62Q6JfMxrB/XL/i-F6Mc7bb-XL.jpg" alt="Featured photography" loading="lazy" decoding="async">
+          <div class="gallery-project-card__overlay">
+            <span class="gallery-project-card__count">4 photos</span>
+            <h3 class="gallery-project-card__title">Featured</h3>
+            <p class="gallery-project-card__desc">Selected highlights from across my work.</p>
+          </div>
+        </a>
+        <a class="gallery-project-card reveal" href="#gallery/proposals" onclick="navigate('gallery/proposals'); return false;">
+          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-p7vsZLb/0/LBZpqzDjKtXfs8XWwQ7zzxMz9HW4ZZwrJqhT2WM4n/XL/i-p7vsZLb-XL.jpg" alt="Celebrations photography" loading="lazy" decoding="async">
+          <div class="gallery-project-card__overlay">
+            <span class="gallery-project-card__count">12 photos</span>
+            <h3 class="gallery-project-card__title">Celebrations</h3>
+            <p class="gallery-project-card__desc">Rokas, proposals, and moments of joy.</p>
+          </div>
+        </a>
+        <a class="gallery-project-card reveal" href="#gallery/travels" onclick="navigate('gallery/travels'); return false;">
+          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-CWKBtDX/0/K47B756mHnF5K5LBm8gB2kXCMphRXj8WqcLZSwWjZ/XL/i-CWKBtDX-XL.jpg" alt="Travels photography" loading="lazy" decoding="async">
+          <div class="gallery-project-card__overlay">
+            <span class="gallery-project-card__count">16 photos</span>
+            <h3 class="gallery-project-card__title">Travels</h3>
+            <p class="gallery-project-card__desc">Japan, street scenes, and cultures captured on the go.</p>
+          </div>
+        </a>
+        <a class="gallery-project-card reveal" href="#gallery/grad" onclick="navigate('gallery/grad'); return false;">
+          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-3qcBbzt/0/Lzd6s4MnRhRTWWfDScC9hPBSNJBjjGSr6MHxRhVpQ/XL/i-3qcBbzt-XL.jpg" alt="Portraits photography" loading="lazy" decoding="async">
+          <div class="gallery-project-card__overlay">
+            <span class="gallery-project-card__count">12 photos</span>
+            <h3 class="gallery-project-card__title">Portraits</h3>
+            <p class="gallery-project-card__desc">Graduation sessions, headshots, and personal portraiture.</p>
+          </div>
+        </a>
+        <a class="gallery-project-card reveal" href="#gallery/proposal_ra" onclick="navigate('gallery/proposal_ra'); return false;">
+          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-2G6NQqB/0/M829rWDrrGF876XB7mSdXg6nkfpxBkPCzx53xTn83/XL/i-2G6NQqB-XL.jpg" alt="Proposals photography" loading="lazy" decoding="async">
+          <div class="gallery-project-card__overlay">
+            <span class="gallery-project-card__count">12 photos</span>
+            <h3 class="gallery-project-card__title">Proposals</h3>
+            <p class="gallery-project-card__desc">The moment of a lifetime, preserved forever.</p>
+          </div>
+        </a>
+        <a class="gallery-project-card reveal" href="#gallery/romance" onclick="navigate('gallery/romance'); return false;">
+          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-NXPksQV/0/NgkKL2nzf74Qw452KzVmr7jBDLS9TDZFwLfGhxxFg/XL/i-NXPksQV-XL.jpg" alt="Couples photography" loading="lazy" decoding="async">
+          <div class="gallery-project-card__overlay">
+            <span class="gallery-project-card__count">12 photos</span>
+            <h3 class="gallery-project-card__title">Couples</h3>
+            <p class="gallery-project-card__desc">Love stories told through light and composition.</p>
+          </div>
+        </a>
       </div>
 
-      <!-- Loading state -->
-      <div class="gallery-loader" id="galleryLoader" style="display:none;">
-        <div class="loader-dots">
-          <span></span><span></span><span></span>
+      <!-- Detail Views (one per category, toggled via JS) -->
+      <!-- Detail: Landscapes -->
+      <div class="gallery-detail" id="gallery-detail-landscapes" style="display:none;">
+        <div class="gallery-detail__header">
+          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Gallery
+          </a>
+          <h2 class="gallery-detail__title">Landscapes</h2>
+          <p class="gallery-detail__desc">From Iceland's volcanic terrains to serene alpine reflections.</p>
+          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2024/Iceland/n-XdJV22" target="_blank" rel="noopener noreferrer">
+            View full gallery on SmugMug
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="gallery-detail__grid">
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-n7mTHMt/0/KPXMNHR2MvSk48b7bmhPk8bZTRh3jg5jwgXpg6mVF/XL/i-n7mTHMt-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-n7mTHMt/0/NftzH9D75pHdBHGtthSdp6s5wNgwW6zjbXHfpwHR5/M/i-n7mTHMt-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-cHDHPpb/0/KL2dMJXrV5QwFDzVF877ktDXtRRD6FWZ2gfTcSVT9/XL/i-cHDHPpb-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-cHDHPpb/0/Mnz2nJdfM3Qkh3Z6pbQBz3Nmm7BkFgv9kCsph7jTM/M/i-cHDHPpb-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-V8FDLHW/0/K6Wb76zQDVspPwMtkX4qh5bS7TTbpf2RMF8H3WtMh/XL/i-V8FDLHW-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-V8FDLHW/0/KdrRC5WTLbjzNZ9hwz4FJCRcGnrJhrn9xkx23rkPc/M/i-V8FDLHW-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-PDJf3Zw/0/KJgpRQTk3t4ZMXSjRgRkGk5SZd2zX4DL2mPMX5bmP/XL/i-PDJf3Zw-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-PDJf3Zw/0/Nfz3KG92mt7TsQtG3sKD5J6fWqsD83JkSbGtL8kJF/M/i-PDJf3Zw-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-z43C7nZ/0/NCXCVrWJrkJrBCVv8XvSPxBHqsvDPLRVhHZdDcPKh/XL/i-z43C7nZ-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-z43C7nZ/0/MXssw3LvW44MSRmJ53CrSVVdwg52NGqPjnHH2sPB2/M/i-z43C7nZ-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-5jjwMhp/0/KFpzSwLQx5dzdgmXqmqsj3JFqgBZ5WnFkFf8HdJnM/XL/i-5jjwMhp-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-5jjwMhp/0/NFGVDtCgS7kXHCScKQhXRDVRv8k62sDXVPMhWNLvv/M/i-5jjwMhp-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-mp4KbdK/0/KjfxsfTbnDLws7m8NQBThDhvj8Wb6PB6wLTBVBjhv/XL/i-mp4KbdK-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-mp4KbdK/0/MWXLxZ7bcGsDVrC6mbdmVjXLW8xXTskqfrN4wFXWK/M/i-mp4KbdK-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-35HRFpR/0/MKHHw5LHLWvZfvQV8hCFvg5njQKNdt2tvhQP3PFht/XL/i-35HRFpR-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-35HRFpR/0/LQT28mRLXhFd4ZCGGmWWSvdkVfxPWz2pwmZJHLtJc/M/i-35HRFpR-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-94TBZsF/0/NHX6np28BGbFzjxqwhSqJmRdmH9p5Bt554BWZSrz5/XL/i-94TBZsF-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-94TBZsF/0/NKHWScbXfCwzLQ9NSV6T9jwgXCncfhMJpkC7s52Hm/M/i-94TBZsF-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-MtxTm7t/0/KbGsxksfcVrf2CntqQrqbcHgNxqnmbmvRzGzSmc69/XL/i-MtxTm7t-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-MtxTm7t/0/Ldr8ZzH5DMfxNDWHRBgG8S3WWQKVfW49smBn72C9n/M/i-MtxTm7t-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-NC7ghM7/0/KsTfVFs52JWbFrCr6cnMdZQbtBRTNLHQhsJFdWSFb/XL/i-NC7ghM7-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-NC7ghM7/0/Lb5SDz7C9dfmKxdpmNdckMwXMv2XVkKLQ5QmVnkrH/M/i-NC7ghM7-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-HnwqsXf/0/KHJs53Xm5ttV4vjccvSGkBPvwcPwWjcWJ4zcdf5MH/XL/i-HnwqsXf-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-HnwqsXf/0/K3W9C5PXSV3V26WKwB5btPZ9qxTdP76fX4jX7GgpS/M/i-HnwqsXf-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-pcgm4BK/0/KxHJNTk8wcQvDsdKK69TLLd97cFKkJwX8QPp4rZBN/XL/i-pcgm4BK-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-pcgm4BK/0/MrCZDsGrJ98QGP87NWWjfgWsW3Nd3D3Gqc3Cnqp2c/M/i-pcgm4BK-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-96G46jc/0/NCkvMp2Rn2mMjqwr4nW27fDdhqCZJWkQ3TNdHPZz8/XL/i-96G46jc-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-96G46jc/0/M54fSC9nCkqM7Tpsg3q2TpHKrG8DBWVNLNrvPZwPQ/M/i-96G46jc-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-5qJnrqj/0/KfrgRPmQJFqksw84B3r3RHzNSqW2XVssKq375PtMF/XL/i-5qJnrqj-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-5qJnrqj/0/KHHfXVfQQKsc6jDcRnC54DbJcskQHRf74jhcTcwcs/M/i-5qJnrqj-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-f52wJdx/0/Lv2Rx5mxL8ZstvKzgGDM46zSM7Qx8CzJVHZPbcbM5/XL/i-f52wJdx-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-f52wJdx/0/KkhC55mg9DBRSbVVWwk5TRRrTL2mLnCKTMdCGFssF/M/i-f52wJdx-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Detail: Featured -->
+      <div class="gallery-detail" id="gallery-detail-carousel" style="display:none;">
+        <div class="gallery-detail__header">
+          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Gallery
+          </a>
+          <h2 class="gallery-detail__title">Featured</h2>
+          <p class="gallery-detail__desc">Selected highlights from across my work.</p>
+          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2024/My-Homepage-Carousel/n-st5NbL" target="_blank" rel="noopener noreferrer">
+            View full gallery on SmugMug
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="gallery-detail__grid">
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-F6Mc7bb/0/KWGWXc2nVxcK6xgvgvQgWRmSSVsBHTs62Q6JfMxrB/XL/i-F6Mc7bb-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-F6Mc7bb/0/MNqb2SP73sLFLKBHX7RFLpqwkVpQVMSPsh2LXQh3F/M/i-F6Mc7bb-M.jpg" alt="Featured photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-TLzdSVq/0/LV5BVXhdmJFJv95GL7sFtCXmS7c8Mt6m8B7gbKKLB/XL/i-TLzdSVq-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-TLzdSVq/0/LxfLg2zNh9r8B9kV4hNPXFvxxb2PHKr2MKGj9Tbdz/M/i-TLzdSVq-M.jpg" alt="Featured photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-63RZgsX/0/KkpvSH6XGLPSzMTHKtQRhzddhpLNH9D3NnW9ffMLL/XL/i-63RZgsX-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-63RZgsX/0/KpSDx2bJVhP4W6pjxKVfczK8BDwwrnw6TZPVkqfDD/M/i-63RZgsX-M.jpg" alt="Featured photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-CT74qs7/0/NbBbMRcFgWzsRCxm9ShfWxr3XmdHDBNz9qWRW7Nnr/XL/i-CT74qs7-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-CT74qs7/0/MmgMrdd4p36zCvN8msF2N4T3VDsng4KD4Z8DwNkV2/M/i-CT74qs7-M.jpg" alt="Featured photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Detail: Celebrations -->
+      <div class="gallery-detail" id="gallery-detail-proposals" style="display:none;">
+        <div class="gallery-detail__header">
+          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Gallery
+          </a>
+          <h2 class="gallery-detail__title">Celebrations</h2>
+          <p class="gallery-detail__desc">Rokas, proposals, and moments of joy.</p>
+          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2025/Herman-Jagjit-Roka/Portraits/n-HpjNrm" target="_blank" rel="noopener noreferrer">
+            View full gallery on SmugMug
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="gallery-detail__grid">
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-p7vsZLb/0/LBZpqzDjKtXfs8XWwQ7zzxMz9HW4ZZwrJqhT2WM4n/XL/i-p7vsZLb-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-p7vsZLb/0/LhV9JttGTW8FZwZ2Jz5Rw7CxrQ2qsmwWqR6kFWHNs/M/i-p7vsZLb-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-msjNvpk/0/KnmLLswfrLhSh8mSVZX77w4JqX4dbj9r5vZcK9LLF/XL/i-msjNvpk-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-msjNvpk/0/LcmHDpXmDn8vNWMDrKdWMR6F4c9Pp34w9j9HkpnjJ/M/i-msjNvpk-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-fxJFrL2/0/LJprD89LVMqw9FQ7GFg9LZ9tCB5sC2XPQMvxXtbns/XL/i-fxJFrL2-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-fxJFrL2/0/NV6c48WV9BrrPD6k38NmKHXdtZdQqkWKsZTzf6jFm/M/i-fxJFrL2-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-qLVXMkC/0/MpQVxnqCpPqJVZbxJRPT2FPhpzxZDRbN6DtkNX3gD/XL/i-qLVXMkC-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-qLVXMkC/0/MfDmbHPZgQChdD2PCXkq7zVQhLGmwdxFWKf6RR3tK/M/i-qLVXMkC-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-jWhCW6w/0/LD7LnRCRkJsRvvNm9GSm6wrgNmBD8btzLWDCcXSBf/XL/i-jWhCW6w-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-jWhCW6w/0/KdQcZK2n9TDn5sjWgmvcQ67ZbhXgSqVV922gfNZzb/M/i-jWhCW6w-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-58bn5R9/0/LFxgP96xwQdQV7CcZ94rZMP79XHGf6f7KgZBnBhPw/XL/i-58bn5R9-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-58bn5R9/0/K4NdscfppB2mmzDJG5QPh537BMxTP9nWvfBDmM2RH/M/i-58bn5R9-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-ZFLJPHz/0/MW29Qz8SG3fXhRvxWrvGpCrGXWDJRz2MBqWCjZNV3/XL/i-ZFLJPHz-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-ZFLJPHz/0/MLN5rjGsXh2qBGzVCJHbDFTSDqNrWx4NTwhQSNtf5/M/i-ZFLJPHz-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-XRVDJpM/0/KGQTprPzgPNq4dGDfkhrbDZh89R3FvZL3t5VdKtNQ/XL/i-XRVDJpM-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-XRVDJpM/0/LB2rgW3nqVLzVVXSv5CX4VFSPZF7m5xCfx7c8NKCj/M/i-XRVDJpM-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-LDj4Zcp/0/KFTZTqGLRw3mcC75jHWFFWk9pWhhqzHWxVVvNc5Z2/XL/i-LDj4Zcp-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-LDj4Zcp/0/NBzpsqPpVmv9WF42df3wLDtCWtFNVQ2fXVnq9d46g/M/i-LDj4Zcp-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-C8Sp8JD/0/LrHpjd7LpnQH4vrqQnNGmzhGt4zRFz7tJQqqKpGtn/XL/i-C8Sp8JD-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-C8Sp8JD/0/LzTRfwKCnsjWt5V7Pcz82t6khDwZhKJPzBtwLgJBv/M/i-C8Sp8JD-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-LnwZpsV/0/KkMdGWDvv52b2TbXrtbfpnQnXWdL6JRFFrFNswmKX/XL/i-LnwZpsV-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-LnwZpsV/0/Mv6NBJMHWKk4KTwgLjcKnCNXtWw92Rc4HN3PLgQjj/M/i-LnwZpsV-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-tTPRk28/0/K4VWh2HzcFggvz3B775PwQwh95dm7zWKJp8BHKw9t/XL/i-tTPRk28-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-tTPRk28/0/MB3TzL2bkMRCLQPPnwpLfJrCwhGnNxWVJTCcgst3Z/M/i-tTPRk28-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Detail: Travels -->
+      <div class="gallery-detail" id="gallery-detail-travels" style="display:none;">
+        <div class="gallery-detail__header">
+          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Gallery
+          </a>
+          <h2 class="gallery-detail__title">Travels</h2>
+          <p class="gallery-detail__desc">Japan, street scenes, and cultures captured on the go.</p>
+          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2025/Japan2025/n-HLd5QQ" target="_blank" rel="noopener noreferrer">
+            View full gallery on SmugMug
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="gallery-detail__grid">
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-CWKBtDX/0/K47B756mHnF5K5LBm8gB2kXCMphRXj8WqcLZSwWjZ/XL/i-CWKBtDX-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-CWKBtDX/0/M9Gvsz5bfCgnGmFddxXPtnsNsFjG9QwBG8pHMwBcM/M/i-CWKBtDX-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-bqf3fLt/0/NK5tfLdXvmnJbRTj7xBS2KczSkmRpZ6WvWtSh255t/XL/i-bqf3fLt-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-bqf3fLt/0/ND9K3TGJ4VN4B2k3FhtCbKH3hVsHQMXRmFSqW7Gtk/M/i-bqf3fLt-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-cFkZmB9/0/KqCc66jVg5XqXb4xR22MKt5fpMF6MN3TCLMPBcPJV/XL/i-cFkZmB9-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-cFkZmB9/0/LsRNvg2ZnPqPh2DGD8xwjvV9m5HH4Q3x4GzwttmPH/M/i-cFkZmB9-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-WLS6GDP/0/MK3HD5VX9QZdNQFKFHG9LNXsrGb2vhWLRJ5kkKZQs/XL/i-WLS6GDP-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-WLS6GDP/0/Lv8WjsRgdxqNKz4JvpqzSW6C73fZgSMgcmn8ww2XL/M/i-WLS6GDP-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-Ng2HFrD/0/K2xmn2WXKc4KJPT2gVTZjVHj3tRvddZhQWkSmKmvS/XL/i-Ng2HFrD-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-Ng2HFrD/0/MjqDCtxsq8WXXwqDLhSGsB3r8Qpsm4nMLnhpxL8F7/M/i-Ng2HFrD-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-wcHrLRP/0/Mr5f4KjrVBG6fpDqPvRFhTgjSKNd7VPHTB65R4nK6/XL/i-wcHrLRP-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-wcHrLRP/0/LK4M4zft7Nqw2vrKMpJTjtNZ33zNXFtxbbzK9jptM/M/i-wcHrLRP-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-nW438Gv/0/KLQnqGbXQdPz56VTvcscDzxxtGCDZDh5xTsSRvBsg/XL/i-nW438Gv-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-nW438Gv/0/MRm4TFR7h4bWB2sWbQFQ7SGxvVTgpR55XJjjPtt9M/M/i-nW438Gv-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-RJz2K74/0/MHQs54K57HZ4W45vj8FbqTWqrvkj8xvmWKxkMZLRX/XL/i-RJz2K74-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-RJz2K74/0/MSFBbJt7DzXSJhWXJh825KKKGdmkLSXXP7P3CfDZB/M/i-RJz2K74-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-458nKHP/0/KKK4Dr9cDWpQM8LQqTFr4N6c3mz6G7GFxvzsFScgF/XL/i-458nKHP-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-458nKHP/0/L7zsCd98ktRgZNBp9Dg6T9WvnBP6Hmx2P5FWN5f42/M/i-458nKHP-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-R6QzchV/0/K6nNQC6ZnPwrTcP9Xjv92HWn6x5XRGd7ztrbWnDnr/XL/i-R6QzchV-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-R6QzchV/0/L5R7x2TWR93QCKMrFLJCHwT9FJdjmrM5vTpKQmxw8/M/i-R6QzchV-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-4Rgh5K6/0/MvJrZxqxPzfHzj96qP4dBnhR9vbrdcn97LV5d23MT/XL/i-4Rgh5K6-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-4Rgh5K6/0/KmvCLGBm9SWWnkRxDGwBN8Kn6MbfKC9gXk3qf2bkb/M/i-4Rgh5K6-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-JZ6QKcW/0/MBscrQWkHrCZ2kzzKg28Vn9WWqG7Ms3hVSzHb7vBC/XL/i-JZ6QKcW-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-JZ6QKcW/0/M8GqWKCmm7LgvRHWRXw3vq4b5ZqHnzFxQCZb74DgJ/M/i-JZ6QKcW-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-LWpspHR/0/LQ4XHrWFVWQPFk5MPgsJGKXtHSM4S2CFBHGFxMKn8/XL/i-LWpspHR-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-LWpspHR/0/KLvcfbtWKgWgWVMxfJ3wxQ3b6fwPzbSDFqrRPqS93/M/i-LWpspHR-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-vSFQxMJ/0/LN7dV82kTmRN5LHH4dtCLWQnbP9k7JWLwfPsVKgP7/XL/i-vSFQxMJ-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-vSFQxMJ/0/LdpRbQp4n2RPj2CbBwPDwjbjrswKMvLsqfdm6BgBq/M/i-vSFQxMJ-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-gVNND6f/0/Mwpc57cMXswZmBdtZM3Qr7LN8dJ96vgMbFW5ZjsKS/XL/i-gVNND6f-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-gVNND6f/0/McDpnW7qSrzFq5c5jZW74zGsrS4zN7TMd3Nns2gGd/M/i-gVNND6f-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-fTW3JzN/0/NHpZLdpDPCdBdvNWbQxWrxs5MG3nQRXq5wb32GjSJ/XL/i-fTW3JzN-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-fTW3JzN/0/L9xcCKVQxT8qp3FFPqMbC4SbJXhcwKqSB89m6tSz2/M/i-fTW3JzN-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Detail: Portraits -->
+      <div class="gallery-detail" id="gallery-detail-grad" style="display:none;">
+        <div class="gallery-detail__header">
+          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Gallery
+          </a>
+          <h2 class="gallery-detail__title">Portraits</h2>
+          <p class="gallery-detail__desc">Graduation sessions, headshots, and personal portraiture.</p>
+          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2025/Mehak-Grad/n-FjzdWS" target="_blank" rel="noopener noreferrer">
+            View full gallery on SmugMug
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="gallery-detail__grid">
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-3qcBbzt/0/Lzd6s4MnRhRTWWfDScC9hPBSNJBjjGSr6MHxRhVpQ/XL/i-3qcBbzt-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-3qcBbzt/0/MbrkdhH7McRQRQjxTZHskqXxjfWLH2G8FdKJW8T9G/M/i-3qcBbzt-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-dwjk543/0/K7H3n9T3SQgJGVqcF4Lbc6QDjn3jD3vm5jJjGs4Q3/XL/i-dwjk543-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-dwjk543/0/NK5cLjkX8gtNwQdR2tFvnVDrHPzfKz8mN4bF7ZZvC/M/i-dwjk543-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-KjjSDdn/0/L9kKxCdVHrzgdSVhSXT9BSdBx3PCQrnx7J28dv4Gz/XL/i-KjjSDdn-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-KjjSDdn/0/LKHDk4LkVZnhbZJBpxFz5MH8SPgqPVstzpBfHgtLN/M/i-KjjSDdn-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-X7HsFkc/0/NbKN8nJx4n8XLSJs9bgBdBvTK7Bp36Wn3TzNSfw85/XL/i-X7HsFkc-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-X7HsFkc/0/KsJLfkPRmrThw2zJ644pnFrg4663tNVH88xnPfHm4/M/i-X7HsFkc-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-SLtrJk2/0/KTvtpC8CPb99fdfXx6gHm5fKH3HF7F4Pp69PnM6QW/XL/i-SLtrJk2-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-SLtrJk2/0/KdFcQR5wMS38hRnw98CdtXPRPddbsR8sk8fcwvqbh/M/i-SLtrJk2-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-zx4sLn6/0/LmhpNg8NNMrfHdrrfXFHWWcSNtjHK7vxvsSdGdJGs/XL/i-zx4sLn6-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-zx4sLn6/0/MsncVLRBnHmbwnrtrfgJwxNwCpXDz4Mv3PX5w9v8N/M/i-zx4sLn6-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-XnqPvMD/0/L8bJw9tWxbm9jvWWP82MvnggqnGGNDXgvvM4n3Zwx/XL/i-XnqPvMD-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-XnqPvMD/0/MMpQTZB23kLJqPN3MpPz8SpmK3qH7gPtcpCPr9gqX/M/i-XnqPvMD-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-DRFpKZ6/0/LMVNJdXqvqZLSZj2g8njG4GtDDwgxTjs9n79dbS4p/XL/i-DRFpKZ6-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-DRFpKZ6/0/MPfTRqxTdd8qbv3LzKfBwJb8kpnKMfCDPxWjrRkKf/M/i-DRFpKZ6-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-W9xPrZf/0/Kjp5cg5sjVnfnsPZq2mcrfx8kM6rLHvQJ7FBS6Bcr/XL/i-W9xPrZf-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-W9xPrZf/0/NXz9XD2FZfD9GMHbzLdfTW23drPJB3K6qdCTvKw5P/M/i-W9xPrZf-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-tmhjCBR/0/Lh3Mw7N7fxkpw88DQGwLbMJhnmCnsnT8BRL2HbgGB/XL/i-tmhjCBR-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-tmhjCBR/0/L5W5QgqgZ5S5ftV829QnJzDPTp493DMdPg8cxnfCC/M/i-tmhjCBR-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-j7J36n9/0/MvhZWHMjTF8n2SfJSFqQZs84bcgvmCDHbt684p6Xz/XL/i-j7J36n9-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-j7J36n9/0/NLNxmvvh5Pj2vVKMXfgn8vmdX3Djb4sz63CQDtvqW/M/i-j7J36n9-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-zZbnvh6/0/LctNBLhhXK2Hzzz8s6v7j9xqzf2cjf9NKVBd4T4JW/XL/i-zZbnvh6-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-zZbnvh6/0/MkpDJVBn2q2MHThkFhdGr6f4L2mkNVSJTzpmRpmCP/M/i-zZbnvh6-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Detail: Proposals -->
+      <div class="gallery-detail" id="gallery-detail-proposal_ra" style="display:none;">
+        <div class="gallery-detail__header">
+          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Gallery
+          </a>
+          <h2 class="gallery-detail__title">Proposals</h2>
+          <p class="gallery-detail__desc">The moment of a lifetime, preserved forever.</p>
+          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2026/Randeep-Alisha-Proposal/n-9HGpb9" target="_blank" rel="noopener noreferrer">
+            View full gallery on SmugMug
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="gallery-detail__grid">
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-2G6NQqB/0/M829rWDrrGF876XB7mSdXg6nkfpxBkPCzx53xTn83/XL/i-2G6NQqB-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-2G6NQqB/0/Kpbx8ZfXFgnmkpp9gGBmqn2WDGvL8fR8F7SG7p4jK/M/i-2G6NQqB-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-xhPFxZS/0/LVzsZHNnGV36VVqXNRtBq6gMLzc9qXnCkgNmLw2Ps/XL/i-xhPFxZS-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-xhPFxZS/0/M4jRDMZs8Vs6cJDLGkvKtN9nQw5JtQWz6g385kq9d/M/i-xhPFxZS-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-C8g3NP9/0/MnF5xfwXxbRfZMW7763ZbK9ZNmtRZsFNZ9BxnxFDJ/XL/i-C8g3NP9-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-C8g3NP9/0/Mr2W4QW2TzNndCMKhv26j45nm6FJMBgbQ5dZPXgJj/M/i-C8g3NP9-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-pjnH93N/0/KVJZGtzzJ4wVvC47LZ4qpsmdG3Sr7XWcZqGkwnJPL/XL/i-pjnH93N-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-pjnH93N/0/MbfKsXGF2XH7L6c6Tp7g2MfXTZKJSPdvbwTtHbdQk/M/i-pjnH93N-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-sHgMjSn/0/K3wgVNzDhVb4hVJLF5ZvKTd8cBX4jgjXGKj4Gxj4C/XL/i-sHgMjSn-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-sHgMjSn/0/Nf989LsZD8QNmn5JR9hvSGB5zNfMrWbJTPDJBtdXt/M/i-sHgMjSn-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-q2Jj2P9/0/LQppwbtNWbn3mXVhKtBLnt44mHVvzxhvVrckTdnQj/XL/i-q2Jj2P9-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-q2Jj2P9/0/MrhLXLdbFbZMskRPkWxmdBf4FQQPPRStSVrZPVjsp/M/i-q2Jj2P9-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-JFdDzKS/0/K9rpbbSZ4hmH2cNMj6GdD6Mw5ftcXfhfC9KCfg7xx/XL/i-JFdDzKS-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-JFdDzKS/0/MsFP7tZfCHqxMG9LFN2qNQbCvc7F8WCDv8WckmX2N/M/i-JFdDzKS-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-g884mKb/0/NJjtwrpHXvDVFgbwJt3rwPjfs4q7vSKxsWthmBx7w/XL/i-g884mKb-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-g884mKb/0/NF2kpC856LPhzxVZbKmn2L3GL5QmMdJN97Gc3Hm99/M/i-g884mKb-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-KR6vBH7/0/K8PrvcRvSCPtMD2nC6PN6ZgFbWztKQBh8J5JZRMN2/XL/i-KR6vBH7-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-KR6vBH7/0/MkbkXGJk3tHjqmKgJRLVHWrkJrccrjMchPCq5pvcX/M/i-KR6vBH7-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-X6cFp23/0/KZBxDQggFGHQ4wd9VMkM6Nw54mvnpnJ4dCQchFjnC/XL/i-X6cFp23-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-X6cFp23/0/LwS5GvnGfp8W7nsPWVMCHmfvVfn5wPhgNbK4KqQf8/M/i-X6cFp23-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-x6zPFC4/0/K3LWzbdJz5xhsLxPT3cXSWrMPTQnV34359f4gwMCL/XL/i-x6zPFC4-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-x6zPFC4/0/KhDhvCt3Ws9QjQjnX953CTCW9cN8W46zgtJp9HLKG/M/i-x6zPFC4-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-Lk8qSF5/0/LtWkWs8wdBdDS7s7tjJHVTNShcK7hX32nrCzqS8Bx/XL/i-Lk8qSF5-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-Lk8qSF5/0/LNtcdF4PmSk3QcqTt7CsCM9msWLFP9qHRSGMXWW5X/M/i-Lk8qSF5-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Detail: Couples -->
+      <div class="gallery-detail" id="gallery-detail-romance" style="display:none;">
+        <div class="gallery-detail__header">
+          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Gallery
+          </a>
+          <h2 class="gallery-detail__title">Couples</h2>
+          <p class="gallery-detail__desc">Love stories told through light and composition.</p>
+          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2025/Japji-Sehej/n-Md29tw" target="_blank" rel="noopener noreferrer">
+            View full gallery on SmugMug
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="gallery-detail__grid">
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-NXPksQV/0/NgkKL2nzf74Qw452KzVmr7jBDLS9TDZFwLfGhxxFg/XL/i-NXPksQV-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-NXPksQV/0/NMspSg9r9bZxgKPGRrJsz4XB6sLVM9CcQ7xkqhK38/M/i-NXPksQV-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-PSs4f2K/0/KRPJM62LHd468cXf773gDLbLXVT9sVCJs5MhVfsmk/XL/i-PSs4f2K-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-PSs4f2K/0/MDvfzCJqcPXgbc4mXrkcG33rStgBVRfjfzhnWdLTZ/M/i-PSs4f2K-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-85hwbNr/0/MBLtTs5wD7RrcCStfWTT7XmVMTxVktHsS7CZ3tVsh/XL/i-85hwbNr-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-85hwbNr/0/NWn6d8ZMGg4tW6DTkHfCFSWMNkLW4ZDNWgdRnZxVB/M/i-85hwbNr-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-j2cWK6k/0/M27nr6CD8q7787B4NwN8S76pTHBDVp6P3rsRq4hnq/XL/i-j2cWK6k-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-j2cWK6k/0/MbH4pMhJzk2TFtFQWSDBQX6TMJ2VHzPNx3FRtRdqc/M/i-j2cWK6k-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-L6Mbm6F/0/LgPRtf7cSq58wf2wRnjzrTt3KwBwwhMc2zXxBscDd/XL/i-L6Mbm6F-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-L6Mbm6F/0/L8sSqqhZ7ZBHh79Rm9mN35jwbCdMZwQmtfmwcZjB9/M/i-L6Mbm6F-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-TkXnVjL/0/NPZMKQ7HFbvHdhFmShWwspzvJXGBq7kgjTqsrRhpH/XL/i-TkXnVjL-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-TkXnVjL/0/KbTGp5s3zjpp8LWpxtZHrg3tc3XFH76xvMLd4mnPf/M/i-TkXnVjL-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-2xPjV57/0/Lq48rkFkDjG7VMFp9qzwpQHwNTGCTrD65hjzZsZLJ/XL/i-2xPjV57-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-2xPjV57/0/LhmvCXHBbTLJCrFZKwdXqnSZtfDjfdfmckQGVGhJC/M/i-2xPjV57-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-qjMtxpw/0/LB7X2fStSKPvkPDnMTPdJSV3DgPK3x975ZqDSnwdZ/XL/i-qjMtxpw-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-qjMtxpw/0/MBDrQZgRvdsG4pQJG2dSW5Bqt4nh4tPwgvMfq9hTT/M/i-qjMtxpw-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-QSRnggJ/0/MLQtBbCJzwxJxRhrBtfC5W92bNwVZrDrdLBL3Fhnc/XL/i-QSRnggJ-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-QSRnggJ/0/K6Xnqjw3LwpsMBh6dPGpb3fhSLS7WPKJpxxLj5whV/M/i-QSRnggJ-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-dD3pBvL/0/NPF9R5xRwdcH3f7GwTHgxm3WG8p9pcRH7MfDC2wFQ/XL/i-dD3pBvL-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-dD3pBvL/0/Kc4L3jLHVcVfLhKPQQsCj7Zfv6LcHznfv48QL2kdF/M/i-dD3pBvL-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-vxtxBjh/0/L6X2Bx55zWjSjGqCTmqsS9wbq4nCwCh4bkG77H3Vs/XL/i-vxtxBjh-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-vxtxBjh/0/M2LhgQpr8jGc9mPpNw79238SpRwkwHZ3XD3968twP/M/i-vxtxBjh-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
+          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-J7GsZd8/0/LnVj3HZT4THLN7BFNRcxT47JhNMnBGB6NvXC8kBjj/XL/i-J7GsZd8-XL.jpg">
+            <img src="https://photos.smugmug.com/photos/i-J7GsZd8/0/LDzqx7jTWvHqmpFrgP8LMfwvcDNTg46vqcxX72Bfz/M/i-J7GsZd8-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
+            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
+          </div>
         </div>
       </div>
 
-      <!-- Gallery grid (filled dynamically from SmugMug or with fallback placeholders) -->
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- Fallback static images (shown when SmugMug is not configured) -->
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="./assets/gallery-1.png" alt="Mountain reflection in a still alpine lake at dawn" width="400" height="400" loading="lazy" decoding="async">
-          <div class="gallery-item__overlay"><span class="gallery-item__caption">Alpine Dawn</span></div>
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="./assets/gallery-2.png" alt="Brutalist architecture with dramatic shadows" width="400" height="400" loading="lazy" decoding="async">
-          <div class="gallery-item__overlay"><span class="gallery-item__caption">Concrete Geometry</span></div>
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="./assets/gallery-5.png" alt="Snowboarder carving through powder" width="400" height="400" loading="lazy" decoding="async">
-          <div class="gallery-item__overlay"><span class="gallery-item__caption">Powder Day</span></div>
-        </div>
-        <div class="gallery-item gallery-item--wide reveal" onclick="openLightbox(this)">
-          <img src="./assets/gallery-3.png" alt="Rainy night street scene with neon reflections" width="800" height="400" loading="lazy" decoding="async">
-          <div class="gallery-item__overlay"><span class="gallery-item__caption">Night Streets</span></div>
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="./assets/gallery-6.png" alt="Dramatic portrait with warm side lighting" width="400" height="400" loading="lazy" decoding="async">
-          <div class="gallery-item__overlay"><span class="gallery-item__caption">Warm Light</span></div>
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="./assets/gallery-4.png" alt="Autumn river winding through forest from above" width="400" height="400" loading="lazy" decoding="async">
-          <div class="gallery-item__overlay"><span class="gallery-item__caption">Autumn River</span></div>
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="./assets/hero-photography.png" alt="Film camera on tripod at golden hour" width="400" height="400" loading="lazy" decoding="async">
-          <div class="gallery-item__overlay"><span class="gallery-item__caption">Golden Hour Setup</span></div>
-        </div>
-      </div>
-
-      <!-- SmugMug attribution (shown when SmugMug is active) -->
-      <div class="smugmug-credit" id="smugmugCredit" style="display:none;">
-        <span>Photos hosted on</span>
-        <a href="https://www.smugmug.com" target="_blank" rel="noopener noreferrer">SmugMug</a>
-      </div>
     </div>
   </section>
 </div>
@@ -482,7 +927,7 @@
           </div>
         </div>
 
-        <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xcontact" method="POST" onsubmit="handleSubmit(event)">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -495,10 +940,11 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Tell me about your project or just say hi..." required></textarea>
           </div>
-          <button type="submit" class="btn-primary">
+          <button type="submit" class="btn-primary" id="contactSubmitBtn">
             Send Message
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
+          <p class="form-status" id="formStatus" style="display:none; margin-top: var(--space-3); font-size: var(--text-sm);"></p>
         </form>
       </div>
     </div>
@@ -518,7 +964,6 @@
     <div class="footer-right">
       <a href="https://github.com/singhgur8" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/singhgur8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
     </div>
   </div>
 </footer>
@@ -550,31 +995,68 @@
   }
 })();
 
-// ——— Hash Router ———
+// ——— Hash Router (supports nested gallery routes) ———
 function navigate(page) {
   window.location.hash = page === 'home' ? '' : page;
 }
 
 function showPage(page) {
+  // Handle nested gallery routes
+  const basePage = page.startsWith('gallery/') ? 'gallery' : page;
+  const gallerySubPage = page.startsWith('gallery/') ? page.replace('gallery/', '') : null;
+
   document.querySelectorAll('.page').forEach(p => {
     p.classList.remove('active');
   });
 
-  const target = document.getElementById('page-' + page);
+  const target = document.getElementById('page-' + basePage);
   if (target) {
     target.classList.add('active');
   }
 
   // Update nav active state
   document.querySelectorAll('.nav-links a').forEach(a => {
-    a.classList.toggle('active', a.dataset.page === page);
+    a.classList.toggle('active', a.dataset.page === basePage);
   });
+
+  // Handle gallery sub-views
+  if (basePage === 'gallery') {
+    showGalleryView(gallerySubPage);
+  }
 
   // Scroll to top
   window.scrollTo(0, 0);
 
   // Re-initialize Lucide icons for new page
   if (window.lucide) lucide.createIcons();
+}
+
+function showGalleryView(categoryId) {
+  const grid = document.getElementById('galleryProjectsGrid');
+  const intro = document.querySelector('.gallery-intro');
+
+  // Hide all detail views
+  document.querySelectorAll('.gallery-detail').forEach(d => {
+    d.style.display = 'none';
+  });
+
+  if (categoryId) {
+    // Show specific detail view
+    const detail = document.getElementById('gallery-detail-' + categoryId);
+    if (detail) {
+      grid.style.display = 'none';
+      intro.style.display = 'none';
+      detail.style.display = 'block';
+    } else {
+      // Unknown category, show grid
+      grid.style.display = '';
+      intro.style.display = '';
+    }
+  } else {
+    // Show the project grid
+    grid.style.display = '';
+    intro.style.display = '';
+  }
 }
 
 function handleRoute() {
@@ -626,8 +1108,8 @@ function openLightbox(el) {
   const img = el.querySelector('img');
   const lightbox = document.getElementById('lightbox');
   const lbImg = document.getElementById('lightbox-img');
-  // Use higher-res SmugMug URL if available, otherwise fall back to src
-  lbImg.src = el.dataset.largeSrc || img.src;
+  // Use higher-res URL from data attribute if available, otherwise fall back to src
+  lbImg.src = el.dataset.largeSrc || el.dataset.largeSrc || img.src;
   lbImg.alt = img.alt;
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -647,203 +1129,70 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ——— Contact Form ———
+// ——— Contact Form (mailto fallback) ———
 function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.btn-primary');
-  btn.textContent = 'Message Sent!';
-  btn.style.background = '#437a22';
-  setTimeout(() => {
-    btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-    btn.style.background = '';
-    e.target.reset();
-  }, 2000);
+  const form = e.target;
+  const btn = document.getElementById('contactSubmitBtn');
+  const status = document.getElementById('formStatus');
+  const name = form.querySelector('#name').value.trim();
+  const email = form.querySelector('#email').value.trim();
+  const message = form.querySelector('#message').value.trim();
+
+  if (!name || !email || !message) return;
+
+  // Try Formspree first
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  fetch(form.action, {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, message })
+  })
+  .then(response => {
+    if (response.ok) {
+      btn.textContent = 'Message Sent!';
+      btn.style.background = '#437a22';
+      status.style.display = 'block';
+      status.style.color = '#437a22';
+      status.textContent = 'Thanks! I\'ll get back to you soon.';
+      form.reset();
+      setTimeout(() => {
+        btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+        btn.style.background = '';
+        btn.disabled = false;
+        status.style.display = 'none';
+      }, 4000);
+    } else {
+      throw new Error('Form submission failed');
+    }
+  })
+  .catch(() => {
+    // Fallback: open mailto link
+    const subject = encodeURIComponent('Portfolio Contact from ' + name);
+    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+    window.location.href = 'mailto:gurjotssingh510@gmail.com?subject=' + subject + '&body=' + body;
+
+    btn.textContent = 'Opening Email...';
+    btn.style.background = 'var(--color-primary)';
+    status.style.display = 'block';
+    status.style.color = 'var(--color-text-muted)';
+    status.textContent = 'Opening your email client. You can also email me directly at gurjotssingh510@gmail.com';
+
+    setTimeout(() => {
+      btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      btn.style.background = '';
+      btn.disabled = false;
+      status.style.display = 'none';
+    }, 5000);
+  });
 }
 
 // ——— Init Lucide ———
 document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) lucide.createIcons();
 });
-
-// ——— SmugMug Integration ———
-// To connect your SmugMug gallery:
-// 1. Go to https://api.smugmug.com/api/developer/apply and get an API key
-// 2. Fill in SMUGMUG_CONFIG below with your API key and nickname (username)
-// 3. Optionally list specific album keys, or leave empty to show all public albums
-
-const SMUGMUG_CONFIG = {
-  apiKey: '',           // Your SmugMug API key (e.g., 'abc123XYZ')
-  nickname: '',         // Your SmugMug username/nickname (e.g., 'gurjotsingh')
-  albums: [],           // Optional: specific album keys to show (e.g., ['AbCdEf', 'GhIjKl'])
-                        // Leave empty [] to auto-discover all public albums
-  maxImages: 50,        // Max images per album to load
-};
-
-const SmugMug = {
-  baseUrl: 'https://api.smugmug.com',
-
-  // Fetch JSON from SmugMug API v2
-  async fetchApi(endpoint) {
-    const separator = endpoint.includes('?') ? '&' : '?';
-    const url = `${this.baseUrl}${endpoint}${separator}APIKey=${SMUGMUG_CONFIG.apiKey}&_accept=application%2Fjson`;
-    const res = await fetch(url, {
-      headers: { 'Accept': 'application/json' }
-    });
-    if (!res.ok) throw new Error(`SmugMug API error: ${res.status}`);
-    return res.json();
-  },
-
-  // Get user's public albums
-  async getAlbums() {
-    const data = await this.fetchApi(`/api/v2/user/${SMUGMUG_CONFIG.nickname}!albums?_expand=AlbumImages&count=50&_shorturis=true`);
-    return data.Response?.Album || [];
-  },
-
-  // Get images from a specific album
-  async getAlbumImages(albumKey) {
-    const data = await this.fetchApi(`/api/v2/album/${albumKey}!images?count=${SMUGMUG_CONFIG.maxImages}&_expand=ImageSizes`);
-    return data.Response?.AlbumImage || [];
-  },
-
-  // Get the best image URL for display
-  getImageUrl(image, size) {
-    const sizes = image?.Uris?.ImageSizes?.ImageSizes || image?.Uris?.ImageSizes || {};
-    // Prefer sizes: XLarge, Large, X2Large, Original
-    if (size === 'thumb') {
-      return sizes.SmallImageUrl || sizes.ThumbnailUrl || sizes.MediumImageUrl || '';
-    }
-    if (size === 'large') {
-      return sizes.X3LargeImageUrl || sizes.X2LargeImageUrl || sizes.XLargeImageUrl || sizes.LargeImageUrl || '';
-    }
-    return sizes.LargeImageUrl || sizes.XLargeImageUrl || sizes.MediumImageUrl || '';
-  },
-
-  // Initialize the gallery
-  async init() {
-    if (!SMUGMUG_CONFIG.apiKey || !SMUGMUG_CONFIG.nickname) return false;
-
-    const loader = document.getElementById('galleryLoader');
-    const grid = document.getElementById('galleryGrid');
-    const tabs = document.getElementById('galleryTabs');
-    const credit = document.getElementById('smugmugCredit');
-
-    try {
-      // Show loader, hide static fallback
-      loader.style.display = 'flex';
-      grid.innerHTML = '';
-
-      // Fetch all albums
-      let albums = await this.getAlbums();
-
-      // Filter to specific albums if configured
-      if (SMUGMUG_CONFIG.albums.length > 0) {
-        albums = albums.filter(a => SMUGMUG_CONFIG.albums.includes(a.AlbumKey));
-      }
-
-      if (albums.length === 0) {
-        loader.style.display = 'none';
-        return false;
-      }
-
-      // Build album tabs
-      if (albums.length > 1) {
-        tabs.style.display = 'flex';
-        albums.forEach(album => {
-          const btn = document.createElement('button');
-          btn.className = 'gallery-tab';
-          btn.dataset.album = album.AlbumKey;
-          btn.textContent = album.Name || album.Title || 'Untitled';
-          btn.addEventListener('click', () => this.filterByAlbum(album.AlbumKey));
-          tabs.appendChild(btn);
-        });
-        // "All" tab click handler
-        tabs.querySelector('[data-album="all"]').addEventListener('click', () => this.filterByAlbum('all'));
-      }
-
-      // Fetch images from each album
-      this.allImages = [];
-      for (const album of albums) {
-        const images = await this.getAlbumImages(album.AlbumKey);
-        images.forEach(img => {
-          img._albumKey = album.AlbumKey;
-          img._albumName = album.Name || album.Title || '';
-        });
-        this.allImages.push(...images);
-      }
-
-      // Render all images
-      this.renderImages(this.allImages);
-      loader.style.display = 'none';
-      credit.style.display = 'flex';
-
-      return true;
-
-    } catch (err) {
-      console.warn('SmugMug load failed, showing fallback gallery:', err);
-      loader.style.display = 'none';
-      return false;
-    }
-  },
-
-  renderImages(images) {
-    const grid = document.getElementById('galleryGrid');
-    grid.innerHTML = '';
-
-    images.forEach((img, i) => {
-      const thumbUrl = this.getImageUrl(img, 'medium');
-      const largeUrl = this.getImageUrl(img, 'large');
-      if (!thumbUrl) return;
-
-      const caption = img.Title || img.Caption || img._albumName || '';
-      const isWide = i === 3 && images.length > 5; // Make 4th image span wide if enough images
-
-      const item = document.createElement('div');
-      item.className = `gallery-item${isWide ? ' gallery-item--wide' : ''} reveal`;
-      item.dataset.album = img._albumKey || '';
-      item.dataset.largeSrc = largeUrl;
-      item.onclick = () => openLightbox(item);
-
-      item.innerHTML = `
-        <img src="${thumbUrl}" alt="${caption}" width="400" height="400" loading="lazy" decoding="async">
-        <div class="gallery-item__overlay"><span class="gallery-item__caption">${caption}</span></div>
-      `;
-
-      grid.appendChild(item);
-    });
-  },
-
-  filterByAlbum(albumKey) {
-    // Update active tab
-    document.querySelectorAll('.gallery-tab').forEach(t => {
-      t.classList.toggle('active', t.dataset.album === albumKey);
-    });
-
-    if (albumKey === 'all') {
-      this.renderImages(this.allImages);
-    } else {
-      this.renderImages(this.allImages.filter(img => img._albumKey === albumKey));
-    }
-  }
-};
-
-// Auto-init SmugMug when gallery page is shown
-const origShowPage = showPage;
-showPage = function(page) {
-  origShowPage(page);
-  if (page === 'gallery' && !SmugMug._initialized && SMUGMUG_CONFIG.apiKey) {
-    SmugMug._initialized = true;
-    SmugMug.init();
-  }
-};
-
-// Also try on DOMContentLoaded if starting on gallery
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.hash === '#gallery' && SMUGMUG_CONFIG.apiKey) {
-    SmugMug._initialized = true;
-    SmugMug.init();
-  }
-});
 </script>
 
 </body>
-</html>
