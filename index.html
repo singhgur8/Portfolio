@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gurjot Singh — Creator, Engineer, Photographer</title>
-<meta name="description" content="Portfolio of Gurjot Singh — full-stack software engineer and photographer. Building digital products and capturing the world through a lens.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gurjot Singh — Creator, Engineer, Photographer</title>
+  <meta name="description"
+    content="Portfolio of Gurjot Singh — full-stack software engineer and photographer. Building digital products and capturing the world through a lens.">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Gurjot Singh — Creator, Engineer, Photographer">
-<meta property="og:description" content="Full-stack software engineer and photographer. Building digital products and capturing the world through a lens.">
-<meta property="og:type" content="website">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gurjot Singh — Creator, Engineer, Photographer">
+  <meta property="og:description"
+    content="Full-stack software engineer and photographer. Building digital products and capturing the world through a lens.">
+  <meta property="og:type" content="website">
 
-<!-- Icons -->
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet">
 
-<!-- Styles -->
-<link rel="stylesheet" href="./base.css">
-<link rel="stylesheet" href="./style.css">
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-<!-- JSON-LD -->
-<script type="application/ld+json">
+  <!-- Styles -->
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -43,1152 +49,957 @@
 }
 </script>
 </head>
+
 <body>
 
-<!-- Skip link -->
-<a href="#main" class="skip-link">Skip to content</a>
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Skip to content</a>
 
-<!-- ============================================
+  <!-- ============================================
      HEADER
      ============================================ -->
-<header class="site-header" id="header">
-  <a class="logo" onclick="navigate('home')" role="link" tabindex="0">Gurjot Singh</a>
-  <nav>
-    <ul class="nav-links" role="list">
-      <li><a href="#projects" onclick="navigate('projects'); return false;" data-page="projects">Projects</a></li>
-      <li><a href="#gallery" onclick="navigate('gallery'); return false;" data-page="gallery">Gallery</a></li>
-      <li><a href="#about" onclick="navigate('about'); return false;" data-page="about">About</a></li>
-      <li><a href="#contact" onclick="navigate('contact'); return false;" data-page="contact">Contact</a></li>
-    </ul>
-  </nav>
-  <div style="display:flex;align-items:center;gap:var(--space-3)">
-    <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+  <header class="site-header" id="header">
+    <a class="logo" onclick="navigate('home')" role="link" tabindex="0">Gurjot Singh</a>
+    <nav>
+      <ul class="nav-links" role="list">
+        <li><a href="#projects" onclick="navigate('projects'); return false;" data-page="projects">Projects</a></li>
+        <li><a href="#gallery" onclick="navigate('gallery'); return false;" data-page="gallery">Gallery</a></li>
+        <li><a href="#about" onclick="navigate('about'); return false;" data-page="about">About</a></li>
+        <li><a href="#contact" onclick="navigate('contact'); return false;" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;align-items:center;gap:var(--space-3)">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#projects" onclick="navigate('projects'); closeMobileMenu(); return false;">Projects</a>
+    <a href="#gallery" onclick="navigate('gallery'); closeMobileMenu(); return false;">Gallery</a>
+    <a href="#about" onclick="navigate('about'); closeMobileMenu(); return false;">About</a>
+    <a href="#contact" onclick="navigate('contact'); closeMobileMenu(); return false;">Contact</a>
   </div>
-</header>
 
-<!-- Mobile Nav -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="#projects" onclick="navigate('projects'); closeMobileMenu(); return false;">Projects</a>
-  <a href="#gallery" onclick="navigate('gallery'); closeMobileMenu(); return false;">Gallery</a>
-  <a href="#about" onclick="navigate('about'); closeMobileMenu(); return false;">About</a>
-  <a href="#contact" onclick="navigate('contact'); closeMobileMenu(); return false;">Contact</a>
-</div>
+  <main id="main">
 
-<main id="main">
-
-<!-- ============================================
+    <!-- ============================================
      HOME PAGE
      ============================================ -->
-<div class="page active" id="page-home">
+    <div class="page active" id="page-home">
 
-  <!-- Hero -->
-  <section class="hero">
-    <svg class="hero-grain" width="100%" height="100%">
-      <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
-      <feColorMatrix type="saturate" values="0"/></filter>
-      <rect width="100%" height="100%" filter="url(#grain)"/>
-    </svg>
-    <div class="hero-content">
-      <p class="hero-label">Creator &middot; Engineer &middot; Photographer</p>
-      <h1 class="hero-title">Gurjot Singh</h1>
-      <p class="hero-subtitle">I build digital products and capture the world through a lens. Full-stack engineer by trade, visual storyteller by passion.</p>
-      <a class="hero-cta" href="#projects" onclick="navigate('projects'); return false;">
-        View my work
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Preview Section -->
-  <section class="section">
-    <div class="container--wide">
-      <div class="section-label reveal">What I Do</div>
-      <h2 class="section-heading reveal" style="margin-bottom: var(--space-10);">Two sides of the same coin.</h2>
-
-      <div class="preview-grid">
-        <a class="preview-card reveal" onclick="navigate('projects'); return false;" role="link" tabindex="0">
-          <img class="preview-card__image" src="./assets/hero-engineering.png" alt="Code editor with warm ambient lighting" width="600" height="375" loading="lazy" decoding="async">
-          <div class="preview-card__body">
-            <p class="preview-card__label">Engineering</p>
-            <h3 class="preview-card__title">Software Projects</h3>
-            <p class="preview-card__desc">Full-stack applications, system design, and mobile development. From React to Swift, Docker to AWS.</p>
-          </div>
-        </a>
-        <a class="preview-card reveal" onclick="navigate('gallery'); return false;" role="link" tabindex="0">
-          <img class="preview-card__image" src="./assets/hero-photography.png" alt="Camera on tripod at golden hour" width="600" height="375" loading="lazy" decoding="async">
-          <div class="preview-card__body">
-            <p class="preview-card__label">Photography</p>
-            <h3 class="preview-card__title">Visual Stories</h3>
-            <p class="preview-card__desc">Landscapes, street photography, portraits, and action shots. Capturing moments that tell a story.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Brief About -->
-  <section class="section" style="border-top: 1px solid oklch(from var(--color-text) l c h / 0.06);">
-    <div class="container">
-      <div class="section-label reveal">A Bit About Me</div>
-      <h2 class="section-heading reveal">Engineer with an eye for detail.</h2>
-      <p class="section-subtext reveal">Mechanical engineering background from UC Davis. Software engineering immersive at Hack Reactor. Currently building full-stack applications at ConfigFab while chasing light with a camera on the weekends.</p>
-      <div style="margin-top: var(--space-6);">
-        <a class="hero-cta reveal" href="#about" onclick="navigate('about'); return false;">
-          Learn more
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ============================================
-     PROJECTS PAGE
-     ============================================ -->
-<div class="page" id="page-projects">
-  <section class="section" style="padding-top: var(--space-16);">
-    <div class="container--wide">
-      <div class="section-label">Engineering</div>
-      <h1 class="section-heading" style="font-size: var(--text-2xl);">Selected Projects</h1>
-      <p class="section-subtext" style="margin-bottom: clamp(var(--space-10), 5vw, var(--space-16));">A selection of engineering work spanning web applications, system design, mobile development, and interactive experiences.</p>
-
-      <div class="project-list">
-
-        <!-- Project 1: HP Monopoly -->
-        <article class="project-item reveal">
-          <div class="project-image-wrap">
-            <img src="./assets/gallery-3.png" alt="Harry Potter Monopoly Deal card game interface" width="600" height="375" loading="lazy" decoding="async">
-          </div>
-          <div class="project-info">
-            <span class="project-number">01</span>
-            <h2 class="project-title">Harry Potter Monopoly Deal</h2>
-            <p class="project-desc">An online multiplayer card game supporting 5 players, with over 106 custom-designed cards, Galleons as currency, and real-time gameplay. A passion project blending game design with web engineering.</p>
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Vite</span>
-              <span class="project-tag">Game Design</span>
-              <span class="project-tag">Custom Artwork</span>
-            </div>
-            <a class="project-link" href="https://github.com/singhgur8/HarryPotterMonopoly" target="_blank" rel="noopener noreferrer">
-              View on GitHub
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <!-- Hero -->
+      <section class="hero slide-section">
+        <canvas id="heroParticleCanvas" class="hero-particle-canvas"></canvas>
+        <svg class="hero-grain" width="100%" height="100%">
+          <filter id="grain">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+            <feColorMatrix type="saturate" values="0" />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain)" />
+        </svg>
+        <div class="hero-content">
+          <p class="hero-label">Creator &middot; Engineer &middot; Photographer</p>
+          <h1 class="hero-title">Gurjot Singh</h1>
+          <p class="hero-subtitle">I build digital products and capture the world through a lens. Full-stack engineer by
+            trade, visual storyteller by passion.</p>
+          <div class="hero-buttons">
+            <a class="hero-cta" href="#projects" onclick="navigate('projects'); return false;">
+              View my work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </a>
-          </div>
-        </article>
-
-        <!-- Project 2: Expense Share -->
-        <article class="project-item reveal">
-          <div class="project-image-wrap">
-            <img src="./assets/gallery-2.png" alt="Expense Share iOS application" width="600" height="375" loading="lazy" decoding="async">
-          </div>
-          <div class="project-info">
-            <span class="project-number">02</span>
-            <h2 class="project-title">Expense Share</h2>
-            <p class="project-desc">A native iOS application for splitting expenses with friends and groups. Built with SwiftUI, Supabase backend with row-level security, real-time balance calculations, and friend discovery.</p>
-            <div class="project-tags">
-              <span class="project-tag">Swift</span>
-              <span class="project-tag">SwiftUI</span>
-              <span class="project-tag">Supabase</span>
-              <span class="project-tag">PostgreSQL</span>
-            </div>
-            <a class="project-link" href="https://github.com/singhgur8/expense-share" target="_blank" rel="noopener noreferrer">
-              View on GitHub
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 3: Home Reservation -->
-        <article class="project-item reveal">
-          <div class="project-image-wrap">
-            <img src="./assets/gallery-4.png" alt="Home reservation application photo gallery" width="600" height="375" loading="lazy" decoding="async">
-          </div>
-          <div class="project-info">
-            <span class="project-number">03</span>
-            <h2 class="project-title">Home Reservation App</h2>
-            <p class="project-desc">A containerized microservice for a home reservation platform. Features a dynamic photo gallery with carousel, deployed to AWS EC2 with Docker, built with React and MongoDB.</p>
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Docker</span>
-              <span class="project-tag">AWS EC2</span>
-              <span class="project-tag">MongoDB</span>
-              <span class="project-tag">Node.js</span>
-            </div>
-            <a class="project-link" href="https://github.com/singhgur8/airbnb-photogallery" target="_blank" rel="noopener noreferrer">
-              View on GitHub
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 4: System Design -->
-        <article class="project-item reveal">
-          <div class="project-image-wrap">
-            <img src="./assets/hero-engineering.png" alt="System design architecture" width="600" height="375" loading="lazy" decoding="async">
-          </div>
-          <div class="project-info">
-            <span class="project-number">04</span>
-            <h2 class="project-title">System Design &mdash; Scale</h2>
-            <p class="project-desc">Scaled a database service to handle high throughput with CRUD operations for Cassandra, deployed across EC2 instances and load balanced with Nginx for production-level performance.</p>
-            <div class="project-tags">
-              <span class="project-tag">Cassandra</span>
-              <span class="project-tag">Nginx</span>
-              <span class="project-tag">AWS EC2</span>
-              <span class="project-tag">Load Balancing</span>
-            </div>
-            <a class="project-link" href="https://github.com/singhgur8/popularFoods" target="_blank" rel="noopener noreferrer">
-              View on GitHub
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ============================================
-     GALLERY PAGE
-     ============================================ -->
-<div class="page" id="page-gallery">
-  <section class="section" style="padding-top: var(--space-16);">
-    <div class="container--wide">
-      <div class="gallery-intro">
-        <div class="section-label">Photography</div>
-        <h1 class="section-heading" style="font-size: var(--text-2xl);">Through the Lens</h1>
-        <p class="section-subtext" style="margin-inline: auto;">Landscapes, streets, people, and motion — organized by project.</p>
-      </div>
-
-      <!-- Project Grid (default view) -->
-      <div class="gallery-projects-grid" id="galleryProjectsGrid">
-        <a class="gallery-project-card reveal" href="#gallery/landscapes" onclick="navigate('gallery/landscapes'); return false;">
-          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-n7mTHMt/0/KPXMNHR2MvSk48b7bmhPk8bZTRh3jg5jwgXpg6mVF/XL/i-n7mTHMt-XL.jpg" alt="Landscapes photography" loading="lazy" decoding="async">
-          <div class="gallery-project-card__overlay">
-            <span class="gallery-project-card__count">16 photos</span>
-            <h3 class="gallery-project-card__title">Landscapes</h3>
-            <p class="gallery-project-card__desc">From Iceland's volcanic terrains to serene alpine reflections.</p>
-          </div>
-        </a>
-        <a class="gallery-project-card reveal" href="#gallery/carousel" onclick="navigate('gallery/carousel'); return false;">
-          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-F6Mc7bb/0/KWGWXc2nVxcK6xgvgvQgWRmSSVsBHTs62Q6JfMxrB/XL/i-F6Mc7bb-XL.jpg" alt="Featured photography" loading="lazy" decoding="async">
-          <div class="gallery-project-card__overlay">
-            <span class="gallery-project-card__count">4 photos</span>
-            <h3 class="gallery-project-card__title">Featured</h3>
-            <p class="gallery-project-card__desc">Selected highlights from across my work.</p>
-          </div>
-        </a>
-        <a class="gallery-project-card reveal" href="#gallery/proposals" onclick="navigate('gallery/proposals'); return false;">
-          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-p7vsZLb/0/LBZpqzDjKtXfs8XWwQ7zzxMz9HW4ZZwrJqhT2WM4n/XL/i-p7vsZLb-XL.jpg" alt="Celebrations photography" loading="lazy" decoding="async">
-          <div class="gallery-project-card__overlay">
-            <span class="gallery-project-card__count">12 photos</span>
-            <h3 class="gallery-project-card__title">Celebrations</h3>
-            <p class="gallery-project-card__desc">Rokas, proposals, and moments of joy.</p>
-          </div>
-        </a>
-        <a class="gallery-project-card reveal" href="#gallery/travels" onclick="navigate('gallery/travels'); return false;">
-          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-CWKBtDX/0/K47B756mHnF5K5LBm8gB2kXCMphRXj8WqcLZSwWjZ/XL/i-CWKBtDX-XL.jpg" alt="Travels photography" loading="lazy" decoding="async">
-          <div class="gallery-project-card__overlay">
-            <span class="gallery-project-card__count">16 photos</span>
-            <h3 class="gallery-project-card__title">Travels</h3>
-            <p class="gallery-project-card__desc">Japan, street scenes, and cultures captured on the go.</p>
-          </div>
-        </a>
-        <a class="gallery-project-card reveal" href="#gallery/grad" onclick="navigate('gallery/grad'); return false;">
-          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-3qcBbzt/0/Lzd6s4MnRhRTWWfDScC9hPBSNJBjjGSr6MHxRhVpQ/XL/i-3qcBbzt-XL.jpg" alt="Portraits photography" loading="lazy" decoding="async">
-          <div class="gallery-project-card__overlay">
-            <span class="gallery-project-card__count">12 photos</span>
-            <h3 class="gallery-project-card__title">Portraits</h3>
-            <p class="gallery-project-card__desc">Graduation sessions, headshots, and personal portraiture.</p>
-          </div>
-        </a>
-        <a class="gallery-project-card reveal" href="#gallery/proposal_ra" onclick="navigate('gallery/proposal_ra'); return false;">
-          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-2G6NQqB/0/M829rWDrrGF876XB7mSdXg6nkfpxBkPCzx53xTn83/XL/i-2G6NQqB-XL.jpg" alt="Proposals photography" loading="lazy" decoding="async">
-          <div class="gallery-project-card__overlay">
-            <span class="gallery-project-card__count">12 photos</span>
-            <h3 class="gallery-project-card__title">Proposals</h3>
-            <p class="gallery-project-card__desc">The moment of a lifetime, preserved forever.</p>
-          </div>
-        </a>
-        <a class="gallery-project-card reveal" href="#gallery/romance" onclick="navigate('gallery/romance'); return false;">
-          <img class="gallery-project-card__img" src="https://photos.smugmug.com/photos/i-NXPksQV/0/NgkKL2nzf74Qw452KzVmr7jBDLS9TDZFwLfGhxxFg/XL/i-NXPksQV-XL.jpg" alt="Couples photography" loading="lazy" decoding="async">
-          <div class="gallery-project-card__overlay">
-            <span class="gallery-project-card__count">12 photos</span>
-            <h3 class="gallery-project-card__title">Couples</h3>
-            <p class="gallery-project-card__desc">Love stories told through light and composition.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Detail Views (one per category, toggled via JS) -->
-      <!-- Detail: Landscapes -->
-      <div class="gallery-detail" id="gallery-detail-landscapes" style="display:none;">
-        <div class="gallery-detail__header">
-          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Back to Gallery
-          </a>
-          <h2 class="gallery-detail__title">Landscapes</h2>
-          <p class="gallery-detail__desc">From Iceland's volcanic terrains to serene alpine reflections.</p>
-          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2024/Iceland/n-XdJV22" target="_blank" rel="noopener noreferrer">
-            View full gallery on SmugMug
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
-        </div>
-        <div class="gallery-detail__grid">
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-n7mTHMt/0/KPXMNHR2MvSk48b7bmhPk8bZTRh3jg5jwgXpg6mVF/XL/i-n7mTHMt-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-n7mTHMt/0/NftzH9D75pHdBHGtthSdp6s5wNgwW6zjbXHfpwHR5/M/i-n7mTHMt-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-cHDHPpb/0/KL2dMJXrV5QwFDzVF877ktDXtRRD6FWZ2gfTcSVT9/XL/i-cHDHPpb-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-cHDHPpb/0/Mnz2nJdfM3Qkh3Z6pbQBz3Nmm7BkFgv9kCsph7jTM/M/i-cHDHPpb-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-V8FDLHW/0/K6Wb76zQDVspPwMtkX4qh5bS7TTbpf2RMF8H3WtMh/XL/i-V8FDLHW-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-V8FDLHW/0/KdrRC5WTLbjzNZ9hwz4FJCRcGnrJhrn9xkx23rkPc/M/i-V8FDLHW-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-PDJf3Zw/0/KJgpRQTk3t4ZMXSjRgRkGk5SZd2zX4DL2mPMX5bmP/XL/i-PDJf3Zw-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-PDJf3Zw/0/Nfz3KG92mt7TsQtG3sKD5J6fWqsD83JkSbGtL8kJF/M/i-PDJf3Zw-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-z43C7nZ/0/NCXCVrWJrkJrBCVv8XvSPxBHqsvDPLRVhHZdDcPKh/XL/i-z43C7nZ-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-z43C7nZ/0/MXssw3LvW44MSRmJ53CrSVVdwg52NGqPjnHH2sPB2/M/i-z43C7nZ-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-5jjwMhp/0/KFpzSwLQx5dzdgmXqmqsj3JFqgBZ5WnFkFf8HdJnM/XL/i-5jjwMhp-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-5jjwMhp/0/NFGVDtCgS7kXHCScKQhXRDVRv8k62sDXVPMhWNLvv/M/i-5jjwMhp-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-mp4KbdK/0/KjfxsfTbnDLws7m8NQBThDhvj8Wb6PB6wLTBVBjhv/XL/i-mp4KbdK-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-mp4KbdK/0/MWXLxZ7bcGsDVrC6mbdmVjXLW8xXTskqfrN4wFXWK/M/i-mp4KbdK-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-35HRFpR/0/MKHHw5LHLWvZfvQV8hCFvg5njQKNdt2tvhQP3PFht/XL/i-35HRFpR-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-35HRFpR/0/LQT28mRLXhFd4ZCGGmWWSvdkVfxPWz2pwmZJHLtJc/M/i-35HRFpR-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-94TBZsF/0/NHX6np28BGbFzjxqwhSqJmRdmH9p5Bt554BWZSrz5/XL/i-94TBZsF-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-94TBZsF/0/NKHWScbXfCwzLQ9NSV6T9jwgXCncfhMJpkC7s52Hm/M/i-94TBZsF-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-MtxTm7t/0/KbGsxksfcVrf2CntqQrqbcHgNxqnmbmvRzGzSmc69/XL/i-MtxTm7t-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-MtxTm7t/0/Ldr8ZzH5DMfxNDWHRBgG8S3WWQKVfW49smBn72C9n/M/i-MtxTm7t-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-NC7ghM7/0/KsTfVFs52JWbFrCr6cnMdZQbtBRTNLHQhsJFdWSFb/XL/i-NC7ghM7-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-NC7ghM7/0/Lb5SDz7C9dfmKxdpmNdckMwXMv2XVkKLQ5QmVnkrH/M/i-NC7ghM7-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-HnwqsXf/0/KHJs53Xm5ttV4vjccvSGkBPvwcPwWjcWJ4zcdf5MH/XL/i-HnwqsXf-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-HnwqsXf/0/K3W9C5PXSV3V26WKwB5btPZ9qxTdP76fX4jX7GgpS/M/i-HnwqsXf-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-pcgm4BK/0/KxHJNTk8wcQvDsdKK69TLLd97cFKkJwX8QPp4rZBN/XL/i-pcgm4BK-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-pcgm4BK/0/MrCZDsGrJ98QGP87NWWjfgWsW3Nd3D3Gqc3Cnqp2c/M/i-pcgm4BK-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-96G46jc/0/NCkvMp2Rn2mMjqwr4nW27fDdhqCZJWkQ3TNdHPZz8/XL/i-96G46jc-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-96G46jc/0/M54fSC9nCkqM7Tpsg3q2TpHKrG8DBWVNLNrvPZwPQ/M/i-96G46jc-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-5qJnrqj/0/KfrgRPmQJFqksw84B3r3RHzNSqW2XVssKq375PtMF/XL/i-5qJnrqj-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-5qJnrqj/0/KHHfXVfQQKsc6jDcRnC54DbJcskQHRf74jhcTcwcs/M/i-5qJnrqj-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-f52wJdx/0/Lv2Rx5mxL8ZstvKzgGDM46zSM7Qx8CzJVHZPbcbM5/XL/i-f52wJdx-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-f52wJdx/0/KkhC55mg9DBRSbVVWwk5TRRrTL2mLnCKTMdCGFssF/M/i-f52wJdx-M.jpg" alt="Landscapes photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-        </div>
-      </div>
-      <!-- Detail: Featured -->
-      <div class="gallery-detail" id="gallery-detail-carousel" style="display:none;">
-        <div class="gallery-detail__header">
-          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Back to Gallery
-          </a>
-          <h2 class="gallery-detail__title">Featured</h2>
-          <p class="gallery-detail__desc">Selected highlights from across my work.</p>
-          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2024/My-Homepage-Carousel/n-st5NbL" target="_blank" rel="noopener noreferrer">
-            View full gallery on SmugMug
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
-        </div>
-        <div class="gallery-detail__grid">
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-F6Mc7bb/0/KWGWXc2nVxcK6xgvgvQgWRmSSVsBHTs62Q6JfMxrB/XL/i-F6Mc7bb-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-F6Mc7bb/0/MNqb2SP73sLFLKBHX7RFLpqwkVpQVMSPsh2LXQh3F/M/i-F6Mc7bb-M.jpg" alt="Featured photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-TLzdSVq/0/LV5BVXhdmJFJv95GL7sFtCXmS7c8Mt6m8B7gbKKLB/XL/i-TLzdSVq-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-TLzdSVq/0/LxfLg2zNh9r8B9kV4hNPXFvxxb2PHKr2MKGj9Tbdz/M/i-TLzdSVq-M.jpg" alt="Featured photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-63RZgsX/0/KkpvSH6XGLPSzMTHKtQRhzddhpLNH9D3NnW9ffMLL/XL/i-63RZgsX-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-63RZgsX/0/KpSDx2bJVhP4W6pjxKVfczK8BDwwrnw6TZPVkqfDD/M/i-63RZgsX-M.jpg" alt="Featured photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-CT74qs7/0/NbBbMRcFgWzsRCxm9ShfWxr3XmdHDBNz9qWRW7Nnr/XL/i-CT74qs7-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-CT74qs7/0/MmgMrdd4p36zCvN8msF2N4T3VDsng4KD4Z8DwNkV2/M/i-CT74qs7-M.jpg" alt="Featured photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-        </div>
-      </div>
-      <!-- Detail: Celebrations -->
-      <div class="gallery-detail" id="gallery-detail-proposals" style="display:none;">
-        <div class="gallery-detail__header">
-          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Back to Gallery
-          </a>
-          <h2 class="gallery-detail__title">Celebrations</h2>
-          <p class="gallery-detail__desc">Rokas, proposals, and moments of joy.</p>
-          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2025/Herman-Jagjit-Roka/Portraits/n-HpjNrm" target="_blank" rel="noopener noreferrer">
-            View full gallery on SmugMug
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
-        </div>
-        <div class="gallery-detail__grid">
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-p7vsZLb/0/LBZpqzDjKtXfs8XWwQ7zzxMz9HW4ZZwrJqhT2WM4n/XL/i-p7vsZLb-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-p7vsZLb/0/LhV9JttGTW8FZwZ2Jz5Rw7CxrQ2qsmwWqR6kFWHNs/M/i-p7vsZLb-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-msjNvpk/0/KnmLLswfrLhSh8mSVZX77w4JqX4dbj9r5vZcK9LLF/XL/i-msjNvpk-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-msjNvpk/0/LcmHDpXmDn8vNWMDrKdWMR6F4c9Pp34w9j9HkpnjJ/M/i-msjNvpk-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-fxJFrL2/0/LJprD89LVMqw9FQ7GFg9LZ9tCB5sC2XPQMvxXtbns/XL/i-fxJFrL2-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-fxJFrL2/0/NV6c48WV9BrrPD6k38NmKHXdtZdQqkWKsZTzf6jFm/M/i-fxJFrL2-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-qLVXMkC/0/MpQVxnqCpPqJVZbxJRPT2FPhpzxZDRbN6DtkNX3gD/XL/i-qLVXMkC-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-qLVXMkC/0/MfDmbHPZgQChdD2PCXkq7zVQhLGmwdxFWKf6RR3tK/M/i-qLVXMkC-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-jWhCW6w/0/LD7LnRCRkJsRvvNm9GSm6wrgNmBD8btzLWDCcXSBf/XL/i-jWhCW6w-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-jWhCW6w/0/KdQcZK2n9TDn5sjWgmvcQ67ZbhXgSqVV922gfNZzb/M/i-jWhCW6w-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-58bn5R9/0/LFxgP96xwQdQV7CcZ94rZMP79XHGf6f7KgZBnBhPw/XL/i-58bn5R9-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-58bn5R9/0/K4NdscfppB2mmzDJG5QPh537BMxTP9nWvfBDmM2RH/M/i-58bn5R9-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-ZFLJPHz/0/MW29Qz8SG3fXhRvxWrvGpCrGXWDJRz2MBqWCjZNV3/XL/i-ZFLJPHz-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-ZFLJPHz/0/MLN5rjGsXh2qBGzVCJHbDFTSDqNrWx4NTwhQSNtf5/M/i-ZFLJPHz-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-XRVDJpM/0/KGQTprPzgPNq4dGDfkhrbDZh89R3FvZL3t5VdKtNQ/XL/i-XRVDJpM-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-XRVDJpM/0/LB2rgW3nqVLzVVXSv5CX4VFSPZF7m5xCfx7c8NKCj/M/i-XRVDJpM-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-LDj4Zcp/0/KFTZTqGLRw3mcC75jHWFFWk9pWhhqzHWxVVvNc5Z2/XL/i-LDj4Zcp-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-LDj4Zcp/0/NBzpsqPpVmv9WF42df3wLDtCWtFNVQ2fXVnq9d46g/M/i-LDj4Zcp-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-C8Sp8JD/0/LrHpjd7LpnQH4vrqQnNGmzhGt4zRFz7tJQqqKpGtn/XL/i-C8Sp8JD-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-C8Sp8JD/0/LzTRfwKCnsjWt5V7Pcz82t6khDwZhKJPzBtwLgJBv/M/i-C8Sp8JD-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-LnwZpsV/0/KkMdGWDvv52b2TbXrtbfpnQnXWdL6JRFFrFNswmKX/XL/i-LnwZpsV-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-LnwZpsV/0/Mv6NBJMHWKk4KTwgLjcKnCNXtWw92Rc4HN3PLgQjj/M/i-LnwZpsV-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-tTPRk28/0/K4VWh2HzcFggvz3B775PwQwh95dm7zWKJp8BHKw9t/XL/i-tTPRk28-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-tTPRk28/0/MB3TzL2bkMRCLQPPnwpLfJrCwhGnNxWVJTCcgst3Z/M/i-tTPRk28-M.jpg" alt="Celebrations photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-        </div>
-      </div>
-      <!-- Detail: Travels -->
-      <div class="gallery-detail" id="gallery-detail-travels" style="display:none;">
-        <div class="gallery-detail__header">
-          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Back to Gallery
-          </a>
-          <h2 class="gallery-detail__title">Travels</h2>
-          <p class="gallery-detail__desc">Japan, street scenes, and cultures captured on the go.</p>
-          <!-- <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2025/Japan2025/n-HLd5QQ" target="_blank" rel="noopener noreferrer">
-            View full gallery on SmugMug
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a> -->
-        </div>
-        <div class="gallery-detail__grid">
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-CWKBtDX/0/K47B756mHnF5K5LBm8gB2kXCMphRXj8WqcLZSwWjZ/XL/i-CWKBtDX-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-CWKBtDX/0/M9Gvsz5bfCgnGmFddxXPtnsNsFjG9QwBG8pHMwBcM/M/i-CWKBtDX-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-bqf3fLt/0/NK5tfLdXvmnJbRTj7xBS2KczSkmRpZ6WvWtSh255t/XL/i-bqf3fLt-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-bqf3fLt/0/ND9K3TGJ4VN4B2k3FhtCbKH3hVsHQMXRmFSqW7Gtk/M/i-bqf3fLt-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-cFkZmB9/0/KqCc66jVg5XqXb4xR22MKt5fpMF6MN3TCLMPBcPJV/XL/i-cFkZmB9-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-cFkZmB9/0/LsRNvg2ZnPqPh2DGD8xwjvV9m5HH4Q3x4GzwttmPH/M/i-cFkZmB9-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-WLS6GDP/0/MK3HD5VX9QZdNQFKFHG9LNXsrGb2vhWLRJ5kkKZQs/XL/i-WLS6GDP-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-WLS6GDP/0/Lv8WjsRgdxqNKz4JvpqzSW6C73fZgSMgcmn8ww2XL/M/i-WLS6GDP-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-Ng2HFrD/0/K2xmn2WXKc4KJPT2gVTZjVHj3tRvddZhQWkSmKmvS/XL/i-Ng2HFrD-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-Ng2HFrD/0/MjqDCtxsq8WXXwqDLhSGsB3r8Qpsm4nMLnhpxL8F7/M/i-Ng2HFrD-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-wcHrLRP/0/Mr5f4KjrVBG6fpDqPvRFhTgjSKNd7VPHTB65R4nK6/XL/i-wcHrLRP-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-wcHrLRP/0/LK4M4zft7Nqw2vrKMpJTjtNZ33zNXFtxbbzK9jptM/M/i-wcHrLRP-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-nW438Gv/0/KLQnqGbXQdPz56VTvcscDzxxtGCDZDh5xTsSRvBsg/XL/i-nW438Gv-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-nW438Gv/0/MRm4TFR7h4bWB2sWbQFQ7SGxvVTgpR55XJjjPtt9M/M/i-nW438Gv-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-RJz2K74/0/MHQs54K57HZ4W45vj8FbqTWqrvkj8xvmWKxkMZLRX/XL/i-RJz2K74-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-RJz2K74/0/MSFBbJt7DzXSJhWXJh825KKKGdmkLSXXP7P3CfDZB/M/i-RJz2K74-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-458nKHP/0/KKK4Dr9cDWpQM8LQqTFr4N6c3mz6G7GFxvzsFScgF/XL/i-458nKHP-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-458nKHP/0/L7zsCd98ktRgZNBp9Dg6T9WvnBP6Hmx2P5FWN5f42/M/i-458nKHP-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-R6QzchV/0/K6nNQC6ZnPwrTcP9Xjv92HWn6x5XRGd7ztrbWnDnr/XL/i-R6QzchV-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-R6QzchV/0/L5R7x2TWR93QCKMrFLJCHwT9FJdjmrM5vTpKQmxw8/M/i-R6QzchV-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-4Rgh5K6/0/MvJrZxqxPzfHzj96qP4dBnhR9vbrdcn97LV5d23MT/XL/i-4Rgh5K6-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-4Rgh5K6/0/KmvCLGBm9SWWnkRxDGwBN8Kn6MbfKC9gXk3qf2bkb/M/i-4Rgh5K6-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-JZ6QKcW/0/MBscrQWkHrCZ2kzzKg28Vn9WWqG7Ms3hVSzHb7vBC/XL/i-JZ6QKcW-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-JZ6QKcW/0/M8GqWKCmm7LgvRHWRXw3vq4b5ZqHnzFxQCZb74DgJ/M/i-JZ6QKcW-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-LWpspHR/0/LQ4XHrWFVWQPFk5MPgsJGKXtHSM4S2CFBHGFxMKn8/XL/i-LWpspHR-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-LWpspHR/0/KLvcfbtWKgWgWVMxfJ3wxQ3b6fwPzbSDFqrRPqS93/M/i-LWpspHR-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-vSFQxMJ/0/LN7dV82kTmRN5LHH4dtCLWQnbP9k7JWLwfPsVKgP7/XL/i-vSFQxMJ-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-vSFQxMJ/0/LdpRbQp4n2RPj2CbBwPDwjbjrswKMvLsqfdm6BgBq/M/i-vSFQxMJ-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-gVNND6f/0/Mwpc57cMXswZmBdtZM3Qr7LN8dJ96vgMbFW5ZjsKS/XL/i-gVNND6f-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-gVNND6f/0/McDpnW7qSrzFq5c5jZW74zGsrS4zN7TMd3Nns2gGd/M/i-gVNND6f-M.jpg" alt="Travels photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-        </div>
-      </div>
-      <!-- Detail: Portraits -->
-      <div class="gallery-detail" id="gallery-detail-grad" style="display:none;">
-        <div class="gallery-detail__header">
-          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Back to Gallery
-          </a>
-          <h2 class="gallery-detail__title">Portraits</h2>
-          <p class="gallery-detail__desc">Graduation sessions, headshots, and personal portraiture.</p>
-          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2025/Mehak-Grad/n-FjzdWS" target="_blank" rel="noopener noreferrer">
-            View full gallery on SmugMug
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
-        </div>
-        <div class="gallery-detail__grid">
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-3qcBbzt/0/Lzd6s4MnRhRTWWfDScC9hPBSNJBjjGSr6MHxRhVpQ/XL/i-3qcBbzt-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-3qcBbzt/0/MbrkdhH7McRQRQjxTZHskqXxjfWLH2G8FdKJW8T9G/M/i-3qcBbzt-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-dwjk543/0/K7H3n9T3SQgJGVqcF4Lbc6QDjn3jD3vm5jJjGs4Q3/XL/i-dwjk543-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-dwjk543/0/NK5cLjkX8gtNwQdR2tFvnVDrHPzfKz8mN4bF7ZZvC/M/i-dwjk543-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-KjjSDdn/0/L9kKxCdVHrzgdSVhSXT9BSdBx3PCQrnx7J28dv4Gz/XL/i-KjjSDdn-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-KjjSDdn/0/LKHDk4LkVZnhbZJBpxFz5MH8SPgqPVstzpBfHgtLN/M/i-KjjSDdn-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-X7HsFkc/0/NbKN8nJx4n8XLSJs9bgBdBvTK7Bp36Wn3TzNSfw85/XL/i-X7HsFkc-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-X7HsFkc/0/KsJLfkPRmrThw2zJ644pnFrg4663tNVH88xnPfHm4/M/i-X7HsFkc-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-SLtrJk2/0/KTvtpC8CPb99fdfXx6gHm5fKH3HF7F4Pp69PnM6QW/XL/i-SLtrJk2-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-SLtrJk2/0/KdFcQR5wMS38hRnw98CdtXPRPddbsR8sk8fcwvqbh/M/i-SLtrJk2-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-zx4sLn6/0/LmhpNg8NNMrfHdrrfXFHWWcSNtjHK7vxvsSdGdJGs/XL/i-zx4sLn6-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-zx4sLn6/0/MsncVLRBnHmbwnrtrfgJwxNwCpXDz4Mv3PX5w9v8N/M/i-zx4sLn6-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-XnqPvMD/0/L8bJw9tWxbm9jvWWP82MvnggqnGGNDXgvvM4n3Zwx/XL/i-XnqPvMD-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-XnqPvMD/0/MMpQTZB23kLJqPN3MpPz8SpmK3qH7gPtcpCPr9gqX/M/i-XnqPvMD-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-DRFpKZ6/0/LMVNJdXqvqZLSZj2g8njG4GtDDwgxTjs9n79dbS4p/XL/i-DRFpKZ6-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-DRFpKZ6/0/MPfTRqxTdd8qbv3LzKfBwJb8kpnKMfCDPxWjrRkKf/M/i-DRFpKZ6-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-W9xPrZf/0/Kjp5cg5sjVnfnsPZq2mcrfx8kM6rLHvQJ7FBS6Bcr/XL/i-W9xPrZf-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-W9xPrZf/0/NXz9XD2FZfD9GMHbzLdfTW23drPJB3K6qdCTvKw5P/M/i-W9xPrZf-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-tmhjCBR/0/Lh3Mw7N7fxkpw88DQGwLbMJhnmCnsnT8BRL2HbgGB/XL/i-tmhjCBR-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-tmhjCBR/0/L5W5QgqgZ5S5ftV829QnJzDPTp493DMdPg8cxnfCC/M/i-tmhjCBR-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-j7J36n9/0/MvhZWHMjTF8n2SfJSFqQZs84bcgvmCDHbt684p6Xz/XL/i-j7J36n9-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-j7J36n9/0/NLNxmvvh5Pj2vVKMXfgn8vmdX3Djb4sz63CQDtvqW/M/i-j7J36n9-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-zZbnvh6/0/LctNBLhhXK2Hzzz8s6v7j9xqzf2cjf9NKVBd4T4JW/XL/i-zZbnvh6-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-zZbnvh6/0/MkpDJVBn2q2MHThkFhdGr6f4L2mkNVSJTzpmRpmCP/M/i-zZbnvh6-M.jpg" alt="Portraits photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-        </div>
-      </div>
-      <!-- Detail: Proposals -->
-      <div class="gallery-detail" id="gallery-detail-proposal_ra" style="display:none;">
-        <div class="gallery-detail__header">
-          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Back to Gallery
-          </a>
-          <h2 class="gallery-detail__title">Proposals</h2>
-          <p class="gallery-detail__desc">The moment of a lifetime, preserved forever.</p>
-          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2026/Randeep-Alisha-Proposal/n-9HGpb9" target="_blank" rel="noopener noreferrer">
-            View full gallery on SmugMug
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
-        </div>
-        <div class="gallery-detail__grid">
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-2G6NQqB/0/M829rWDrrGF876XB7mSdXg6nkfpxBkPCzx53xTn83/XL/i-2G6NQqB-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-2G6NQqB/0/Kpbx8ZfXFgnmkpp9gGBmqn2WDGvL8fR8F7SG7p4jK/M/i-2G6NQqB-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-xhPFxZS/0/LVzsZHNnGV36VVqXNRtBq6gMLzc9qXnCkgNmLw2Ps/XL/i-xhPFxZS-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-xhPFxZS/0/M4jRDMZs8Vs6cJDLGkvKtN9nQw5JtQWz6g385kq9d/M/i-xhPFxZS-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-C8g3NP9/0/MnF5xfwXxbRfZMW7763ZbK9ZNmtRZsFNZ9BxnxFDJ/XL/i-C8g3NP9-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-C8g3NP9/0/Mr2W4QW2TzNndCMKhv26j45nm6FJMBgbQ5dZPXgJj/M/i-C8g3NP9-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-pjnH93N/0/KVJZGtzzJ4wVvC47LZ4qpsmdG3Sr7XWcZqGkwnJPL/XL/i-pjnH93N-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-pjnH93N/0/MbfKsXGF2XH7L6c6Tp7g2MfXTZKJSPdvbwTtHbdQk/M/i-pjnH93N-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-sHgMjSn/0/K3wgVNzDhVb4hVJLF5ZvKTd8cBX4jgjXGKj4Gxj4C/XL/i-sHgMjSn-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-sHgMjSn/0/Nf989LsZD8QNmn5JR9hvSGB5zNfMrWbJTPDJBtdXt/M/i-sHgMjSn-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-q2Jj2P9/0/LQppwbtNWbn3mXVhKtBLnt44mHVvzxhvVrckTdnQj/XL/i-q2Jj2P9-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-q2Jj2P9/0/MrhLXLdbFbZMskRPkWxmdBf4FQQPPRStSVrZPVjsp/M/i-q2Jj2P9-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-JFdDzKS/0/K9rpbbSZ4hmH2cNMj6GdD6Mw5ftcXfhfC9KCfg7xx/XL/i-JFdDzKS-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-JFdDzKS/0/MsFP7tZfCHqxMG9LFN2qNQbCvc7F8WCDv8WckmX2N/M/i-JFdDzKS-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-g884mKb/0/NJjtwrpHXvDVFgbwJt3rwPjfs4q7vSKxsWthmBx7w/XL/i-g884mKb-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-g884mKb/0/NF2kpC856LPhzxVZbKmn2L3GL5QmMdJN97Gc3Hm99/M/i-g884mKb-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-KR6vBH7/0/K8PrvcRvSCPtMD2nC6PN6ZgFbWztKQBh8J5JZRMN2/XL/i-KR6vBH7-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-KR6vBH7/0/MkbkXGJk3tHjqmKgJRLVHWrkJrccrjMchPCq5pvcX/M/i-KR6vBH7-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-X6cFp23/0/KZBxDQggFGHQ4wd9VMkM6Nw54mvnpnJ4dCQchFjnC/XL/i-X6cFp23-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-X6cFp23/0/LwS5GvnGfp8W7nsPWVMCHmfvVfn5wPhgNbK4KqQf8/M/i-X6cFp23-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-x6zPFC4/0/K3LWzbdJz5xhsLxPT3cXSWrMPTQnV34359f4gwMCL/XL/i-x6zPFC4-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-x6zPFC4/0/KhDhvCt3Ws9QjQjnX953CTCW9cN8W46zgtJp9HLKG/M/i-x6zPFC4-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-Lk8qSF5/0/LtWkWs8wdBdDS7s7tjJHVTNShcK7hX32nrCzqS8Bx/XL/i-Lk8qSF5-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-Lk8qSF5/0/LNtcdF4PmSk3QcqTt7CsCM9msWLFP9qHRSGMXWW5X/M/i-Lk8qSF5-M.jpg" alt="Proposals photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-        </div>
-      </div>
-      <!-- Detail: Couples -->
-      <div class="gallery-detail" id="gallery-detail-romance" style="display:none;">
-        <div class="gallery-detail__header">
-          <a class="gallery-detail__back" href="#gallery" onclick="navigate('gallery'); return false;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Back to Gallery
-          </a>
-          <h2 class="gallery-detail__title">Couples</h2>
-          <p class="gallery-detail__desc">Love stories told through light and composition.</p>
-          <a class="gallery-detail__smugmug" href="https://gurjotsingh.smugmug.com/2025/Japji-Sehej/n-Md29tw" target="_blank" rel="noopener noreferrer">
-            View full gallery on SmugMug
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
-        </div>
-        <div class="gallery-detail__grid">
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-NXPksQV/0/NgkKL2nzf74Qw452KzVmr7jBDLS9TDZFwLfGhxxFg/XL/i-NXPksQV-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-NXPksQV/0/NMspSg9r9bZxgKPGRrJsz4XB6sLVM9CcQ7xkqhK38/M/i-NXPksQV-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-PSs4f2K/0/KRPJM62LHd468cXf773gDLbLXVT9sVCJs5MhVfsmk/XL/i-PSs4f2K-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-PSs4f2K/0/MDvfzCJqcPXgbc4mXrkcG33rStgBVRfjfzhnWdLTZ/M/i-PSs4f2K-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-85hwbNr/0/MBLtTs5wD7RrcCStfWTT7XmVMTxVktHsS7CZ3tVsh/XL/i-85hwbNr-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-85hwbNr/0/NWn6d8ZMGg4tW6DTkHfCFSWMNkLW4ZDNWgdRnZxVB/M/i-85hwbNr-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-j2cWK6k/0/M27nr6CD8q7787B4NwN8S76pTHBDVp6P3rsRq4hnq/XL/i-j2cWK6k-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-j2cWK6k/0/MbH4pMhJzk2TFtFQWSDBQX6TMJ2VHzPNx3FRtRdqc/M/i-j2cWK6k-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-L6Mbm6F/0/LgPRtf7cSq58wf2wRnjzrTt3KwBwwhMc2zXxBscDd/XL/i-L6Mbm6F-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-L6Mbm6F/0/L8sSqqhZ7ZBHh79Rm9mN35jwbCdMZwQmtfmwcZjB9/M/i-L6Mbm6F-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-TkXnVjL/0/NPZMKQ7HFbvHdhFmShWwspzvJXGBq7kgjTqsrRhpH/XL/i-TkXnVjL-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-TkXnVjL/0/KbTGp5s3zjpp8LWpxtZHrg3tc3XFH76xvMLd4mnPf/M/i-TkXnVjL-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-2xPjV57/0/Lq48rkFkDjG7VMFp9qzwpQHwNTGCTrD65hjzZsZLJ/XL/i-2xPjV57-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-2xPjV57/0/LhmvCXHBbTLJCrFZKwdXqnSZtfDjfdfmckQGVGhJC/M/i-2xPjV57-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-qjMtxpw/0/LB7X2fStSKPvkPDnMTPdJSV3DgPK3x975ZqDSnwdZ/XL/i-qjMtxpw-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-qjMtxpw/0/MBDrQZgRvdsG4pQJG2dSW5Bqt4nh4tPwgvMfq9hTT/M/i-qjMtxpw-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-QSRnggJ/0/MLQtBbCJzwxJxRhrBtfC5W92bNwVZrDrdLBL3Fhnc/XL/i-QSRnggJ-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-QSRnggJ/0/K6Xnqjw3LwpsMBh6dPGpb3fhSLS7WPKJpxxLj5whV/M/i-QSRnggJ-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-dD3pBvL/0/NPF9R5xRwdcH3f7GwTHgxm3WG8p9pcRH7MfDC2wFQ/XL/i-dD3pBvL-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-dD3pBvL/0/Kc4L3jLHVcVfLhKPQQsCj7Zfv6LcHznfv48QL2kdF/M/i-dD3pBvL-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-vxtxBjh/0/L6X2Bx55zWjSjGqCTmqsS9wbq4nCwCh4bkG77H3Vs/XL/i-vxtxBjh-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-vxtxBjh/0/M2LhgQpr8jGc9mPpNw79238SpRwkwHZ3XD3968twP/M/i-vxtxBjh-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-          <div class="gallery-item reveal" onclick="openLightbox(this)" data-large-src="https://photos.smugmug.com/photos/i-J7GsZd8/0/LnVj3HZT4THLN7BFNRcxT47JhNMnBGB6NvXC8kBjj/XL/i-J7GsZd8-XL.jpg">
-            <img src="https://photos.smugmug.com/photos/i-J7GsZd8/0/LDzqx7jTWvHqmpFrgP8LMfwvcDNTg46vqcxX72Bfz/M/i-J7GsZd8-M.jpg" alt="Couples photo" width="400" height="400" loading="lazy" decoding="async">
-            <div class="gallery-item__overlay"><span class="gallery-item__caption"></span></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-</div>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-  <img id="lightbox-img" src="" alt="">
-</div>
-
-<!-- ============================================
-     ABOUT PAGE
-     ============================================ -->
-<div class="page" id="page-about">
-  <section class="section" style="padding-top: var(--space-16);">
-    <div class="container--wide">
-      <div class="section-label">About</div>
-      <h1 class="section-heading" style="font-size: var(--text-2xl); margin-bottom: clamp(var(--space-8), 4vw, var(--space-12));">The Full Picture</h1>
-
-      <div class="about-grid">
-        <div class="about-portrait reveal">
-          <img src="./assets/about-portrait.png" alt="Portrait of Gurjot Singh" width="480" height="640" loading="lazy" decoding="async">
-        </div>
-        <div class="about-text">
-          <h3 class="reveal">Engineer &amp; Creator</h3>
-          <p class="reveal">I'm Gurjot Singh — a full-stack software engineer, photographer, and filmmaker based in California. I build things for the web and capture the world through a lens.</p>
-          <p class="reveal">My path started with mechanical engineering at UC Davis, where I developed a problem-solving mindset and an eye for how things are built. I transitioned into software through Hack Reactor's immersive program and haven't looked back.</p>
-
-          <h3 class="reveal">What I Build</h3>
-          <p class="reveal">At ConfigFab, I work across the full stack — from C# and ASP.NET on the backend to React on the frontend. I've built email reporting systems, seeded databases for e-commerce products, coded Python scripts for 3D model generation, and even used Inventor for engineering spec drawings.</p>
-          <p class="reveal">On the side, I'm always building. Recent projects include a Harry Potter Monopoly Deal card game (React + Vite, 106 custom cards) and an iOS expense-sharing app (Swift + Supabase).</p>
-
-          <h3 class="reveal">Off the Clock</h3>
-          <p class="reveal">When I'm not writing code, you'll find me snowboarding, playing volleyball, making films, or out with a camera chasing golden hour light. Photography started as a hobby and became a way of seeing — finding composition and story in everyday moments.</p>
-
-          <div class="divider reveal"></div>
-
-          <h3 class="reveal">Skills</h3>
-          <div class="skills-row reveal">
-            <span class="skill-pill">React</span>
-            <span class="skill-pill">Node.js</span>
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">Swift</span>
-            <span class="skill-pill">C#</span>
-            <span class="skill-pill">TypeScript</span>
-            <span class="skill-pill">ASP.NET</span>
-            <span class="skill-pill">GraphQL</span>
-            <span class="skill-pill">MongoDB</span>
-            <span class="skill-pill">PostgreSQL</span>
-            <span class="skill-pill">Cassandra</span>
-            <span class="skill-pill">Docker</span>
-            <span class="skill-pill">AWS</span>
-            <span class="skill-pill">Nginx</span>
-            <span class="skill-pill">React Native</span>
-            <span class="skill-pill">D3.js</span>
-            <span class="skill-pill">Git</span>
-            <span class="skill-pill">Supabase</span>
-          </div>
-
-          <h3 class="reveal">Experience</h3>
-          <div class="timeline reveal">
-            <div class="timeline-item">
-              <span class="timeline-year">2019 — Present</span>
-              <div class="timeline-content">
-                <h4>Full Stack Engineer — ConfigFab Inc.</h4>
-                <p>Front-end and back-end development in C#, ASP.NET MVC, React. Database management, Python scripting for 3D models, and engineering specification drawings.</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-year">2018 — 2019</span>
-              <div class="timeline-content">
-                <h4>Supply Chain Associate — PepsiCo</h4>
-                <p>Managed quality, production, and maintenance. Decreased downtime by 20% through Lean Six Sigma. Improved safety with redesigned assembly line engineering.</p>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="reveal">Education</h3>
-          <div class="education-list reveal">
-            <div class="education-item">
-              <h4>University of California, Davis</h4>
-              <p>B.S. Mechanical Engineering, 2014 — 2018</p>
-            </div>
-            <div class="education-item">
-              <h4>Hack Reactor</h4>
-              <p>Software Engineering Immersive, 2019 — 2020</p>
-            </div>
-          </div>
-
-          <div class="now-card reveal" style="margin-top: var(--space-8);">
-            <h4>What I'm Working On Now</h4>
-            <ul role="list">
-              <li>Building an online multiplayer Harry Potter Monopoly Deal game</li>
-              <li>Expanding my photography portfolio</li>
-              <li>Exploring iOS development with SwiftUI</li>
-              <li>Snowboarding whenever the mountains call</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ============================================
-     CONTACT PAGE
-     ============================================ -->
-<div class="page" id="page-contact">
-  <section class="section" style="padding-top: var(--space-16);">
-    <div class="container">
-      <div class="section-label">Get In Touch</div>
-      <h1 class="section-heading" style="font-size: var(--text-2xl); margin-bottom: clamp(var(--space-8), 4vw, var(--space-12));">Let's Create Something</h1>
-
-      <div class="contact-layout">
-        <div class="contact-info reveal">
-          <h3>Reach Out</h3>
-          <p class="section-subtext" style="margin-bottom: var(--space-8);">Whether you have a project in mind, want to collaborate, or just want to say hello — I'd love to hear from you.</p>
-
-          <div class="contact-links">
-            <a class="contact-link-item" href="mailto:gurjotssingh510@gmail.com" target="_blank" rel="noopener noreferrer">
-              <i data-lucide="mail"></i>
-              <span>gurjotssingh510@gmail.com</span>
-            </a>
-            <a class="contact-link-item" href="https://github.com/singhgur8" target="_blank" rel="noopener noreferrer">
-              <i data-lucide="github"></i>
-              <span>github.com/singhgur8</span>
-            </a>
-            <a class="contact-link-item" href="https://www.linkedin.com/in/singhgur8/" target="_blank" rel="noopener noreferrer">
-              <i data-lucide="linkedin"></i>
-              <span>linkedin.com/in/singhgur8</span>
-            </a>
-          </div>
-
-          <div style="margin-top: var(--space-8);">
-            <a class="btn-primary" href="https://gurjotportfolio.s3-us-west-1.amazonaws.com/GurjotSingh_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a class="hero-cta hero-cta-secondary"
+              href="https://gurjotportfolio.s3.us-west-1.amazonaws.com/Resume_Gurjot_Singh.pdf" target="_blank"
+              rel="noopener noreferrer">
               <i data-lucide="download" style="width:16px;height:16px"></i>
               Download Resume
             </a>
           </div>
         </div>
+        <div class="hero-scroll-hint">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
 
-        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xcontact" method="POST" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+      <!-- Overview Section (Aligned container--wide for Recruiter Orientation) -->
+      <section class="section slide-section" style="border-top: 1px solid rgba(255, 255, 255, 0.05);">
+        <div class="container--wide">
+          <div class="section-label reveal">Overview</div>
+          <h2 class="section-heading reveal">Engineer with an eye for detail.</h2>
+          <p class="section-subtext reveal" style="max-width: 800px; margin-bottom: var(--space-6);">B.S. in Mechanical
+            Engineering from UC Davis and Software Engineering Immersive at Hack Reactor. Experienced in architecting
+            high-performance web platforms, micro-frontends, and LLM pipelines while keeping the door wide open for
+            robotics and hardware-software integration.</p>
+          <a class="hero-cta reveal" href="#about" onclick="navigate('about'); return false;">
+            Read full bio
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Experience Timeline Section (Home Page Recruiter Feature) -->
+      <section class="section slide-section" style="border-top: 1px solid rgba(255, 255, 255, 0.05);">
+        <div class="container--wide">
+          <div class="section-label reveal">Career Experience</div>
+          <h2 class="section-heading reveal" style="margin-bottom: var(--space-8);">Engineering impact in production.
+          </h2>
+
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <span class="timeline-year">June 2020 — Aug 2026</span>
+              <div class="timeline-content">
+                <h4>Full Stack Software Engineer — Rubicon Technologies, LLC</h4>
+                <p>Fine-tuned specialized LLMs for custom invoice table extraction. Architected Azure Outlook add-ins,
+                  Next.js SSR platforms with Zuora payment integration (+35% conversion boost), and CRA micro-frontend
+                  migrations via Webpack Module Federation. Automated event-driven GitHub Actions CI/CD pipelines (>50%
+                  faster deployments) and hardened application security using Snyk.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">July 2019 — June 2020</span>
+              <div class="timeline-content">
+                <h4>Full Stack Software Engineer — ConfigFab, Inc.</h4>
+                <p>Engineered full-stack e-commerce capabilities in C#, ASP.NET MVC, and SQL. Programmed custom Python
+                  automation scripts to generate parametric 3D CAD models and technical drawings in Autodesk Inventor.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+      </section>
+
+      <!-- Featured Focus Section -->
+      <section class="section slide-section" style="border-top: 1px solid rgba(255, 255, 255, 0.05);">
+        <div class="container--wide">
+          <div class="section-label reveal">Featured Work</div>
+          <h2 class="section-heading reveal" style="margin-bottom: var(--space-10);">Engineering precision meets
+            creative direction.</h2>
+
+          <div class="preview-grid">
+            <a class="preview-card reveal" onclick="navigate('projects'); return false;" role="link" tabindex="0">
+              <img class="preview-card__image" src="./assets/hero-engineering.jpg"
+                alt="Modern MacBook software dashboard setup" width="600" height="375" loading="lazy" decoding="async">
+              <div class="preview-card__body">
+                <p class="preview-card__label">Engineering</p>
+                <h3 class="preview-card__title">Software Projects &amp; Systems</h3>
+                <p class="preview-card__desc">Full-stack web applications, micro-frontends, LLM extraction pipelines,
+                  and cloud architecture. Next.js, React, Node.js, C#, and Python.</p>
+              </div>
+            </a>
+            <a class="preview-card reveal" onclick="navigate('gallery'); return false;" role="link" tabindex="0">
+              <img class="preview-card__image" src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_1.jpg"
+                alt="Photography Visual Storytelling" width="600" height="375" loading="lazy" decoding="async">
+              <div class="preview-card__body">
+                <p class="preview-card__label">Photography</p>
+                <h3 class="preview-card__title">Visual Stories &amp; Directing</h3>
+                <p class="preview-card__desc">Landscapes, street photography, portraits, and action shots. Capturing
+                  composition and narrative through a lens.</p>
+              </div>
+            </a>
           </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about your project or just say hi..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary" id="contactSubmitBtn">
-            Send Message
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-          <p class="form-status" id="formStatus" style="display:none; margin-top: var(--space-3); font-size: var(--text-sm);"></p>
-        </form>
-      </div>
+        </div>
+      </section>
     </div>
-  </section>
-</div>
 
-</main>
+    <!-- ============================================
+     PROJECTS PAGE
+     ============================================ -->
+    <div class="page" id="page-projects">
+      <section class="section" style="padding-top: var(--space-16);">
+        <div class="container--wide">
+          <div class="section-label">Engineering</div>
+          <h1 class="section-heading" style="font-size: var(--text-2xl);">Selected Projects</h1>
+          <p class="section-subtext" style="margin-bottom: clamp(var(--space-10), 5vw, var(--space-16));">A selection of
+            engineering work spanning web applications, system design, mobile development, and interactive experiences.
+          </p>
 
-<!-- ============================================
+          <div class="project-list">
+
+            <!-- Project 1: HP Monopoly -->
+            <article class="project-item reveal">
+              <div class="project-image-wrap">
+                <img src="./assets/gallery-3.png" alt="Harry Potter Monopoly Deal card game interface" width="600"
+                  height="375" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <span class="project-number">01</span>
+                <h2 class="project-title">Harry Potter Monopoly Deal</h2>
+                <p class="project-desc">An online multiplayer card game supporting 5 players, with over 106
+                  custom-designed cards, Galleons as currency, and real-time gameplay. A passion project blending game
+                  design with web engineering.</p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Vite</span>
+                  <span class="project-tag">Game Design</span>
+                  <span class="project-tag">Custom Artwork</span>
+                </div>
+                <a class="project-link" href="https://github.com/singhgur8/HarryPotterMonopoly" target="_blank"
+                  rel="noopener noreferrer">
+                  View on GitHub
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2: Expense Share -->
+            <article class="project-item reveal">
+              <div class="project-image-wrap">
+                <img src="./assets/gallery-2.png" alt="Expense Share iOS application" width="600" height="375"
+                  loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <span class="project-number">02</span>
+                <h2 class="project-title">Expense Share</h2>
+                <p class="project-desc">A native iOS application for splitting expenses with friends and groups. Built
+                  with SwiftUI, Supabase backend with row-level security, real-time balance calculations, and friend
+                  discovery.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Swift</span>
+                  <span class="project-tag">SwiftUI</span>
+                  <span class="project-tag">Supabase</span>
+                  <span class="project-tag">PostgreSQL</span>
+                </div>
+                <a class="project-link" href="https://github.com/singhgur8/expense-share" target="_blank"
+                  rel="noopener noreferrer">
+                  View on GitHub
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 3: Home Reservation -->
+            <article class="project-item reveal">
+              <div class="project-image-wrap">
+                <img src="./assets/gallery-4.png" alt="Home reservation application photo gallery" width="600"
+                  height="375" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <span class="project-number">03</span>
+                <h2 class="project-title">Home Reservation App</h2>
+                <p class="project-desc">A containerized microservice for a home reservation platform. Features a dynamic
+                  photo gallery with carousel, deployed to AWS EC2 with Docker, built with React and MongoDB.</p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Docker</span>
+                  <span class="project-tag">AWS EC2</span>
+                  <span class="project-tag">MongoDB</span>
+                  <span class="project-tag">Node.js</span>
+                </div>
+                <a class="project-link" href="https://github.com/singhgur8/airbnb-photogallery" target="_blank"
+                  rel="noopener noreferrer">
+                  View on GitHub
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 4: System Design -->
+            <article class="project-item reveal">
+              <div class="project-image-wrap">
+                <img src="./assets/hero-engineering.png" alt="System design architecture" width="600" height="375"
+                  loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <span class="project-number">04</span>
+                <h2 class="project-title">System Design &mdash; Scale</h2>
+                <p class="project-desc">Scaled a database service to handle high throughput with CRUD operations for
+                  Cassandra, deployed across EC2 instances and load balanced with Nginx for production-level
+                  performance.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Cassandra</span>
+                  <span class="project-tag">Nginx</span>
+                  <span class="project-tag">AWS EC2</span>
+                  <span class="project-tag">Load Balancing</span>
+                </div>
+                <a class="project-link" href="https://github.com/singhgur8/popularFoods" target="_blank"
+                  rel="noopener noreferrer">
+                  View on GitHub
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============================================
+     GALLERY PAGE
+     ============================================ -->
+    <div class="page" id="page-gallery">
+      <section class="section" style="padding-top: var(--space-16);">
+        <div class="container--wide">
+          <div class="gallery-intro">
+            <div class="section-label">Photography &amp; Visual Stories</div>
+            <h1 class="section-heading" style="font-size: var(--text-2xl);">Through the Lens</h1>
+            <p class="section-subtext" style="margin-inline: auto; max-width: 680px;">A curated showcase of landscape,
+              portrait, street, and motion photography. Click any frame for full-screen view.</p>
+
+            <div style="margin-top: var(--space-6);">
+              <a class="btn-primary" href="https://azaadarts.com" target="_blank" rel="noopener noreferrer"
+                style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 12px 24px;">
+                <span>Explore Full Portfolios at azaadarts.com</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Unified Responsive Gallery Grid -->
+          <div class="main-gallery-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-6); margin-top: var(--space-10);">
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-n7mTHMt/0/KPXMNHR2MvSk48b7bmhPk8bZTRh3jg5jwgXpg6mVF/XL/i-n7mTHMt-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-n7mTHMt/0/NftzH9D75pHdBHGtthSdp6s5wNgwW6zjbXHfpwHR5/M/i-n7mTHMt-M.jpg"
+                alt="Iceland Landscape" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Iceland Volcanic Terrain</span>
+              </div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-3qcBbzt/0/Lzd6s4MnRhRTWWfDScC9hPBSNJBjjGSr6MHxRhVpQ/XL/i-3qcBbzt-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-3qcBbzt/0/MbrkdhH7McRQRQjxTZHskqXxjfWLH2G8FdKJW8T9G/M/i-3qcBbzt-M.jpg"
+                alt="Portrait Session" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Graduation Portraiture</span></div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-CWKBtDX/0/K47B756mHnF5K5LBm8gB2kXCMphRXj8WqcLZSwWjZ/XL/i-CWKBtDX-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-CWKBtDX/0/M9Gvsz5bfCgnGmFddxXPtnsNsFjG9QwBG8pHMwBcM/M/i-CWKBtDX-M.jpg"
+                alt="Japan Street Scene" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Japan Street Photography</span>
+              </div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-2G6NQqB/0/M829rWDrrGF876XB7mSdXg6nkfpxBkPCzx53xTn83/XL/i-2G6NQqB-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-2G6NQqB/0/Kpbx8ZfXFgnmkpp9gGBmqn2WDGvL8fR8F7SG7p4jK/M/i-2G6NQqB-M.jpg"
+                alt="Golden Hour Proposal" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Celebrations &amp; Proposals</span>
+              </div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-NXPksQV/0/NgkKL2nzf74Qw452KzVmr7jBDLS9TDZFwLfGhxxFg/XL/i-NXPksQV-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-NXPksQV/0/NMspSg9r9bZxgKPGRrJsz4XB6sLVM9CcQ7xkqhK38/M/i-NXPksQV-M.jpg"
+                alt="Couples Session" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Couples &amp; Storytelling</span>
+              </div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-cHDHPpb/0/KL2dMJXrV5QwFDzVF877ktDXtRRD6FWZ2gfTcSVT9/XL/i-cHDHPpb-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-cHDHPpb/0/Mnz2nJdfM3Qkh3Z6pbQBz3Nmm7BkFgv9kCsph7jTM/M/i-cHDHPpb-M.jpg"
+                alt="Alpine Landscape" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Alpine Mountain Reflections</span>
+              </div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-bqf3fLt/0/NK5tfLdXvmnJbRTj7xBS2KczSkmRpZ6WvWtSh255t/XL/i-bqf3fLt-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-bqf3fLt/0/ND9K3TGJ4VN4B2k3FhtCbKH3hVsHQMXRmFSqW7Gtk/M/i-bqf3fLt-M.jpg"
+                alt="Tokyo Motion" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Tokyo Nightlife &amp; Motion</span>
+              </div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-KjjSDdn/0/L9kKxCdVHrzgdSVhSXT9BSdBx3PCQrnx7J28dv4Gz/XL/i-KjjSDdn-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-KjjSDdn/0/LKHDk4LkVZnhbZJBpxFz5MH8SPgqPVstzpBfHgtLN/M/i-KjjSDdn-M.jpg"
+                alt="Portrait Studio" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Natural Light Portraiture</span>
+              </div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-V8FDLHW/0/K6Wb76zQDVspPwMtkX4qh5bS7TTbpf2RMF8H3WtMh/XL/i-V8FDLHW-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-V8FDLHW/0/KdrRC5WTLbjzNZ9hwz4FJCRcGnrJhrn9xkx23rkPc/M/i-V8FDLHW-M.jpg"
+                alt="Glacial Waters" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Glacial Waters &amp; Canyons</span>
+              </div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-PSs4f2K/0/KRPJM62LHd468cXf773gDLbLXVT9sVCJs5MhVfsmk/XL/i-PSs4f2K-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-PSs4f2K/0/MDvfzCJqcPXgbc4mXrkcG33rStgBVRfjfzhnWdLTZ/M/i-PSs4f2K-M.jpg"
+                alt="Romantic Silhouette" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Golden Hour Silhouette</span></div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-gFvnmwG/0/L4ZgK7zvhFmH4dpxg4tG9dFw8wL6z79sH4Q26kF7G/XL/i-gFvnmwG-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-gFvnmwG/0/MJn8v8Rz56D8Cq9KmL29hNfS7LxgP6gN5JqXzDvf/M/i-gFvnmwG-M.jpg"
+                alt="Coastline Wave" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Pacific Coastline Motion</span>
+              </div>
+            </div>
+
+            <div class="gallery-item reveal" onclick="openLightbox(this)"
+              data-large-src="https://photos.smugmug.com/photos/i-85hwbNr/0/MBLtTs5wD7RrcCStfWTT7XmVMTxVktHsS7CZ3tVsh/XL/i-85hwbNr-XL.jpg">
+              <img
+                src="https://photos.smugmug.com/photos/i-85hwbNr/0/NWn6d8ZMGg4tW6DTkHfCFSWMNkLW4ZDNWgdRnZxVB/M/i-85hwbNr-M.jpg"
+                alt="Sunset Couple" width="400" height="400" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Coastal Sunset Portraiture</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Redirect Banner -->
+          <div
+            style="margin-top: var(--space-16); padding: var(--space-10); background: rgba(13, 23, 46, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-lg); text-align: center;"
+            class="reveal">
+            <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Looking for full photo series &amp;
+              booking details?</h3>
+            <p
+              style="color: var(--color-text-muted); margin-bottom: var(--space-6); max-width: 540px; margin-inline: auto;">
+              View complete galleries, print store, and commercial photography inquiries on Azaad Arts.</p>
+            <a class="hero-cta" href="https://azaadarts.com" target="_blank" rel="noopener noreferrer"
+              style="display: inline-flex;">
+              Visit azaadarts.com
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+      <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <!-- ============================================
+     ABOUT PAGE
+     ============================================ -->
+    <div class="page" id="page-about">
+      <section class="section" style="padding-top: var(--space-16);">
+        <div class="container--wide">
+          <div class="section-label">About</div>
+          <h1 class="section-heading"
+            style="font-size: var(--text-2xl); margin-bottom: clamp(var(--space-8), 4vw, var(--space-12));">The Full
+            Picture</h1>
+
+          <div class="about-grid">
+            <div class="about-portrait reveal">
+              <img src="./assets/about-portrait.jpg" alt="Portrait of Gurjot Singh" width="480" height="640"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="about-text">
+              <h3 class="reveal">Engineer &amp; Creator</h3>
+              <p class="reveal">I'm Gurjot Singh, a full-stack software engineer, photographer, and visual storyteller
+                based in California. I specialize in building scalable web platforms, micro-frontend architectures, and
+                intelligent data pipelines while capturing the world through a lens.</p>
+              <p class="reveal">My engineering foundation started with a B.S. in Mechanical Engineering from UC Davis,
+                where I mastered physical system dynamics, CAD modeling, and first-principles problem solving. I
+                expanded into full-stack software through Hack Reactor's advanced immersive program. Rather than leaving
+                hardware behind, this dual background positions me at the intersection of complex software systems and
+                physical engineering, keeping the door wide open for robotics, embedded systems, and distributed
+                platforms where hardware and software converge.</p>
+
+              <h3 class="reveal">What I Build</h3>
+              <p class="reveal">Most recently at <strong>Rubicon Technologies</strong>, I led high-impact engineering
+                initiatives: fine-tuning specialized LLMs for custom invoice data extraction pipelines, architecting
+                serverless Azure Outlook add-ins, building Next.js/React SSR web platforms with Zuora payments (driving
+                a 35% conversion increase), and migrating monolithic applications to micro-frontend architectures using
+                Webpack Module Federation. I also modernized CI/CD pipelines with GitHub Actions, cutting deployment
+                window overhead by over 50%.</p>
+              <p class="reveal">Earlier at <strong>ConfigFab</strong>, I engineered full-stack e-commerce capabilities
+                using C#, ASP.NET MVC, and SQL, and programmed custom Python scripts for parametric 3D CAD modeling
+                integrated with Autodesk Inventor workflows.</p>
+              <p class="reveal">On the side, I build tools that solve real problems such as a full-stack, multi-user
+                custom expense-sharing web application featuring automated balance splitting and debt simplification
+                algorithms.</p>
+
+              <h3 class="reveal">Off the Clock</h3>
+              <p class="reveal">When I'm not architecting systems, you'll find me snowboarding, playing volleyball,
+                making films, or out with a camera chasing golden hour light. Photography started as a passion and
+                evolved into a way of seeing, framing composition, light, and narrative in everyday moments.</p>
+
+              <div class="divider reveal"></div>
+
+              <h3 class="reveal">Skills &amp; Technologies</h3>
+              <div class="skills-row reveal">
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">Next.js</span>
+                <span class="skill-pill">Redux</span>
+                <span class="skill-pill">React Query</span>
+                <span class="skill-pill">Microfrontends</span>
+                <span class="skill-pill">Webpack</span>
+                <span class="skill-pill">KendoReact</span>
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">Express</span>
+                <span class="skill-pill">.NET / C#</span>
+                <span class="skill-pill">ASP.NET MVC</span>
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">LLM Fine-Tuning</span>
+                <span class="skill-pill">SQL / MySQL</span>
+                <span class="skill-pill">MongoDB</span>
+                <span class="skill-pill">Cassandra</span>
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">AWS (EC2, S3, Lambda)</span>
+                <span class="skill-pill">Azure</span>
+                <span class="skill-pill">GitHub Actions</span>
+                <span class="skill-pill">Jenkins</span>
+                <span class="skill-pill">Terraform</span>
+                <span class="skill-pill">Snyk</span>
+                <span class="skill-pill">FullStory</span>
+                <span class="skill-pill">Swift</span>
+                <span class="skill-pill">D3.js</span>
+                <span class="skill-pill">CAD / Inventor</span>
+              </div>
+
+              <h3 class="reveal">Experience</h3>
+              <div class="timeline reveal">
+                <div class="timeline-item">
+                  <span class="timeline-year">June 2020 — Aug 2026</span>
+                  <div class="timeline-content">
+                    <h4>Full Stack Software Engineer — Rubicon Technologies, LLC</h4>
+                    <p>Fine-tuned LLMs for automated invoice table extraction. Architected Azure Outlook add-ins,
+                      Next.js SSR platforms with Zuora payments (+35% conversions), and CRA micro-frontend migrations
+                      via Webpack Module Federation. Automated GitHub Actions CI/CD pipelines (>50% faster deployments)
+                      and enforced application security with Snyk.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-year">July 2019 — June 2020</span>
+                  <div class="timeline-content">
+                    <h4>Full Stack Software Engineer — ConfigFab, Inc.</h4>
+                    <p>Engineered full-stack e-commerce features in C#, ASP.NET MVC, and SQL. Programmed Python
+                      automation scripts to generate parametric 3D CAD models and technical manufacturing drawings in
+                      Autodesk Inventor.</p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="reveal">Education</h3>
+              <div class="education-list reveal">
+                <div class="education-item">
+                  <h4>Hack Reactor</h4>
+                  <p>Advanced Software Engineering Immersive, Oct 2019 — Jan 2020</p>
+                </div>
+                <div class="education-item">
+                  <h4>University of California, Davis</h4>
+                  <p>B.S. Mechanical Engineering, Sept 2014 — June 2018</p>
+                </div>
+              </div>
+
+              <div class="now-card reveal" style="margin-top: var(--space-8);">
+                <h4>Current Focus</h4>
+                <ul role="list">
+                  <li>Building full-stack web platforms, debt simplification tools, &amp; LLM pipelines</li>
+                  <li>Exploring robotics &amp; hardware-software integration</li>
+                  <li>Expanding visual storytelling &amp; photography portfolio</li>
+                  <li>Snowboarding whenever mountain snow conditions align</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============================================
+     CONTACT PAGE
+     ============================================ -->
+    <div class="page" id="page-contact">
+      <section class="section" style="padding-top: var(--space-16);">
+        <div class="container">
+          <div class="section-label">Get In Touch</div>
+          <h1 class="section-heading"
+            style="font-size: var(--text-2xl); margin-bottom: clamp(var(--space-8), 4vw, var(--space-12));">Let's Create
+            Something</h1>
+
+          <div class="contact-layout">
+            <div class="contact-info reveal">
+              <h3>Reach Out</h3>
+              <p class="section-subtext" style="margin-bottom: var(--space-8);">Whether you have a project in mind, want
+                to collaborate, or just want to say hello — I'd love to hear from you.</p>
+
+              <div class="contact-links">
+                <div style="display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;">
+                  <a class="contact-link-item" href="mailto:gurjotssingh510@gmail.com" target="_blank"
+                    rel="noopener noreferrer">
+                    <i data-lucide="mail"></i>
+                    <span>gurjotssingh510@gmail.com</span>
+                  </a>
+                  <button onclick="copyEmail(this)"
+                    style="font-size: var(--text-xs); padding: 4px 10px; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); color: #94a3b8; background: transparent; cursor: pointer; transition: all 0.2s ease;">
+                    Copy Email
+                  </button>
+                </div>
+                <a class="contact-link-item" href="https://github.com/singhgur8" target="_blank"
+                  rel="noopener noreferrer">
+                  <i data-lucide="github"></i>
+                  <span>github.com/singhgur8</span>
+                </a>
+                <a class="contact-link-item" href="https://www.linkedin.com/in/singhgur8/" target="_blank"
+                  rel="noopener noreferrer">
+                  <i data-lucide="linkedin"></i>
+                  <span>linkedin.com/in/singhgur8</span>
+                </a>
+              </div>
+
+              <div style="margin-top: var(--space-8);">
+                <a class="btn-primary" href="https://gurjotportfolio.s3.us-west-1.amazonaws.com/Resume_Gurjot_Singh.pdf"
+                  target="_blank" rel="noopener noreferrer">
+                  <i data-lucide="download" style="width:16px;height:16px"></i>
+                  Download Resume
+                </a>
+              </div>
+            </div>
+
+            <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST"
+              onsubmit="handleSubmit(event)">
+              <input type="hidden" name="access_key" value="644628ad-be75-4e65-a971-dc30285a8a79">
+              <input type="hidden" name="subject" value="New Portfolio Contact Submission - Gurjot Singh">
+              <!-- Honeypot Bot Trap -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none !important;" tabindex="-1"
+                autocomplete="off">
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" maxlength="80" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" maxlength="100" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your project or just say hi..."
+                  maxlength="2000" required></textarea>
+              </div>
+              <button type="submit" class="btn-primary" id="contactSubmitBtn">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+              <p class="form-status" id="formStatus"
+                style="display:none; margin-top: var(--space-3); font-size: var(--text-sm);"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ============================================
      FOOTER
      ============================================ -->
-<footer class="site-footer">
-  <div class="container--wide">
-    <div class="footer-left">
-      &copy; 2026 Gurjot Singh. All rights reserved.
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-left">
+        &copy; 2026 Gurjot Singh. All rights reserved.
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#projects" onclick="navigate('projects'); return false;">Projects</a></li>
+        <li><a href="#gallery" onclick="navigate('gallery'); return false;">Gallery</a></li>
+        <li><a href="#about" onclick="navigate('about'); return false;">About</a></li>
+        <li><a href="#contact" onclick="navigate('contact'); return false;">Contact</a></li>
+      </ul>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/azaadarts_/" target="_blank" rel="noopener noreferrer"
+          title="Instagram @azaadarts_">
+          <i data-lucide="instagram" style="width:16px;height:16px"></i> Instagram
+        </a>
+        <a href="https://www.linkedin.com/in/singhgur8/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <i data-lucide="linkedin" style="width:16px;height:16px"></i> LinkedIn
+        </a>
+        <a href="mailto:gurjotssingh510@gmail.com" title="Email Gurjot">
+          <i data-lucide="mail" style="width:16px;height:16px"></i> Email
+        </a>
+      </div>
     </div>
-    <div class="footer-right">
-      <a href="https://github.com/singhgur8" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/singhgur8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- ============================================
+  <!-- ============================================
      JAVASCRIPT
      ============================================ -->
-<script>
-// ——— Theme Toggle ———
-(function(){
-  const t = document.querySelector('[data-theme-toggle]');
-  const r = document.documentElement;
-  let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
-  r.setAttribute('data-theme', d);
-  updateThemeIcon();
+  <script>
+    // Force dark mode
+    document.documentElement.setAttribute('data-theme', 'dark');
 
-  t && t.addEventListener('click', () => {
-    d = d === 'dark' ? 'light' : 'dark';
-    r.setAttribute('data-theme', d);
-    t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
-    updateThemeIcon();
-  });
-
-  function updateThemeIcon() {
-    if (!t) return;
-    t.innerHTML = d === 'dark'
-      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-      : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-  }
-})();
-
-// ——— Hash Router (supports nested gallery routes) ———
-function navigate(page) {
-  window.location.hash = page === 'home' ? '' : page;
-}
-
-function showPage(page) {
-  // Handle nested gallery routes
-  const basePage = page.startsWith('gallery/') ? 'gallery' : page;
-  const gallerySubPage = page.startsWith('gallery/') ? page.replace('gallery/', '') : null;
-
-  document.querySelectorAll('.page').forEach(p => {
-    p.classList.remove('active');
-  });
-
-  const target = document.getElementById('page-' + basePage);
-  if (target) {
-    target.classList.add('active');
-  }
-
-  // Update nav active state
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.classList.toggle('active', a.dataset.page === basePage);
-  });
-
-  // Handle gallery sub-views
-  if (basePage === 'gallery') {
-    showGalleryView(gallerySubPage);
-  }
-
-  // Scroll to top
-  window.scrollTo(0, 0);
-
-  // Re-initialize Lucide icons for new page
-  if (window.lucide) lucide.createIcons();
-}
-
-function showGalleryView(categoryId) {
-  const grid = document.getElementById('galleryProjectsGrid');
-  const intro = document.querySelector('.gallery-intro');
-
-  // Hide all detail views
-  document.querySelectorAll('.gallery-detail').forEach(d => {
-    d.style.display = 'none';
-  });
-
-  if (categoryId) {
-    // Show specific detail view
-    const detail = document.getElementById('gallery-detail-' + categoryId);
-    if (detail) {
-      grid.style.display = 'none';
-      intro.style.display = 'none';
-      detail.style.display = 'block';
-    } else {
-      // Unknown category, show grid
-      grid.style.display = '';
-      intro.style.display = '';
+    // ——— Hash Router (supports nested gallery routes) ———
+    function navigate(page) {
+      window.location.hash = page === 'home' ? '' : page;
     }
-  } else {
-    // Show the project grid
-    grid.style.display = '';
-    intro.style.display = '';
-  }
-}
 
-function handleRoute() {
-  const hash = window.location.hash.replace('#', '') || 'home';
-  showPage(hash);
-}
+    function showPage(page) {
+      // Handle nested gallery routes
+      const basePage = page.startsWith('gallery/') ? 'gallery' : page;
+      const gallerySubPage = page.startsWith('gallery/') ? page.replace('gallery/', '') : null;
 
-window.addEventListener('hashchange', handleRoute);
-window.addEventListener('DOMContentLoaded', handleRoute);
+      document.querySelectorAll('.page').forEach(p => {
+        p.classList.remove('active');
+      });
 
-// ——— Mobile Menu ———
-const mobileBtn = document.getElementById('mobileMenuBtn');
-const mobileNav = document.getElementById('mobileNav');
+      const target = document.getElementById('page-' + basePage);
+      if (target) {
+        target.classList.add('active');
+      }
 
-mobileBtn.addEventListener('click', () => {
-  mobileBtn.classList.toggle('open');
-  mobileNav.classList.toggle('open');
-});
+      // Update nav active state
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.toggle('active', a.dataset.page === basePage);
+      });
 
-function closeMobileMenu() {
-  mobileBtn.classList.remove('open');
-  mobileNav.classList.remove('open');
-}
+      // Handle gallery sub-views
+      if (basePage === 'gallery') {
+        showGalleryView(gallerySubPage);
+      }
 
-// ——— Header Scroll Behavior ———
-let lastScroll = 0;
-const header = document.getElementById('header');
+      // Scroll to top
+      window.scrollTo(0, 0);
 
-window.addEventListener('scroll', () => {
-  const current = window.scrollY;
-
-  if (current > 100) {
-    header.classList.add('site-header--scrolled');
-  } else {
-    header.classList.remove('site-header--scrolled');
-  }
-
-  if (current > lastScroll && current > 200) {
-    header.classList.add('site-header--hidden');
-  } else {
-    header.classList.remove('site-header--hidden');
-  }
-
-  lastScroll = current;
-}, { passive: true });
-
-// ——— Lightbox ———
-function openLightbox(el) {
-  const img = el.querySelector('img');
-  const lightbox = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lightbox-img');
-  // Use higher-res URL from data attribute if available, otherwise fall back to src
-  lbImg.src = el.dataset.largeSrc || el.dataset.largeSrc || img.src;
-  lbImg.alt = img.alt;
-  lightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox(e) {
-  if (e.target === document.getElementById('lightbox') || e.target.closest('.lightbox-close')) {
-    document.getElementById('lightbox').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-}
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    document.getElementById('lightbox').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-});
-
-// ——— Contact Form (mailto fallback) ———
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = document.getElementById('contactSubmitBtn');
-  const status = document.getElementById('formStatus');
-  const name = form.querySelector('#name').value.trim();
-  const email = form.querySelector('#email').value.trim();
-  const message = form.querySelector('#message').value.trim();
-
-  if (!name || !email || !message) return;
-
-  // Try Formspree first
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-
-  fetch(form.action, {
-    method: 'POST',
-    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name, email, message })
-  })
-  .then(response => {
-    if (response.ok) {
-      btn.textContent = 'Message Sent!';
-      btn.style.background = '#437a22';
-      status.style.display = 'block';
-      status.style.color = '#437a22';
-      status.textContent = 'Thanks! I\'ll get back to you soon.';
-      form.reset();
-      setTimeout(() => {
-        btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-        btn.style.background = '';
-        btn.disabled = false;
-        status.style.display = 'none';
-      }, 4000);
-    } else {
-      throw new Error('Form submission failed');
+      // Re-initialize Lucide icons for new page
+      if (window.lucide) lucide.createIcons();
     }
-  })
-  .catch(() => {
-    // Fallback: open mailto link
-    const subject = encodeURIComponent('Portfolio Contact from ' + name);
-    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
-    window.location.href = 'mailto:gurjotssingh510@gmail.com?subject=' + subject + '&body=' + body;
 
-    btn.textContent = 'Opening Email...';
-    btn.style.background = 'var(--color-primary)';
-    status.style.display = 'block';
-    status.style.color = 'var(--color-text-muted)';
-    status.textContent = 'Opening your email client. You can also email me directly at gurjotssingh510@gmail.com';
+    function showGalleryView(categoryId) {
+      const grid = document.getElementById('galleryProjectsGrid');
+      const intro = document.querySelector('.gallery-intro');
 
-    setTimeout(() => {
-      btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-      btn.style.background = '';
-      btn.disabled = false;
-      status.style.display = 'none';
-    }, 5000);
-  });
-}
+      // Hide all detail views
+      document.querySelectorAll('.gallery-detail').forEach(d => {
+        d.style.display = 'none';
+      });
 
-// ——— Init Lucide ———
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.lucide) lucide.createIcons();
-});
-</script>
+      if (categoryId) {
+        // Show specific detail view
+        const detail = document.getElementById('gallery-detail-' + categoryId);
+        if (detail) {
+          grid.style.display = 'none';
+          intro.style.display = 'none';
+          detail.style.display = 'block';
+        } else {
+          // Unknown category, show grid
+          grid.style.display = '';
+          intro.style.display = '';
+        }
+      } else {
+        // Show the project grid
+        grid.style.display = '';
+        intro.style.display = '';
+      }
+    }
 
+    function handleRoute() {
+      const hash = window.location.hash.replace('#', '') || 'home';
+      showPage(hash);
+    }
+
+    window.addEventListener('hashchange', handleRoute);
+    window.addEventListener('DOMContentLoaded', handleRoute);
+
+    // ——— Mobile Menu ———
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileBtn.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+
+    function closeMobileMenu() {
+      mobileBtn.classList.remove('open');
+      mobileNav.classList.remove('open');
+    }
+
+    // ——— Header Scroll Behavior ———
+    let lastScroll = 0;
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+      const current = window.scrollY;
+
+      if (current > 100) {
+        header.classList.add('site-header--scrolled');
+      } else {
+        header.classList.remove('site-header--scrolled');
+      }
+
+      if (current > lastScroll && current > 200) {
+        header.classList.add('site-header--hidden');
+      } else {
+        header.classList.remove('site-header--hidden');
+      }
+
+      lastScroll = current;
+    }, { passive: true });
+
+    // ——— Lightbox ———
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      // Use higher-res URL from data attribute if available, otherwise fall back to src
+      lbImg.src = el.dataset.largeSrc || el.dataset.largeSrc || img.src;
+      lbImg.alt = img.alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e.target === document.getElementById('lightbox') || e.target.closest('.lightbox-close')) {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // ——— Copy Email to Clipboard ———
+    function copyEmail(btn) {
+      const email = 'gurjotssingh510@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.style.borderColor = '#3b82f6';
+        btn.style.color = '#3b82f6';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.borderColor = 'rgba(255,255,255,0.2)';
+          btn.style.color = '#94a3b8';
+        }, 2500);
+      }).catch(() => {
+        window.location.href = 'mailto:' + email;
+      });
+    }
+
+    // ——— Contact Form Submission ———
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('contactSubmitBtn');
+      const status = document.getElementById('formStatus');
+      const formData = new FormData(form);
+
+      // 1. Honeypot Anti-Spam Bot Check
+      if (formData.get('botcheck')) {
+        // Automated bot detected, silently drop request
+        return;
+      }
+
+      // 2. Client-Side Rate-Limiting Cooldown (60s)
+      const lastSubmit = localStorage.getItem('last_form_submit');
+      const now = Date.now();
+      if (lastSubmit && (now - parseInt(lastSubmit, 10)) < 60000) {
+        const remaining = Math.ceil((60000 - (now - parseInt(lastSubmit, 10))) / 1000);
+        status.style.display = 'block';
+        status.style.color = '#ef4444';
+        status.textContent = `Please wait ${remaining} seconds before submitting another message.`;
+        return;
+      }
+
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+        .then(async (response) => {
+          const res = await response.json();
+          if (response.ok && res.success) {
+            localStorage.setItem('last_form_submit', Date.now().toString());
+            btn.textContent = 'Message Sent!';
+            btn.style.background = '#2563eb';
+            status.style.display = 'block';
+            status.style.color = '#60a5fa';
+            status.textContent = 'Thanks! I\'ll get back to you soon.';
+            form.reset();
+            setTimeout(() => {
+              btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+              btn.style.background = '';
+              btn.disabled = false;
+              status.style.display = 'none';
+            }, 4000);
+          } else {
+            throw new Error(res.message || 'Form submission failed');
+          }
+        })
+        .catch(() => {
+          const name = form.querySelector('#name')?.value || '';
+          const message = form.querySelector('#message')?.value || '';
+          const subject = encodeURIComponent('Portfolio Contact from ' + name);
+          const body = encodeURIComponent(message);
+          window.location.href = 'mailto:gurjotssingh510@gmail.com?subject=' + subject + '&body=' + body;
+
+          btn.textContent = 'Opening Email...';
+          btn.style.background = '#3b82f6';
+          status.style.display = 'block';
+          status.style.color = '#94a3b8';
+          status.textContent = 'Opening your email client. You can also email me directly at gurjotssingh510@gmail.com';
+
+          setTimeout(() => {
+            btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+            btn.style.background = '';
+            btn.disabled = false;
+            status.style.display = 'none';
+          }, 5000);
+        });
+    }
+
+    // ——— Init Lucide & Scroll Observer ———
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+
+      // Observer for slide reveals across all browsers
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('is-hidden');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealElements.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <script src="./assets/particles.js"></script>
 </body>
