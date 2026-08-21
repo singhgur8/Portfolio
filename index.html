@@ -17,11 +17,12 @@
     content="Full-stack software engineer and photographer. Building digital products and capturing the world through a lens.">
   <meta property="og:type" content="website">
 
-  <!-- Fonts -->
+  <!-- Fonts & Asset Domains -->
+  <link rel="preconnect" href="https://gurjotportfolio.s3.us-west-1.amazonaws.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -59,12 +60,12 @@
      HEADER
      ============================================ -->
   <header class="site-header" id="header">
-    <a class="logo" onclick="navigate('home')" role="link" tabindex="0">Gurjot Singh</a>
     <nav>
       <ul class="nav-links" role="list">
+        <li><a href="#home" onclick="navigate('home'); return false;" data-page="home">Home</a></li>
+        <li><a href="#about" onclick="navigate('about'); return false;" data-page="about">About</a></li>
         <li><a href="#projects" onclick="navigate('projects'); return false;" data-page="projects">Projects</a></li>
         <li><a href="#gallery" onclick="navigate('gallery'); return false;" data-page="gallery">Gallery</a></li>
-        <li><a href="#about" onclick="navigate('about'); return false;" data-page="about">About</a></li>
         <li><a href="#contact" onclick="navigate('contact'); return false;" data-page="contact">Contact</a></li>
       </ul>
     </nav>
@@ -77,9 +78,10 @@
 
   <!-- Mobile Nav -->
   <div class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="navigate('home'); closeMobileMenu(); return false;">Home</a>
+    <a href="#about" onclick="navigate('about'); closeMobileMenu(); return false;">About</a>
     <a href="#projects" onclick="navigate('projects'); closeMobileMenu(); return false;">Projects</a>
     <a href="#gallery" onclick="navigate('gallery'); closeMobileMenu(); return false;">Gallery</a>
-    <a href="#about" onclick="navigate('about'); closeMobileMenu(); return false;">About</a>
     <a href="#contact" onclick="navigate('contact'); closeMobileMenu(); return false;">Contact</a>
   </div>
 
@@ -222,14 +224,40 @@
 
           <div class="project-list">
 
-            <!-- Project 1: HP Monopoly -->
+            <!-- Project 1: Expense Share -->
             <article class="project-item reveal">
               <div class="project-image-wrap">
-                <img src="./assets/gallery-3.png" alt="Harry Potter Monopoly Deal card game interface" width="600"
-                  height="375" loading="lazy" decoding="async">
+                <img src="./assets/expense-share.png" alt="Expense Share web application dashboard interface" width="600" height="375"
+                  loading="lazy" decoding="async">
               </div>
               <div class="project-info">
                 <span class="project-number">01</span>
+                <h2 class="project-title">Expense Share</h2>
+                <p class="project-desc">A full-stack web application for splitting expenses with friends and groups. Built with React, Next.js, Supabase backend with row-level security, real-time balance calculations, debt simplification algorithms, and friend discovery.</p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Next.js</span>
+                  <span class="project-tag">Supabase</span>
+                  <span class="project-tag">PostgreSQL</span>
+                </div>
+                <a class="project-link" href="https://github.com/singhgur8/expense-share" target="_blank"
+                  rel="noopener noreferrer">
+                  View on GitHub
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2: HP Monopoly -->
+            <article class="project-item reveal">
+              <div class="project-image-wrap">
+                <img src="./assets/hp-monopoly.jpg" alt="Harry Potter Monopoly Deal card gallery interface" width="600"
+                  height="375" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <span class="project-number">02</span>
                 <h2 class="project-title">Harry Potter Monopoly Deal</h2>
                 <p class="project-desc">An online multiplayer card game supporting 5 players, with over 106
                   custom-designed cards, Galleons as currency, and real-time gameplay. A passion project blending game
@@ -250,38 +278,10 @@
               </div>
             </article>
 
-            <!-- Project 2: Expense Share -->
-            <article class="project-item reveal">
-              <div class="project-image-wrap">
-                <img src="./assets/gallery-2.png" alt="Expense Share iOS application" width="600" height="375"
-                  loading="lazy" decoding="async">
-              </div>
-              <div class="project-info">
-                <span class="project-number">02</span>
-                <h2 class="project-title">Expense Share</h2>
-                <p class="project-desc">A native iOS application for splitting expenses with friends and groups. Built
-                  with SwiftUI, Supabase backend with row-level security, real-time balance calculations, and friend
-                  discovery.</p>
-                <div class="project-tags">
-                  <span class="project-tag">Swift</span>
-                  <span class="project-tag">SwiftUI</span>
-                  <span class="project-tag">Supabase</span>
-                  <span class="project-tag">PostgreSQL</span>
-                </div>
-                <a class="project-link" href="https://github.com/singhgur8/expense-share" target="_blank"
-                  rel="noopener noreferrer">
-                  View on GitHub
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </article>
-
             <!-- Project 3: Home Reservation -->
             <article class="project-item reveal">
               <div class="project-image-wrap">
-                <img src="./assets/gallery-4.png" alt="Home reservation application photo gallery" width="600"
+                <img src="./assets/home-rental.png" alt="Home Rental Web App interface" width="600"
                   height="375" loading="lazy" decoding="async">
               </div>
               <div class="project-info">
@@ -296,20 +296,29 @@
                   <span class="project-tag">MongoDB</span>
                   <span class="project-tag">Node.js</span>
                 </div>
-                <a class="project-link" href="https://github.com/singhgur8/airbnb-photogallery" target="_blank"
-                  rel="noopener noreferrer">
-                  View on GitHub
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+                  <a class="project-link" href="https://github.com/singhgur8/airbnb-photogallery" target="_blank"
+                    rel="noopener noreferrer">
+                    View on GitHub
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a class="project-link" href="https://www.youtube.com/watch?v=ltTGxX7qFrs" target="_blank"
+                    rel="noopener noreferrer" style="color: #ffffff;">
+                    Watch Demo Video
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </article>
 
             <!-- Project 4: System Design -->
             <article class="project-item reveal">
               <div class="project-image-wrap">
-                <img src="./assets/hero-engineering.png" alt="System design architecture" width="600" height="375"
+                <img src="./assets/system-design.jpg" alt="Modern Distributed System Architecture diagram" width="600" height="375"
                   loading="lazy" decoding="async">
               </div>
               <div class="project-info">
@@ -343,140 +352,120 @@
      GALLERY PAGE
      ============================================ -->
     <div class="page" id="page-gallery">
-      <section class="section" style="padding-top: var(--space-16);">
-        <div class="container--wide">
-          <div class="gallery-intro">
-            <div class="section-label">Photography &amp; Visual Stories</div>
-            <h1 class="section-heading" style="font-size: var(--text-2xl);">Through the Lens</h1>
-            <p class="section-subtext" style="margin-inline: auto; max-width: 680px;">A curated showcase of landscape,
-              portrait, street, and motion photography. Click any frame for full-screen view.</p>
-
-            <div style="margin-top: var(--space-6);">
-              <a class="btn-primary" href="https://azaadarts.com" target="_blank" rel="noopener noreferrer"
-                style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 12px 24px;">
-                <span>Explore Full Portfolios at azaadarts.com</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
-                </svg>
-              </a>
-            </div>
+      <section class="section" style="padding-top: var(--space-16); padding-inline: 0;">
+        <div style="max-width: 100%; width: 100%; padding-inline: 0;">
+          <div class="gallery-intro" style="text-align: center; margin-bottom: var(--space-8); padding-inline: var(--space-6);">
+            <div class="section-label">Visual Stories &amp; Directing</div>
+            <h1 class="section-heading" style="font-size: var(--text-2xl); margin-bottom: var(--space-3);">Frame Your World Into Lasting Memories</h1>
+            <p class="section-subtext" style="margin-inline: auto; max-width: 680px;">A curated showcase of landscape, portrait, street, and motion photography. Click any frame for full-screen view.</p>
           </div>
 
-          <!-- Unified Responsive Gallery Grid -->
-          <div class="main-gallery-grid"
-            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-6); margin-top: var(--space-10);">
+          <!-- Full-Bleed Border-Touching Seamless Photo Grid -->
+          <div class="main-gallery-grid">
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-n7mTHMt/0/KPXMNHR2MvSk48b7bmhPk8bZTRh3jg5jwgXpg6mVF/XL/i-n7mTHMt-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-n7mTHMt/0/NftzH9D75pHdBHGtthSdp6s5wNgwW6zjbXHfpwHR5/M/i-n7mTHMt-M.jpg"
-                alt="Iceland Landscape" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Iceland Volcanic Terrain</span>
-              </div>
+            <!-- 1. Landscape -->
+            <div class="gallery-item gallery-item--landscape reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_1.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_1.jpg" alt="Gallery Photo 1" loading="eager" fetchpriority="high" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 01</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-3qcBbzt/0/Lzd6s4MnRhRTWWfDScC9hPBSNJBjjGSr6MHxRhVpQ/XL/i-3qcBbzt-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-3qcBbzt/0/MbrkdhH7McRQRQjxTZHskqXxjfWLH2G8FdKJW8T9G/M/i-3qcBbzt-M.jpg"
-                alt="Portrait Session" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Graduation Portraiture</span></div>
+            <!-- 2. Portrait -->
+            <div class="gallery-item gallery-item--portrait reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_2.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_2.jpg" alt="Gallery Photo 2" loading="eager" fetchpriority="high" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 02</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-CWKBtDX/0/K47B756mHnF5K5LBm8gB2kXCMphRXj8WqcLZSwWjZ/XL/i-CWKBtDX-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-CWKBtDX/0/M9Gvsz5bfCgnGmFddxXPtnsNsFjG9QwBG8pHMwBcM/M/i-CWKBtDX-M.jpg"
-                alt="Japan Street Scene" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Japan Street Photography</span>
-              </div>
+            <!-- 3. Portrait -->
+            <div class="gallery-item gallery-item--portrait reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_3.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_3.jpg" alt="Gallery Photo 3" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 03</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-2G6NQqB/0/M829rWDrrGF876XB7mSdXg6nkfpxBkPCzx53xTn83/XL/i-2G6NQqB-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-2G6NQqB/0/Kpbx8ZfXFgnmkpp9gGBmqn2WDGvL8fR8F7SG7p4jK/M/i-2G6NQqB-M.jpg"
-                alt="Golden Hour Proposal" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Celebrations &amp; Proposals</span>
-              </div>
+            <!-- 4. Landscape -->
+            <div class="gallery-item gallery-item--landscape reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_4.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_4.jpg" alt="Gallery Photo 4" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 04</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-NXPksQV/0/NgkKL2nzf74Qw452KzVmr7jBDLS9TDZFwLfGhxxFg/XL/i-NXPksQV-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-NXPksQV/0/NMspSg9r9bZxgKPGRrJsz4XB6sLVM9CcQ7xkqhK38/M/i-NXPksQV-M.jpg"
-                alt="Couples Session" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Couples &amp; Storytelling</span>
-              </div>
+            <!-- 5. Landscape -->
+            <div class="gallery-item gallery-item--landscape reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_5.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_5.jpg" alt="Gallery Photo 5" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 05</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-cHDHPpb/0/KL2dMJXrV5QwFDzVF877ktDXtRRD6FWZ2gfTcSVT9/XL/i-cHDHPpb-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-cHDHPpb/0/Mnz2nJdfM3Qkh3Z6pbQBz3Nmm7BkFgv9kCsph7jTM/M/i-cHDHPpb-M.jpg"
-                alt="Alpine Landscape" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Alpine Mountain Reflections</span>
-              </div>
+            <!-- 6. Landscape -->
+            <div class="gallery-item gallery-item--landscape reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_6.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_6.jpg" alt="Gallery Photo 6" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 06</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-bqf3fLt/0/NK5tfLdXvmnJbRTj7xBS2KczSkmRpZ6WvWtSh255t/XL/i-bqf3fLt-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-bqf3fLt/0/ND9K3TGJ4VN4B2k3FhtCbKH3hVsHQMXRmFSqW7Gtk/M/i-bqf3fLt-M.jpg"
-                alt="Tokyo Motion" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Tokyo Nightlife &amp; Motion</span>
-              </div>
+            <!-- 7. Portrait -->
+            <div class="gallery-item gallery-item--portrait reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_7.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_7.jpg" alt="Gallery Photo 7" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 07</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-KjjSDdn/0/L9kKxCdVHrzgdSVhSXT9BSdBx3PCQrnx7J28dv4Gz/XL/i-KjjSDdn-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-KjjSDdn/0/LKHDk4LkVZnhbZJBpxFz5MH8SPgqPVstzpBfHgtLN/M/i-KjjSDdn-M.jpg"
-                alt="Portrait Studio" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Natural Light Portraiture</span>
-              </div>
+            <!-- 8. Landscape -->
+            <div class="gallery-item gallery-item--landscape reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_8.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_8.jpg" alt="Gallery Photo 8" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 08</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-V8FDLHW/0/K6Wb76zQDVspPwMtkX4qh5bS7TTbpf2RMF8H3WtMh/XL/i-V8FDLHW-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-V8FDLHW/0/KdrRC5WTLbjzNZ9hwz4FJCRcGnrJhrn9xkx23rkPc/M/i-V8FDLHW-M.jpg"
-                alt="Glacial Waters" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Glacial Waters &amp; Canyons</span>
-              </div>
+            <!-- 9. Landscape -->
+            <div class="gallery-item gallery-item--landscape reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_9.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_9.jpg" alt="Gallery Photo 9" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 09</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-PSs4f2K/0/KRPJM62LHd468cXf773gDLbLXVT9sVCJs5MhVfsmk/XL/i-PSs4f2K-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-PSs4f2K/0/MDvfzCJqcPXgbc4mXrkcG33rStgBVRfjfzhnWdLTZ/M/i-PSs4f2K-M.jpg"
-                alt="Romantic Silhouette" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Golden Hour Silhouette</span></div>
+            <!-- 10. Landscape -->
+            <div class="gallery-item gallery-item--landscape reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_10.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_10.jpg" alt="Gallery Photo 10" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 10</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-gFvnmwG/0/L4ZgK7zvhFmH4dpxg4tG9dFw8wL6z79sH4Q26kF7G/XL/i-gFvnmwG-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-gFvnmwG/0/MJn8v8Rz56D8Cq9KmL29hNfS7LxgP6gN5JqXzDvf/M/i-gFvnmwG-M.jpg"
-                alt="Coastline Wave" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Pacific Coastline Motion</span>
-              </div>
+            <!-- 11. Portrait -->
+            <div class="gallery-item gallery-item--portrait reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_11.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_11.jpg" alt="Gallery Photo 11" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 11</span></div>
             </div>
 
-            <div class="gallery-item reveal" onclick="openLightbox(this)"
-              data-large-src="https://photos.smugmug.com/photos/i-85hwbNr/0/MBLtTs5wD7RrcCStfWTT7XmVMTxVktHsS7CZ3tVsh/XL/i-85hwbNr-XL.jpg">
-              <img
-                src="https://photos.smugmug.com/photos/i-85hwbNr/0/NWn6d8ZMGg4tW6DTkHfCFSWMNkLW4ZDNWgdRnZxVB/M/i-85hwbNr-M.jpg"
-                alt="Sunset Couple" width="400" height="400" loading="lazy" decoding="async">
-              <div class="gallery-item__overlay"><span class="gallery-item__caption">Coastal Sunset Portraiture</span>
-              </div>
+            <!-- 12. Portrait -->
+            <div class="gallery-item gallery-item--portrait reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_12.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_12.jpg" alt="Gallery Photo 12" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 12</span></div>
+            </div>
+
+            <!-- 13. Portrait -->
+            <div class="gallery-item gallery-item--portrait reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_13.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_13.jpg" alt="Gallery Photo 13" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 13</span></div>
+            </div>
+
+            <!-- 14. Portrait -->
+            <div class="gallery-item gallery-item--portrait reveal" onclick="openLightbox(this)"
+              data-large-src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_14.jpg">
+              <img src="https://gurjotportfolio.s3.us-west-1.amazonaws.com/gallery_14.jpg" alt="Gallery Photo 14" loading="lazy" decoding="async">
+              <div class="gallery-item__overlay"><span class="gallery-item__caption">Frame 14</span></div>
             </div>
 
           </div>
 
           <!-- Bottom Redirect Banner -->
           <div
-            style="margin-top: var(--space-16); padding: var(--space-10); background: rgba(13, 23, 46, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-lg); text-align: center;"
+            style="margin-top: var(--space-16); margin-inline: var(--space-6); padding: var(--space-10); background: rgba(13, 23, 46, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-lg); text-align: center;"
             class="reveal">
             <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Looking for full photo series &amp;
               booking details?</h3>
@@ -730,9 +719,10 @@
         &copy; 2026 Gurjot Singh. All rights reserved.
       </div>
       <ul class="footer-nav">
+        <li><a href="#home" onclick="navigate('home'); return false;">Home</a></li>
+        <li><a href="#about" onclick="navigate('about'); return false;">About</a></li>
         <li><a href="#projects" onclick="navigate('projects'); return false;">Projects</a></li>
         <li><a href="#gallery" onclick="navigate('gallery'); return false;">Gallery</a></li>
-        <li><a href="#about" onclick="navigate('about'); return false;">About</a></li>
         <li><a href="#contact" onclick="navigate('contact'); return false;">Contact</a></li>
       </ul>
       <div class="footer-socials">
