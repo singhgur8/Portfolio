@@ -1032,19 +1032,24 @@ body::after {
 }
 @media (max-width: 768px) {
   .about-grid { grid-template-columns: 1fr; }
+  .about-portrait { position: static; }
 }
 
 .about-portrait {
+  position: sticky;
+  top: 90px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--color-surface);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 .about-portrait img {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
   display: block;
-  filter: grayscale(30%);
+  filter: grayscale(15%);
+  transition: filter 0.3s ease;
 }
 
 .about-text h3 {
