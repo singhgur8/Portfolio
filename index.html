@@ -747,12 +747,31 @@
     // Force dark mode
     document.documentElement.setAttribute('data-theme', 'dark');
 
-    // ——— Hash Router (supports nested gallery routes) ———
+    // Disable browser automatic scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
     function navigate(page) {
+      scrollToTopInstant();
       window.location.hash = page === 'home' ? '' : page;
     }
 
+    function scrollToTopInstant() {
+      const originalBehavior = document.documentElement.style.scrollBehavior;
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      setTimeout(() => {
+        document.documentElement.style.scrollBehavior = originalBehavior;
+      }, 50);
+    }
+
     function showPage(page) {
+      // SCROLL TO TOP IMMEDIATELY BEFORE DOM SWAPPING
+      scrollToTopInstant();
+
       // Handle nested gallery routes
       const basePage = page.startsWith('gallery/') ? 'gallery' : page;
       const gallerySubPage = page.startsWith('gallery/') ? page.replace('gallery/', '') : null;
@@ -776,18 +795,21 @@
         showGalleryView(gallerySubPage);
       }
 
-      // Scroll to top
-      window.scrollTo(0, 0);
-
       // Re-initialize Lucide icons for new page
       if (window.lucide) lucide.createIcons();
+
+      // Ensure top position after DOM frame reflow
+      requestAnimationFrame(() => {
+        scrollToTopInstant();
+      });
+      setTimeout(scrollToTopInstant, 10);
     }
 
     function showGalleryView(categoryId) {
       const grid = document.getElementById('galleryProjectsGrid');
       const intro = document.querySelector('.gallery-intro');
 
-      // Hide all detail views
+      // Hide all detail views safely
       document.querySelectorAll('.gallery-detail').forEach(d => {
         d.style.display = 'none';
       });
@@ -796,18 +818,16 @@
         // Show specific detail view
         const detail = document.getElementById('gallery-detail-' + categoryId);
         if (detail) {
-          grid.style.display = 'none';
-          intro.style.display = 'none';
+          if (grid) grid.style.display = 'none';
+          if (intro) intro.style.display = 'none';
           detail.style.display = 'block';
         } else {
-          // Unknown category, show grid
-          grid.style.display = '';
-          intro.style.display = '';
+          if (grid) grid.style.display = '';
+          if (intro) intro.style.display = '';
         }
       } else {
-        // Show the project grid
-        grid.style.display = '';
-        intro.style.display = '';
+        if (grid) grid.style.display = '';
+        if (intro) intro.style.display = '';
       }
     }
 
